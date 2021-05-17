@@ -1,4 +1,4 @@
-### 获取URL中的参数 （from：https://www.30secondsofcode.org/js/s/get-url-parameters）
+### 获取URL中的参数 （来源：https://www.30secondsofcode.org/js/s/get-url-parameters）
 ```javascript
 const getURLParameters = url =>
   (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
