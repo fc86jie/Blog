@@ -9,3 +9,5 @@
   - [基础](/html/base.md)
 * nodejs
   - [nodejs技术栈](https://www.nodejs.red/#/)
+* TypeScript
+  - [TypeScript入门教程](https://ts.xcatliu.com/introduction/index.html)
