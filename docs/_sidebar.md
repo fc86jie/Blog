@@ -2,7 +2,7 @@
   - [简介](README.md)
 * JavaScript
   - [基础](./javascript/base.md)
-  - [浏览器常用方法](/javascript/browser.md)
+  - [浏览器常用方法](./javascript/browser.md)
 * CSS
   - [基础](./css/base.md)
 * HTML
