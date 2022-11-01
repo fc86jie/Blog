@@ -38,6 +38,7 @@
     <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="./js/md5.js"></script>
     <script>
       var gitalkConfig = {
         clientID: '97347242bdca7df2343e',
@@ -45,6 +46,7 @@
         repo: 'Blog',
         owner: 'fc86jie',
         admin: ['fc86jie'],
+        id: md5(location.pathname),
         distractionFreeMode: false,
       };
       
