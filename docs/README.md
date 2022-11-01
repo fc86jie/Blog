@@ -1,3 +1,4 @@
 ## Welcome to Blog
 
-- .nojekyll文件是允许访问_开头的文件，默认不允许
+- .nojekyll 文件是允许访问\_开头的文件，默认不允许
+- 启动本地服务命令：docsify serve docs
