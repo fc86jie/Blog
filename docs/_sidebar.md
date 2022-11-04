@@ -13,5 +13,7 @@
   - [链接相关](./typescript/link.md)
 - **React**
   - [React 基础](./react/base.md)
+  - [Hooks](./react/hooks.md)
 - **算法**
   - [LeetCode 刷题攻略](https://github.com/youngyangyang04/leetcode-master)
+  - [十大排序算法](https://github.com/hustcc/JS-Sorting-Algorithm)

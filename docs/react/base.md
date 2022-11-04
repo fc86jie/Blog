@@ -115,3 +115,28 @@ root.render(VDOM);
    5. componentDidUpdate(prevProps, prevState, snapshot)
 3. 卸载组件：由 ReactDOM.unmountComponentAtNode()触发
    1. componentWillUnmount() ====== 关闭定时器、取消订阅消息
+
+### 高阶组件
+
+高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。
+
+```javascript
+// 高阶组件是参数为组件，返回值为新组件的函数
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+```
+
+### memo
+
+```javascript
+function MyComponent(props) {
+  /* 使用 props 渲染 */
+}
+function areEqual(prevProps, nextProps) {
+  /*
+  如果把 nextProps 传入 render 方法的返回结果与
+  将 prevProps 传入 render 方法的返回结果一致则返回 true，不更新myComponent
+  否则返回 false，更新myComponent
+  */
+}
+export default React.memo(MyComponent, areEqual);
+```
