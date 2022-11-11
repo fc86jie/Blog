@@ -15,6 +15,8 @@
   - [基础](./react/base.md)
   - [Hooks](./react/hooks.md)
   - [Router](./react/router.md)
+- **Vue**
+  - [其他](./vue/other.md)
 - **算法**
   - [LeetCode 刷题攻略](https://github.com/youngyangyang04/leetcode-master)
   - [十大排序算法](https://github.com/hustcc/JS-Sorting-Algorithm)
