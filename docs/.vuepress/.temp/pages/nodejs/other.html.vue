@@ -1,0 +1,17 @@
+<template><div><h3 id="http-server-启动-https-服务" tabindex="-1"><a class="header-anchor" href="#http-server-启动-https-服务" aria-hidden="true">#</a> http-server 启动 https 服务</h3>
+<ul>
+<li>安装 http-server</li>
+</ul>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> http-server
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul>
+<li>安装 openssl，并设置环境变量，保证 openssl 命令可用</li>
+<li>使用 openssl 生成 key.pem 和 cert.pem</li>
+</ul>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>openssl req <span class="token parameter variable">-newkey</span> rsa:2048 <span class="token parameter variable">-new</span> <span class="token parameter variable">-nodes</span> <span class="token parameter variable">-x509</span> <span class="token parameter variable">-days</span> <span class="token number">3650</span> <span class="token parameter variable">-keyout</span> key.pem <span class="token parameter variable">-out</span> cert.pem
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul>
+<li>把生成的 key.pem 和 cert.pem 文件放在服务目录，使用如下命令即可启动 https 服务</li>
+</ul>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>http-server <span class="token parameter variable">-S</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div></template>
+
+

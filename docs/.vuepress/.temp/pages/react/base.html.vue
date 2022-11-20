@@ -1,0 +1,160 @@
+<template><div><h3 id="jsx-语法规则" tabindex="-1"><a class="header-anchor" href="#jsx-语法规则" aria-hidden="true">#</a> jsx 语法规则</h3>
+<ol>
+<li>定义虚拟 DOM 时，不要写引号</li>
+<li>标签中混入 JS 表达式是要用{}</li>
+<li>样式的类名指定使用 className，不要用 class</li>
+<li>内联样式，要用 style={ {key:value} }写法<!--遇到双花括号要在中间加入空格，否则会报错--></li>
+<li>虚拟 DOM 只有一个根标签</li>
+<li>标签必须闭合</li>
+<li>标签首字符
+<ol>
+<li>若小写字母开头，则将该标签转化为 html 中同名元素，若 html 中无对应的同名元素，则报错</li>
+<li>若大写字符开头，react 就去渲染对应的组件，若组件没定义，则报错</li>
+</ol>
+</li>
+</ol>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> Id <span class="token operator">=</span> <span class="token string">'container'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">VDOM</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>h1 className<span class="token operator">=</span><span class="token string">"title"</span> id<span class="token operator">=</span><span class="token punctuation">{</span>Id<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'white'</span><span class="token punctuation">,</span> <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token string">'30px'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span>data<span class="token punctuation">.</span><span class="token function">toLocaleLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+    <span class="token operator">&lt;</span>h1 className<span class="token operator">=</span><span class="token string">"title"</span> id<span class="token operator">=</span><span class="token punctuation">{</span>Id<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'white'</span><span class="token punctuation">,</span> <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token string">'30px'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span>data<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> root <span class="token operator">=</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token constant">VDOM</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="组件间通信" tabindex="-1"><a class="header-anchor" href="#组件间通信" aria-hidden="true">#</a> 组件间通信</h3>
+<ol>
+<li>
+<p>父级向子级通信：把数据添加到子组件的属性中，然后组件从 props 属性中获取父级传递过来的数据</p>
+</li>
+<li>
+<p>子级向父级通信：在父级中定义回调方法，然后将回调方法传递给子级，子级调用父级的回调进行通信</p>
+</li>
+<li>
+<p>祖先和后代通信：通过 Context 完成</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> MyContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span>defaultValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>MyContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token string">"dark"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>Toolbar <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>MyContext<span class="token punctuation">.</span>Provider<span class="token operator">></span><span class="token punctuation">;</span>
+
+<span class="token comment">// 中间的组件再也不必指明往下传递 theme 了。</span>
+<span class="token keyword">function</span> <span class="token function">Toolbar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>ThemedButton <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// contextType方式</span>
+<span class="token keyword">class</span> <span class="token class-name">ThemedButton</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 指定 contextType 读取当前的 theme context。</span>
+  <span class="token comment">// React 会往上找到最近的 theme Provider，然后使用它的值。</span>
+  <span class="token comment">// 在这个例子中，当前的 theme 值为 “dark”。</span>
+  <span class="token keyword">static</span> contextType <span class="token operator">=</span> MyContext<span class="token punctuation">;</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>Button theme<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>context<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Context.Consumer方式</span>
+<span class="token keyword">function</span> <span class="token function">ThemedButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>MyContext<span class="token punctuation">.</span>Consumer<span class="token operator">></span>
+      <span class="token punctuation">{</span><span class="token parameter">theme</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+       <span class="token operator">&lt;</span>Button theme<span class="token operator">=</span><span class="token punctuation">{</span>theme<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>MyContext<span class="token punctuation">.</span>Consumer<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h5 id="class-contexttype-和-context-consumer-的区别" tabindex="-1"><a class="header-anchor" href="#class-contexttype-和-context-consumer-的区别" aria-hidden="true">#</a> Class.contextType 和 Context.Consumer 的区别</h5>
+<ul>
+<li>
+<p>Class.contextType 使用时会自动在组件上添加一个属性 context，存储离当前组件最近的 Provider 提供的数据，不能写多个</p>
+</li>
+<li>
+<p>Context.Consumer 可以写多个，能获取到所有 Provider 提供数据</p>
+</li>
+<li>
+<p>动态的数据，还可以传递方法</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="setstate-异步-or-同步" tabindex="-1"><a class="header-anchor" href="#setstate-异步-or-同步" aria-hidden="true">#</a> setState 异步 or 同步</h3>
+<p>在 React 可以控制的方法中（React 生命周期函数、React 事件中）表现为异步，在原生 js 控制（setTimeout、Promise.then 等）及 DOM 事件中表现为同步</p>
+<h3 id="react-的生命周期-旧的" tabindex="-1"><a class="header-anchor" href="#react-的生命周期-旧的" aria-hidden="true">#</a> React 的生命周期（旧的）</h3>
+<ol>
+<li>初始化阶段：由 ReactDOM.render()触发---初次渲染
+<ol>
+<li>constructor()</li>
+<li>componentWillMount()</li>
+<li>render()</li>
+<li>componentDidMount() ====== 初始化，开启定时器、发送网络请求、订阅消息</li>
+</ol>
+</li>
+<li>更新阶段：由组件内部 this.setState()或父组件 render 触发
+<ol>
+<li>shouldComponentUpdate()</li>
+<li>componentWillUpdate()</li>
+<li>render()</li>
+<li>componentDidUpdate()</li>
+</ol>
+</li>
+<li>卸载组件：由 ReactDOM.unmountComponentAtNode()触发
+<ol>
+<li>componentWillUnmount() ====== 关闭定时器、取消订阅消息</li>
+</ol>
+</li>
+</ol>
+<h3 id="react-的生命周期-新的" tabindex="-1"><a class="header-anchor" href="#react-的生命周期-新的" aria-hidden="true">#</a> React 的生命周期（新的）</h3>
+<ol>
+<li>初始化阶段：由 ReactDOM.render()触发---初次渲染
+<ol>
+<li>constructor()</li>
+<li>static getDerivedStateFromProps(props, state) ====== 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。state 的值在任何时候都取决于 props。</li>
+<li>render()</li>
+<li>componentDidMount() ====== 初始化，开启定时器、发送网络请求、订阅消息</li>
+</ol>
+</li>
+<li>更新阶段：由组件内部 this.setState()或父组件 render 触发
+<ol>
+<li>static getDerivedStateFromProps(props, state)</li>
+<li>shouldComponentUpdate(nextProps, nextState)</li>
+<li>render()</li>
+<li>getSnapshotBeforeUpdate(prevProps, prevState)</li>
+<li>componentDidUpdate(prevProps, prevState, snapshot)</li>
+</ol>
+</li>
+<li>卸载组件：由 ReactDOM.unmountComponentAtNode()触发
+<ol>
+<li>componentWillUnmount() ====== 关闭定时器、取消订阅消息</li>
+</ol>
+</li>
+</ol>
+<h3 id="高阶组件" tabindex="-1"><a class="header-anchor" href="#高阶组件" aria-hidden="true">#</a> 高阶组件</h3>
+<p>高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// 高阶组件是参数为组件，返回值为新组件的函数</span>
+<span class="token keyword">const</span> EnhancedComponent <span class="token operator">=</span> <span class="token function">higherOrderComponent</span><span class="token punctuation">(</span>WrappedComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="memo" tabindex="-1"><a class="header-anchor" href="#memo" aria-hidden="true">#</a> memo</h3>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">MyComponent</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* 使用 props 渲染 */</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">areEqual</span><span class="token punctuation">(</span><span class="token parameter">prevProps<span class="token punctuation">,</span> nextProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">/*
+  如果把 nextProps 传入 render 方法的返回结果与
+  将 prevProps 传入 render 方法的返回结果一致则返回 true，不更新myComponent
+  否则返回 false，更新myComponent
+  */</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> React<span class="token punctuation">.</span><span class="token function">memo</span><span class="token punctuation">(</span>MyComponent<span class="token punctuation">,</span> areEqual<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

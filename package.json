@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "docsify serve docs"
+    "start": "docsify serve docs",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/fc86jie/Blog/issues"
   },
-  "homepage": "https://github.com/fc86jie/Blog#readme"
+  "homepage": "https://github.com/fc86jie/Blog#readme",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.53"
+  }
 }
