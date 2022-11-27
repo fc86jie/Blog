@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2022-11-15 19:14:16
+ * @LastEditTime: 2022-11-27 21:13:13
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
@@ -13,7 +13,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '学习笔记', // 标题
   description: '学习笔记', // 标题下的描述
-  base: '/' /* 基础虚拟路径: */,
+  base: '/Blog/' /* 基础虚拟路径: */,
   dest: 'dist' /* 打包文件基础路径, 在命令所在目录下 */,
   theme: defaultTheme({
     // 主题配置
