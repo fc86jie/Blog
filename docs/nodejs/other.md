@@ -18,3 +18,26 @@ openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 ```sh
 http-server -S
 ```
+
+### 在 ES 模块（Node.js）中导入 JSON 文件
+
+1. 使用 fs 模块读取和解析 JSON 文件
+
+```javascript
+import { readFile } from 'fs/promises';
+const jsonData = JSON.parse(await readFile('./a.json'));
+```
+
+2. 利用 CommonJS require 方法加载 JSON 文件，createRequire 允许您构造 CommonJS require 方法，以便可以使用典型的 CommonJS 功能
+
+```javascript
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const jsonData = require('./a.json');
+```
+
+3. import Assertions
+
+```javascript
+import jsonData from './a.json' assert { type: 'json' };
+```
