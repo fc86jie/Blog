@@ -1,4 +1,4 @@
-import{_ as n,o as s,c as a,d as e}from"./app.4a665ec5.js";const t={},p=e(`<h3 id="electron-安装" tabindex="-1"><a class="header-anchor" href="#electron-安装" aria-hidden="true">#</a> Electron 安装</h3><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>// 设置淘宝源
+import{_ as n,o as s,c as a,d as e}from"./app.0fe137f3.js";const t={},p=e(`<h3 id="electron-安装" tabindex="-1"><a class="header-anchor" href="#electron-安装" aria-hidden="true">#</a> Electron 安装</h3><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>// 设置淘宝源
 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> <span class="token assign-left variable">ELECTRON_MIRROR</span><span class="token operator">=</span><span class="token string">&quot;https://npmmirror.com/mirrors/electron/&quot;</span>
 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> <span class="token assign-left variable">ELECTRON_CUSTOM_DIR</span><span class="token operator">=</span><span class="token string">&quot;{{ version }}&quot;</span>
 // 安装
