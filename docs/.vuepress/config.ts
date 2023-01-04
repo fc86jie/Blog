@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2022-11-27 21:13:13
+ * @LastEditTime: 2023-01-03 19:41:16
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
@@ -108,6 +108,15 @@ export default defineUserConfig({
           {
             text: 'Router',
             link: '/react/router.md',
+          },
+        ],
+      },
+      {
+        text: '微信小程序',
+        children: [
+          {
+            text: '基础',
+            link: '/miniprogram/base.md',
           },
         ],
       },
