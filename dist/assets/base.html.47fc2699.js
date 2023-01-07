@@ -1,4 +1,4 @@
-import{_ as n,o as e,c as a,d as s}from"./app.c3378553.js";const i={},t=s(`<h3 id="npm-init" tabindex="-1"><a class="header-anchor" href="#npm-init" aria-hidden="true">#</a> npm init</h3><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">npm</span> init 包名 等效于 npx create-包名
+import{_ as n,o as e,c as a,d as s}from"./app.d96f598f.js";const i={},t=s(`<h3 id="npm-init" tabindex="-1"><a class="header-anchor" href="#npm-init" aria-hidden="true">#</a> npm init</h3><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">npm</span> init 包名 等效于 npx create-包名
 <span class="token function">npm</span> init @命名空间 等效于 npx @命名空间/create
 <span class="token function">npm</span> init @命名空间/包名 等效于 npx @命名空间/create-包名
 <span class="token function">npm</span> init <span class="token parameter variable">-y</span> 生成默认的package.json
