@@ -1,10 +1,11 @@
 export const pagesRoutes = [
   ["v-8daa1a0e","/",{"title":""},["/index.html","/README.md"]],
   ["v-531c1d43","/css/base.html",{"title":"基础"},["/css/base","/css/base.md"]],
-  ["v-3b0d6374","/electron/base.html",{"title":""},["/electron/base","/electron/base.md"]],
   ["v-e0c5db06","/html/base.html",{"title":"基础"},["/html/base","/html/base.md"]],
+  ["v-3b0d6374","/electron/base.html",{"title":""},["/electron/base","/electron/base.md"]],
   ["v-17ed0aff","/javascript/base.html",{"title":"基础"},["/javascript/base","/javascript/base.md"]],
   ["v-22e964fa","/javascript/browser.html",{"title":""},["/javascript/browser","/javascript/browser.md"]],
+  ["v-5c12e78e","/javascript/reg.html",{"title":""},["/javascript/reg","/javascript/reg.md"]],
   ["v-ad652be6","/miniprogram/base.html",{"title":""},["/miniprogram/base","/miniprogram/base.md"]],
   ["v-24bab858","/nodejs/link.html",{"title":""},["/nodejs/link","/nodejs/link.md"]],
   ["v-72b54898","/nodejs/other.html",{"title":""},["/nodejs/other","/nodejs/other.md"]],

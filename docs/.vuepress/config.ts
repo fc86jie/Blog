@@ -34,6 +34,10 @@ export default defineUserConfig({
             text: '浏览器常用方法',
             link: '/javascript/browser.md',
           },
+          {
+            text: '正则表达式',
+            link: '/javascript/reg.md',
+          },
         ],
       },
       {

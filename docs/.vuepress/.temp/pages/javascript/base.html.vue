@@ -81,6 +81,9 @@
 <li>pageX、pageY：事件属性返回当事件被触发时鼠标指针相对于整个页面左上角的水平坐标、垂直坐标</li>
 <li>screenX、screenY：事件属性返回当事件被触发时鼠标位置相对于用户屏幕水水平坐标、垂直坐标，此时的参照点也就是原点是屏幕的左上角</li>
 </ul>
+<h3 id="prototype-和-proto-关系" tabindex="-1"><a class="header-anchor" href="#prototype-和-proto-关系" aria-hidden="true">#</a> prototype 和__proto__关系？</h3>
+<p>所有对象都有__proto__属性，函数这个特殊对象除了具有__proto__属性，还特有的原型属性 prototype。prototype 对象默认有 2 个属性，constructor 属性和__proto__属性。prototype 属性可以给函数和对象添加可共享的（继承）的方法、属性，而__proto__是查找某函数或对象的原型链方式。constructor 这个属性包含了一个指针，指回原构造函数。</p>
+<p><img src="@source/javascript/prototype和__proto__关系.png" alt="prototype 和__proto__关系"></p>
 </div></template>
 
 
