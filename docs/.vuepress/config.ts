@@ -2,12 +2,14 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-01-03 19:41:16
+ * @LastEditTime: 2023-01-10 16:46:21
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
 
 import { defineUserConfig, defaultTheme } from 'vuepress';
+import mdItContainer from 'markdown-it-container';
+import { tocPlugin } from '@mdit-vue/plugin-toc';
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -15,6 +17,10 @@ export default defineUserConfig({
   description: '学习笔记', // 标题下的描述
   base: '/Blog/' /* 基础虚拟路径: */,
   dest: 'dist' /* 打包文件基础路径, 在命令所在目录下 */,
+  extendsMarkdown: md => {
+    md.use(mdItContainer);
+    md.use(tocPlugin);
+  },
   theme: defaultTheme({
     // 主题配置
     sidebar: [

@@ -1,4 +1,5 @@
-<template><div><h3 id="正则表达式小结" tabindex="-1"><a class="header-anchor" href="#正则表达式小结" aria-hidden="true">#</a> 正则表达式小结</h3>
+<template><div><nav class="table-of-contents"><ul><li><a href="#正则表达式小结">正则表达式小结</a></li></ul></nav>
+<h3 id="正则表达式小结" tabindex="-1"><a class="header-anchor" href="#正则表达式小结" aria-hidden="true">#</a> 正则表达式小结</h3>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// 字面量创建</span>
 <span class="token keyword">let</span> reg <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\d+</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
 <span class="token comment">// 构造函数创建（1、\需要转移，2、支持变量）</span>

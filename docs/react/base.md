@@ -1,3 +1,5 @@
+[[toc]]
+
 ### jsx 语法规则
 
 1. 定义虚拟 DOM 时，不要写引号
@@ -83,7 +85,8 @@ root.render(VDOM);
 
 ### setState 异步 or 同步
 
-在 React 可以控制的方法中（React 生命周期函数、React 事件中）表现为异步，在原生 js 控制（setTimeout、Promise.then 等）及 DOM 事件中表现为同步
+在 React 可以控制的方法中（React 生命周期函数、React 事件中）表现为异步，在原生 js 控制（setTimeout、Promise.then 等）及
+DOM 事件中表现为同步
 
 ### React 的生命周期（旧的）
 
@@ -104,7 +107,8 @@ root.render(VDOM);
 
 1. 初始化阶段：由 ReactDOM.render()触发---初次渲染
    1. constructor()
-   2. static getDerivedStateFromProps(props, state) ====== 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。state 的值在任何时候都取决于 props。
+   2. static getDerivedStateFromProps(props, state) ====== 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会
+      被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。state 的值在任何时候都取决于 props。
    3. render()
    4. componentDidMount() ====== 初始化，开启定时器、发送网络请求、订阅消息
 2. 更新阶段：由组件内部 this.setState()或父组件 render 触发
@@ -118,7 +122,8 @@ root.render(VDOM);
 
 ### 高阶组件
 
-高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。
+高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性
+而形成的设计模式。
 
 ```javascript
 // 高阶组件是参数为组件，返回值为新组件的函数

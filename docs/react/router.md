@@ -1,3 +1,5 @@
+[[toc]]
+
 ### 路由模式
 
 ```javascript

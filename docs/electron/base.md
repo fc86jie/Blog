@@ -1,3 +1,5 @@
+[[toc]]
+
 ### Electron 安装
 
 ```sh

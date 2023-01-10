@@ -1,4 +1,5 @@
-<template><div><h3 id="jsx-语法规则" tabindex="-1"><a class="header-anchor" href="#jsx-语法规则" aria-hidden="true">#</a> jsx 语法规则</h3>
+<template><div><nav class="table-of-contents"><ul><li><a href="#jsx-语法规则">jsx 语法规则</a></li><li><a href="#组件间通信">组件间通信</a></li><li><a href="#setstate-异步-or-同步">setState 异步 or 同步</a></li><li><a href="#react-的生命周期-旧的">React 的生命周期（旧的）</a></li><li><a href="#react-的生命周期-新的">React 的生命周期（新的）</a></li><li><a href="#高阶组件">高阶组件</a></li><li><a href="#memo">memo</a></li></ul></nav>
+<h3 id="jsx-语法规则" tabindex="-1"><a class="header-anchor" href="#jsx-语法规则" aria-hidden="true">#</a> jsx 语法规则</h3>
 <ol>
 <li>定义虚拟 DOM 时，不要写引号</li>
 <li>标签中混入 JS 表达式是要用{}</li>
@@ -89,7 +90,8 @@ root<span class="token punctuation">.</span><span class="token function">render<
 </li>
 </ol>
 <h3 id="setstate-异步-or-同步" tabindex="-1"><a class="header-anchor" href="#setstate-异步-or-同步" aria-hidden="true">#</a> setState 异步 or 同步</h3>
-<p>在 React 可以控制的方法中（React 生命周期函数、React 事件中）表现为异步，在原生 js 控制（setTimeout、Promise.then 等）及 DOM 事件中表现为同步</p>
+<p>在 React 可以控制的方法中（React 生命周期函数、React 事件中）表现为异步，在原生 js 控制（setTimeout、Promise.then 等）及
+DOM 事件中表现为同步</p>
 <h3 id="react-的生命周期-旧的" tabindex="-1"><a class="header-anchor" href="#react-的生命周期-旧的" aria-hidden="true">#</a> React 的生命周期（旧的）</h3>
 <ol>
 <li>初始化阶段：由 ReactDOM.render()触发---初次渲染
@@ -119,7 +121,8 @@ root<span class="token punctuation">.</span><span class="token function">render<
 <li>初始化阶段：由 ReactDOM.render()触发---初次渲染
 <ol>
 <li>constructor()</li>
-<li>static getDerivedStateFromProps(props, state) ====== 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。state 的值在任何时候都取决于 props。</li>
+<li>static getDerivedStateFromProps(props, state) ====== 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会
+被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。state 的值在任何时候都取决于 props。</li>
 <li>render()</li>
 <li>componentDidMount() ====== 初始化，开启定时器、发送网络请求、订阅消息</li>
 </ol>
@@ -140,7 +143,8 @@ root<span class="token punctuation">.</span><span class="token function">render<
 </li>
 </ol>
 <h3 id="高阶组件" tabindex="-1"><a class="header-anchor" href="#高阶组件" aria-hidden="true">#</a> 高阶组件</h3>
-<p>高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。</p>
+<p>高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性
+而形成的设计模式。</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// 高阶组件是参数为组件，返回值为新组件的函数</span>
 <span class="token keyword">const</span> EnhancedComponent <span class="token operator">=</span> <span class="token function">higherOrderComponent</span><span class="token punctuation">(</span>WrappedComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="memo" tabindex="-1"><a class="header-anchor" href="#memo" aria-hidden="true">#</a> memo</h3>

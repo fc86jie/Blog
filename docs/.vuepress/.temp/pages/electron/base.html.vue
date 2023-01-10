@@ -1,4 +1,5 @@
-<template><div><h3 id="electron-安装" tabindex="-1"><a class="header-anchor" href="#electron-安装" aria-hidden="true">#</a> Electron 安装</h3>
+<template><div><nav class="table-of-contents"><ul><li><a href="#electron-安装">Electron 安装</a></li><li><a href="#windows-下控制台中文乱码问题">windows 下控制台中文乱码问题</a></li><li><a href="#打包">打包</a></li><li><a href="#在渲染进程中使用-nodejs">在渲染进程中使用 nodejs</a></li><li><a href="#在渲染进程中打开新窗口">在渲染进程中打开新窗口</a></li></ul></nav>
+<h3 id="electron-安装" tabindex="-1"><a class="header-anchor" href="#electron-安装" aria-hidden="true">#</a> Electron 安装</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>// 设置淘宝源
 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> <span class="token assign-left variable">ELECTRON_MIRROR</span><span class="token operator">=</span><span class="token string">"https://npmmirror.com/mirrors/electron/"</span>
 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> <span class="token assign-left variable">ELECTRON_CUSTOM_DIR</span><span class="token operator">=</span><span class="token string">"{{ version }}"</span>

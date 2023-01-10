@@ -1,6 +1,8 @@
+[[toc]]
+
 ### 微信小程序登录流程
 
-[![微信小程序登录流程图](./api-login.jpg)](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)
+[![微信小程序登录流程图](./images/api-login.jpg)](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)
 
 - 部分字段解释如下：
 <table>

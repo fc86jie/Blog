@@ -1,18 +1,19 @@
-### 获取URL中的参数 
-* 来源：https://www.30secondsofcode.org/js/s/get-url-parameters
+[[toc]]
+
+### 获取 URL 中的参数
+
+- 来源：https://www.30secondsofcode.org/js/s/get-url-parameters
 
 ```javascript
 const getURLParameters = url =>
   (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
-    (a, v) => (
-      (a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a
-    ),
+    (a, v) => ((a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a),
     {}
   );
-  
+
 //Examples
 
-getURLParameters('google.com'); 
+getURLParameters('google.com');
 // {}
 
 getURLParameters('http://url.com/page?name=Adam&surname=Smith');

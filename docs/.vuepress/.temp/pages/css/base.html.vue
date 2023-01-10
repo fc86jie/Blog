@@ -1,8 +1,9 @@
-<template><div><h1 id="基础" tabindex="-1"><a class="header-anchor" href="#基础" aria-hidden="true">#</a> 基础</h1>
+<template><div><nav class="table-of-contents"><ul><li><a href="#css-选择器优先级">CSS 选择器优先级</a></li><li><a href="#fixed-定位失效">fixed 定位失效</a></li><li><a href="#单行省略技巧">单行省略技巧</a></li></ul></nav>
 <h3 id="css-选择器优先级" tabindex="-1"><a class="header-anchor" href="#css-选择器优先级" aria-hidden="true">#</a> CSS 选择器优先级</h3>
 <ol>
 <li>基础规则：important &gt; 行内样式 &gt; ID 选择器 &gt; 类选择器 &gt; 元素选择器 &gt; 通配符选择器</li>
-<li>详细规则：每一个选择则器可以计算出一个【权重值】，格式为(a,b,c)，优先比较 a，在比较 b，在比较 c，相同权重后面的优先级高于前面的（不包含 important）
+<li>详细规则：每一个选择则器可以计算出一个【权重值】，格式为(a,b,c)，优先比较 a，在比较 b，在比较 c，相同权重后面的优先级
+高于前面的（不包含 important）
 <ul>
 <li>a 表示：一个选择器中【ID】选择器的个数</li>
 <li>b 表示：一个选择器中【类、伪类、属性】选择器的个数</li>

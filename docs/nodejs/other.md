@@ -1,3 +1,5 @@
+[[toc]]
+
 ### http-server 启动 https 服务
 
 - 安装 http-server
@@ -28,7 +30,8 @@ import { readFile } from 'fs/promises';
 const jsonData = JSON.parse(await readFile('./a.json'));
 ```
 
-2. 利用 CommonJS require 方法加载 JSON 文件，createRequire 允许您构造 CommonJS require 方法，以便可以使用典型的 CommonJS 功能
+2. 利用 CommonJS require 方法加载 JSON 文件，createRequire 允许您构造 CommonJS require 方法，以便可以使用典型的 CommonJS
+   功能
 
 ```javascript
 import { createRequire } from 'module';

@@ -1,4 +1,5 @@
-<template><div><h3 id="http-server-启动-https-服务" tabindex="-1"><a class="header-anchor" href="#http-server-启动-https-服务" aria-hidden="true">#</a> http-server 启动 https 服务</h3>
+<template><div><nav class="table-of-contents"><ul><li><a href="#http-server-启动-https-服务">http-server 启动 https 服务</a></li><li><a href="#在-es-模块-node-js-中导入-json-文件">在 ES 模块（Node.js）中导入 JSON 文件</a></li></ul></nav>
+<h3 id="http-server-启动-https-服务" tabindex="-1"><a class="header-anchor" href="#http-server-启动-https-服务" aria-hidden="true">#</a> http-server 启动 https 服务</h3>
 <ul>
 <li>安装 http-server</li>
 </ul>
@@ -19,7 +20,8 @@
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> readFile <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'fs/promises'</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> jsonData <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token keyword">await</span> <span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'./a.json'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
-<li>利用 CommonJS require 方法加载 JSON 文件，createRequire 允许您构造 CommonJS require 方法，以便可以使用典型的 CommonJS 功能</li>
+<li>利用 CommonJS require 方法加载 JSON 文件，createRequire 允许您构造 CommonJS require 方法，以便可以使用典型的 CommonJS
+功能</li>
 </ol>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createRequire <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'module'</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> require <span class="token operator">=</span> <span class="token function">createRequire</span><span class="token punctuation">(</span><span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>

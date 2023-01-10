@@ -1,1 +1,0 @@
-import{_ as c,o as t,c as a,a as e,b as n}from"./app.8aadd4fb.js";const o={},r=e("h2",{id:"欢迎来到-fc86jie-的学习笔记",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#欢迎来到-fc86jie-的学习笔记","aria-hidden":"true"},"#"),n(" 欢迎来到 fc86jie 的学习笔记")],-1),s=[r];function i(_,d){return t(),a("div",null,s)}const h=c(o,[["render",i],["__file","index.html.vue"]]);export{h as default};

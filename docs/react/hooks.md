@@ -1,3 +1,5 @@
+[[toc]]
+
 ### 函数式组件
 
 - 本质是一个普通函数，接收一个参数 props，返回一个 reactNodes
@@ -58,8 +60,11 @@ function Child(props) {
 }
 ```
 
-- 挂载阶段：从上到下执行函数组件，如果碰到 useEffect 就将其中的 effect 存储到一个队列中，当组件挂载完成之后，按照队列顺序执行 effect 函数，并获取 cleanup 函数存储到一个新的队列中
-- 更新阶段：从上到下执行函数组件，如果碰到 useEffect 就将其中的 effect 存储到一个队列中，当组件更新完成之后，会将之前存储的 cleanup 函数队列按顺序执行下，然后执行 effect 函数队列，并获取 cleanup 函数存储到一个新的队列中。在更新阶段会观察依赖依赖参数的值有没有发生变化，如果没有变化就不执行对应的 cleanup 和 effect
+- 挂载阶段：从上到下执行函数组件，如果碰到 useEffect 就将其中的 effect 存储到一个队列中，当组件挂载完成之后，按照队列顺
+  序执行 effect 函数，并获取 cleanup 函数存储到一个新的队列中
+- 更新阶段：从上到下执行函数组件，如果碰到 useEffect 就将其中的 effect 存储到一个队列中，当组件更新完成之后，会将之前存
+  储的 cleanup 函数队列按顺序执行下，然后执行 effect 函数队列，并获取 cleanup 函数存储到一个新的队列中。在更新阶段会观察
+  依赖依赖参数的值有没有发生变化，如果没有变化就不执行对应的 cleanup 和 effect
 - 卸载阶段：找到之前存储的 cleanup 函数队列，依次执行
 
 ### Ref hook
@@ -81,8 +86,7 @@ function Child(props) {
       <button
         onClick={() => {
           setCount(count + 1);
-        }}
-      ></button>
+        }}></button>
     </div>
   );
 }

@@ -1,4 +1,5 @@
-<template><div><h3 id="函数式组件" tabindex="-1"><a class="header-anchor" href="#函数式组件" aria-hidden="true">#</a> 函数式组件</h3>
+<template><div><nav class="table-of-contents"><ul><li><a href="#函数式组件">函数式组件</a></li><li><a href="#react-hooks">React Hooks</a></li><li><a href="#state-hook">State Hook</a></li><li><a href="#effect-hook">Effect Hook</a></li><li><a href="#ref-hook">Ref hook</a></li><li><a href="#memo-hook">Memo hook</a></li><li><a href="#callback-hook">Callback hook</a></li></ul></nav>
+<h3 id="函数式组件" tabindex="-1"><a class="header-anchor" href="#函数式组件" aria-hidden="true">#</a> 函数式组件</h3>
 <ul>
 <li>本质是一个普通函数，接收一个参数 props，返回一个 reactNodes</li>
 <li>函数式组件没有 this 和生命周期，不能使用 string ref</li>
@@ -52,8 +53,11 @@
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>挂载阶段：从上到下执行函数组件，如果碰到 useEffect 就将其中的 effect 存储到一个队列中，当组件挂载完成之后，按照队列顺序执行 effect 函数，并获取 cleanup 函数存储到一个新的队列中</li>
-<li>更新阶段：从上到下执行函数组件，如果碰到 useEffect 就将其中的 effect 存储到一个队列中，当组件更新完成之后，会将之前存储的 cleanup 函数队列按顺序执行下，然后执行 effect 函数队列，并获取 cleanup 函数存储到一个新的队列中。在更新阶段会观察依赖依赖参数的值有没有发生变化，如果没有变化就不执行对应的 cleanup 和 effect</li>
+<li>挂载阶段：从上到下执行函数组件，如果碰到 useEffect 就将其中的 effect 存储到一个队列中，当组件挂载完成之后，按照队列顺
+序执行 effect 函数，并获取 cleanup 函数存储到一个新的队列中</li>
+<li>更新阶段：从上到下执行函数组件，如果碰到 useEffect 就将其中的 effect 存储到一个队列中，当组件更新完成之后，会将之前存
+储的 cleanup 函数队列按顺序执行下，然后执行 effect 函数队列，并获取 cleanup 函数存储到一个新的队列中。在更新阶段会观察
+依赖依赖参数的值有没有发生变化，如果没有变化就不执行对应的 cleanup 和 effect</li>
 <li>卸载阶段：找到之前存储的 cleanup 函数队列，依次执行</li>
 </ul>
 <h3 id="ref-hook" tabindex="-1"><a class="header-anchor" href="#ref-hook" aria-hidden="true">#</a> Ref hook</h3>
@@ -73,12 +77,11 @@
       <span class="token operator">&lt;</span>button
         onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
           <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">}</span>
-      <span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
 <li>类似于 createRef</li>
 <li>除了可以保存实例外，还可以保存组件更新前的数据</li>
 <li>当 ref 存储的是数据时，数据不会随着组件更新而自动更新</li>

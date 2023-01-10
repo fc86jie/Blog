@@ -1,4 +1,5 @@
-<template><div><h3 id="路由模式" tabindex="-1"><a class="header-anchor" href="#路由模式" aria-hidden="true">#</a> 路由模式</h3>
+<template><div><nav class="table-of-contents"><ul><li><a href="#路由模式">路由模式</a></li><li><a href="#route-路由">Route 路由</a></li><li><a href="#link-和-navlink">Link 和 NavLink</a></li></ul></nav>
+<h3 id="路由模式" tabindex="-1"><a class="header-anchor" href="#路由模式" aria-hidden="true">#</a> 路由模式</h3>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createBrowserRouter<span class="token punctuation">,</span> createHashRouter<span class="token punctuation">,</span> HashRouter<span class="token punctuation">,</span> BrowserRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
   <span class="token operator">&lt;</span>BrowserRouter<span class="token operator">></span>
