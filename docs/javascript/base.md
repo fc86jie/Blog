@@ -225,3 +225,23 @@ function addItems() {
 
 requestAnimationFrame(addItems);
 ```
+
+### requestIdleCallback
+
+当关注用户体验，不希望因为一些不重要的任务（如统计上报）导致用户感觉到卡顿的话，就应该考虑使用 requestIdleCallback。因为
+requestIdleCallback 回调的执行的前提条件是当前浏览器处于空闲状态
+
+```javascript
+// 如果指定了 timeout，并且有一个正值，而回调在 timeout 毫秒过后还没有被调用，那么回调任务将放入事件循环中排队，即使这样做有可能对性能产生负面影响。
+requestIdleCallback(myNonEssentialWork, { timeout: 2000 });
+
+function myNonEssentialWork(deadline) {
+  // 当回调函数是由于超时才得以执行的话，deadline.didTimeout为true
+  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && tasks.length > 0) {
+    doWorkIfNeeded();
+  }
+  if (tasks.length > 0) {
+    requestIdleCallback(myNonEssentialWork);
+  }
+}
+```

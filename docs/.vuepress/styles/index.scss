@@ -1,0 +1,4 @@
+// 保证代码块中的注释能换行
+.token.comment {
+  white-space: normal;
+}
