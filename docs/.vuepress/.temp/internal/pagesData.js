@@ -13,12 +13,12 @@ export const pagesData = {
   "v-22e964fa": () => import(/* webpackChunkName: "v-22e964fa" */"D:/project/Blog/docs/.vuepress/.temp/pages/javascript/browser.html.js").then(({ data }) => data),
   // path: /javascript/reg.html
   "v-5c12e78e": () => import(/* webpackChunkName: "v-5c12e78e" */"D:/project/Blog/docs/.vuepress/.temp/pages/javascript/reg.html.js").then(({ data }) => data),
+  // path: /miniprogram/base.html
+  "v-ad652be6": () => import(/* webpackChunkName: "v-ad652be6" */"D:/project/Blog/docs/.vuepress/.temp/pages/miniprogram/base.html.js").then(({ data }) => data),
   // path: /nodejs/link.html
   "v-24bab858": () => import(/* webpackChunkName: "v-24bab858" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/link.html.js").then(({ data }) => data),
   // path: /nodejs/other.html
   "v-72b54898": () => import(/* webpackChunkName: "v-72b54898" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/other.html.js").then(({ data }) => data),
-  // path: /miniprogram/base.html
-  "v-ad652be6": () => import(/* webpackChunkName: "v-ad652be6" */"D:/project/Blog/docs/.vuepress/.temp/pages/miniprogram/base.html.js").then(({ data }) => data),
   // path: /npm/base.html
   "v-036777aa": () => import(/* webpackChunkName: "v-036777aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/npm/base.html.js").then(({ data }) => data),
   // path: /react/base.html

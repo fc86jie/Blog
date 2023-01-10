@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-01-10 16:46:21
+ * @LastEditTime: 2023-01-10 17:27:26
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
@@ -31,6 +31,7 @@ export default defineUserConfig({
       },
       {
         text: 'JavaScript',
+        collapsible: true,
         children: [
           {
             text: '基础',
@@ -48,6 +49,7 @@ export default defineUserConfig({
       },
       {
         text: 'CSS',
+        collapsible: true,
         children: [
           {
             text: '基础',
@@ -57,6 +59,7 @@ export default defineUserConfig({
       },
       {
         text: 'HTML',
+        collapsible: true,
         children: [
           {
             text: '基础',
@@ -66,6 +69,7 @@ export default defineUserConfig({
       },
       {
         text: 'NPM',
+        collapsible: true,
         children: [
           {
             text: '基础',
@@ -75,6 +79,7 @@ export default defineUserConfig({
       },
       {
         text: 'NodeJs',
+        collapsible: true,
         children: [
           {
             text: '链接相关',
@@ -88,6 +93,7 @@ export default defineUserConfig({
       },
       {
         text: 'TypeScript',
+        collapsible: true,
         children: [
           {
             text: '链接相关',
@@ -97,6 +103,7 @@ export default defineUserConfig({
       },
       {
         text: 'Vue',
+        collapsible: true,
         children: [
           {
             text: '其他',
@@ -106,6 +113,7 @@ export default defineUserConfig({
       },
       {
         text: 'React',
+        collapsible: true,
         children: [
           {
             text: '基础',
@@ -123,6 +131,7 @@ export default defineUserConfig({
       },
       {
         text: '微信小程序',
+        collapsible: true,
         children: [
           {
             text: '基础',
@@ -132,6 +141,7 @@ export default defineUserConfig({
       },
       {
         text: 'Electron',
+        collapsible: true,
         children: [
           {
             text: '基础',
@@ -141,6 +151,7 @@ export default defineUserConfig({
       },
       {
         text: '算法',
+        collapsible: true,
         children: [
           {
             text: 'LeetCode 刷题攻略',
