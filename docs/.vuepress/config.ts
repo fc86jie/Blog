@@ -2,14 +2,14 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-01-10 17:27:26
+ * @LastEditTime: 2023-01-11 18:28:34
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
 
-import { defineUserConfig, defaultTheme } from 'vuepress';
-import mdItContainer from 'markdown-it-container';
 import { tocPlugin } from '@mdit-vue/plugin-toc';
+import mdItContainer from 'markdown-it-container';
+import { defaultTheme, defineUserConfig } from 'vuepress';
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -30,20 +30,16 @@ export default defineUserConfig({
         link: '/README.md',
       },
       {
-        text: 'JavaScript',
+        text: '浏览器相关',
+        link: '/browser/base.md',
+      },
+      {
+        text: 'HTML',
         collapsible: true,
         children: [
           {
             text: '基础',
-            link: '/javascript/base.md',
-          },
-          {
-            text: '浏览器常用方法',
-            link: '/javascript/browser.md',
-          },
-          {
-            text: '正则表达式',
-            link: '/javascript/reg.md',
+            link: '/html/base.md',
           },
         ],
       },
@@ -58,12 +54,16 @@ export default defineUserConfig({
         ],
       },
       {
-        text: 'HTML',
+        text: 'JavaScript',
         collapsible: true,
         children: [
           {
             text: '基础',
-            link: '/html/base.md',
+            link: '/javascript/base.md',
+          },
+          {
+            text: '正则表达式',
+            link: '/javascript/reg.md',
           },
         ],
       },

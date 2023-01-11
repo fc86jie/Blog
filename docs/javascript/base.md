@@ -2,7 +2,7 @@
 
 ### offset
 
-![offset示例图](./images/offset.webp)
+![offset示例图](./images/offset.jpg)
 
 - offsetParent：定位父级
   1. 元素自身有 fixed 定位，offsetParent 的结果为 null
@@ -16,7 +16,7 @@
 - offsetTop：表示元素的上外边框至 offsetParent 元素的上内边框之间的像素距离
 - offsetLeft：表示元素的左外边框至 offsetParent 元素的左内边框之间的像素距离
   ### client
-  ![client示例图](./images/client.webp)
+  ![client示例图](./images/client.jpg)
 - clientWidth：表示元素节点的客户区宽度，clientWidth = padding-left + width + padding-right
 - clientHeight：表示元素节点的客户区高度，clientHeight = padding-top + height + padding-bottom
 - clientLeft：表示左边框的宽度
@@ -29,7 +29,7 @@
 
   ### scroll
 
-  ![scroll示例图](./images/scroll.webp)
+  ![scroll示例图](./images/scroll.jpg)
 
 - scrollWidth：元素的总宽度，包括由于溢出而无法展示在网页的不可见部分
 - scrollHeight：元素的总高度，包括由于溢出而无法展示在网页的不可见部分
@@ -49,7 +49,7 @@
 
 ### MouseEvent
 
-![鼠标事件位置参数](./images/mouseEvent.jpg)
+<img src="./images/mouseEvent.jpg" alt="mouseEvent.jpg" width="80%" />
 
 - altkey：触发鼠标事件时是否 alt 按键被按下,如果按下，则返回 true，否则返回 fasle
 - button：事件属性返回一个阿拉伯数字 ， 0 代表 按下 左键 ，1 代表按下 滚轮 ，2 代表按下 右键
@@ -65,7 +65,7 @@
 有 2 个属性，constructor 属性和\_\_proto\_\_属性。prototype 属性可以给函数和对象添加可共享的（继承）的方法、属性，而
 \_\_proto\_\_是查找某函数或对象的原型链方式。constructor 这个属性包含了一个指针，指回原构造函数。
 
-![prototype 和__proto__关系](./images/prototype---__proto__.png)
+<img src="./images/prototype---__proto__.jpg" alt="prototype---__proto__.jpg" width="80%" >
 
 ### getBoundingClientRect
 
@@ -78,7 +78,7 @@ Element.getBoundingClientRect() 方法返回元素的大小及其相对于视口
 - width：是元素自身的宽（包含了 padding 和 border-width）
 - height：是元素自身的高（包含了 padding 和 border-width）
 
-![getBoundingClientRect](./images/getBoundingClientRect.png)
+<img src="./images/getBoundingClientRect.jpg" alt="getBoundingClientRect.jpg" width="50%" />
 
 ### IntersectionObserver
 
@@ -245,3 +245,5 @@ function myNonEssentialWork(deadline) {
   }
 }
 ```
+
+### 前端模块化：CommonJS,AMD,CMD,ES6

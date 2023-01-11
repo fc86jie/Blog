@@ -1,6 +1,6 @@
-<template><div><nav class="table-of-contents"><ul><li><a href="#offset">offset</a></li><li><a href="#mouseevent">MouseEvent</a></li><li><a href="#prototype-和-proto-关系">prototype 和__proto__关系？</a></li><li><a href="#getboundingclientrect">getBoundingClientRect</a></li><li><a href="#intersectionobserver">IntersectionObserver</a></li><li><a href="#createnodeiterator">createNodeIterator</a></li><li><a href="#getcomputedstyle">getComputedStyle</a></li><li><a href="#requestanimationframe">requestAnimationFrame</a></li><li><a href="#requestidlecallback">requestIdleCallback</a></li></ul></nav>
+<template><div><nav class="table-of-contents"><ul><li><a href="#offset">offset</a></li><li><a href="#mouseevent">MouseEvent</a></li><li><a href="#prototype-和-proto-关系">prototype 和__proto__关系？</a></li><li><a href="#getboundingclientrect">getBoundingClientRect</a></li><li><a href="#intersectionobserver">IntersectionObserver</a></li><li><a href="#createnodeiterator">createNodeIterator</a></li><li><a href="#getcomputedstyle">getComputedStyle</a></li><li><a href="#requestanimationframe">requestAnimationFrame</a></li><li><a href="#requestidlecallback">requestIdleCallback</a></li><li><a href="#前端模块化-commonjs-amd-cmd-es6">前端模块化：CommonJS,AMD,CMD,ES6</a></li></ul></nav>
 <h3 id="offset" tabindex="-1"><a class="header-anchor" href="#offset" aria-hidden="true">#</a> offset</h3>
-<p><img src="@source/javascript/images/offset.webp" alt="offset示例图"></p>
+<p><img src="@source/javascript/images/offset.jpg" alt="offset示例图"></p>
 <ul>
 <li>
 <p>offsetParent：定位父级</p>
@@ -25,7 +25,7 @@ padding-top + height + padding-bottom + border-bottom-width</p>
 <li>
 <p>offsetLeft：表示元素的左外边框至 offsetParent 元素的左内边框之间的像素距离</p>
 <h3 id="client" tabindex="-1"><a class="header-anchor" href="#client" aria-hidden="true">#</a> client</h3>
-<p><img src="@source/javascript/images/client.webp" alt="client示例图"></p>
+<p><img src="@source/javascript/images/client.jpg" alt="client示例图"></p>
 </li>
 <li>
 <p>clientWidth：表示元素节点的客户区宽度，clientWidth = padding-left + width + padding-right</p>
@@ -45,7 +45,7 @@ padding-top + height + padding-bottom + border-bottom-width</p>
 访问，则把它们的值保存在变量中，以提高性能</li>
 </ol>
 <h3 id="scroll" tabindex="-1"><a class="header-anchor" href="#scroll" aria-hidden="true">#</a> scroll</h3>
-<p><img src="@source/javascript/images/scroll.webp" alt="scroll示例图"></p>
+<p><img src="@source/javascript/images/scroll.jpg" alt="scroll示例图"></p>
 </li>
 <li>
 <p>scrollWidth：元素的总宽度，包括由于溢出而无法展示在网页的不可见部分</p>
@@ -78,7 +78,7 @@ document.body.scrollTop 和 scrollLeft 来控制的</li>
 </li>
 </ul>
 <h3 id="mouseevent" tabindex="-1"><a class="header-anchor" href="#mouseevent" aria-hidden="true">#</a> MouseEvent</h3>
-<p><img src="@source/javascript/images/mouseEvent.jpg" alt="鼠标事件位置参数"></p>
+<img src="@source/javascript/images/mouseEvent.jpg" alt="mouseEvent.jpg" width="80%" />
 <ul>
 <li>altkey：触发鼠标事件时是否 alt 按键被按下,如果按下，则返回 true，否则返回 fasle</li>
 <li>button：事件属性返回一个阿拉伯数字 ， 0 代表 按下 左键 ，1 代表按下 滚轮 ，2 代表按下 右键</li>
@@ -92,7 +92,7 @@ document.body.scrollTop 和 scrollLeft 来控制的</li>
 <p>所有对象都有__proto__属性，函数这个特殊对象除了具有__proto__属性，还特有的原型属性 prototype。prototype 对象默认
 有 2 个属性，constructor 属性和__proto__属性。prototype 属性可以给函数和对象添加可共享的（继承）的方法、属性，而
 __proto__是查找某函数或对象的原型链方式。constructor 这个属性包含了一个指针，指回原构造函数。</p>
-<p><img src="@source/javascript/images/prototype---__proto__.png" alt="prototype 和__proto__关系"></p>
+<img src="@source/javascript/images/prototype---__proto__.jpg" alt="prototype---__proto__.jpg" width="80%" >
 <h3 id="getboundingclientrect" tabindex="-1"><a class="header-anchor" href="#getboundingclientrect" aria-hidden="true">#</a> getBoundingClientRect</h3>
 <p>Element.getBoundingClientRect() 方法返回元素的大小及其相对于视口的位置。返回的是一个对象，对象里有这 8 个属性：</p>
 <ul>
@@ -103,7 +103,7 @@ __proto__是查找某函数或对象的原型链方式。constructor 这个属�
 <li>width：是元素自身的宽（包含了 padding 和 border-width）</li>
 <li>height：是元素自身的高（包含了 padding 和 border-width）</li>
 </ul>
-<p><img src="@source/javascript/images/getBoundingClientRect.png" alt="getBoundingClientRect"></p>
+<img src="@source/javascript/images/getBoundingClientRect.jpg" alt="getBoundingClientRect.jpg" width="50%" />
 <h3 id="intersectionobserver" tabindex="-1"><a class="header-anchor" href="#intersectionobserver" aria-hidden="true">#</a> IntersectionObserver</h3>
 <p>IntersectionObserver 接口（从属于 Intersection Observer API）提供了一种异步观察目标元素与其祖先元素或顶级文档视口
 （viewport）交叉状态的方法。其祖先元素或视口被称为根（root）。</p>
@@ -247,6 +247,7 @@ requestIdleCallback 回调的执行的前提条件是当前浏览器处于空闲
     <span class="token function">requestIdleCallback</span><span class="token punctuation">(</span>myNonEssentialWork<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="前端模块化-commonjs-amd-cmd-es6" tabindex="-1"><a class="header-anchor" href="#前端模块化-commonjs-amd-cmd-es6" aria-hidden="true">#</a> 前端模块化：CommonJS,AMD,CMD,ES6</h3>
+</div></template>
 
 
