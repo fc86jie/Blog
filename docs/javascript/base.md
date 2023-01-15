@@ -8,7 +8,7 @@
   1. 元素自身有 fixed 定位，offsetParent 的结果为 null
   2. 元素自身无 fixed 定位，且父元素都没有设置定位，offsetParent 的结果为 body
   3. 元素自身无 fixed 定位，且父级元素存在经过定位的元素，offsetParent 的结果为离自身元素最近的经过定位的父级元素
-  4. \<body\>元素的 offsetParent 是 null
+  4. \<body>元素的 offsetParent 是 null
 - offsetWidth：元素在水平方向上占用的空间大小，无单位(以像素 px 计)，offsetWidth = border-left-width + padding-left +
   width + padding-right + border-right-width;
 - offsetHeight：offsetHeight 表示元素在垂直方向上占用的空间大小，无单位(以像素 px 计)，offsetHeight = border-top-width +
