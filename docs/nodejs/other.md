@@ -44,3 +44,14 @@ const jsonData = require('./a.json');
 ```javascript
 import jsonData from './a.json' assert { type: 'json' };
 ```
+
+### 自动重启 node 服务
+
+使 nodemon 执行 node 文件，当文件变更时会自动重启服务`node index.js`
+
+### 如何在 node 中使用 esm？
+
+在 node 中使用 esm 有 2 种方案：
+
+- 在 package.json 中指定 type: "modules"，表明模块的类型。此时.js 结尾的默认是 esm，cjs 的文件后缀名要变更为.cjs 才能识别
+- 将文件后缀改成.mjs，标明该文件是 esm 模块
