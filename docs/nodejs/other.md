@@ -53,5 +53,20 @@ import jsonData from './a.json' assert { type: 'json' };
 
 在 node 中使用 esm 有 2 种方案：
 
-- 在 package.json 中指定 type: "modules"，表明模块的类型。此时.js 结尾的默认是 esm，cjs 的文件后缀名要变更为.cjs 才能识别
+- 在 package.json 中指定 type: "module"，表明模块的类型。此时.js 结尾的默认是 esm，cjs 的文件后缀名要变更为.cjs 才能识别
 - 将文件后缀改成.mjs，标明该文件是 esm 模块
+
+### node esm 中\_\_filename、\_\_dirname 怎么获取？
+
+```javascript
+// import.meta.url 返回模块的绝对的 `file:` URL。
+// url模块中fileURLToPath()函数，返回完全解析的特定于平台的 Node.js 文件路径
+// path模块中dirname()函数，返回路径的目录路径
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+// import.meta.url：file:///D:/project/vite-learn/dev-server/index.mjs
+// __filename：D:/project/vite-learn/dev-server/index.mjs
+// __dirname：D:/project/vite-learn/dev-server
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+```
