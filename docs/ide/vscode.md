@@ -5,7 +5,7 @@
 ```javascript
 /**
  * 增加下面一行就能导出webpack文件的语法提示
- * @type {import('webpack'.Configuration)}
+ * @type {import('webpack').Configuration)}
  */
 module.exports = {};
 ```
