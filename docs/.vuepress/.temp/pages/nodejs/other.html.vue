@@ -1,4 +1,4 @@
-<template><div><nav class="table-of-contents"><ul><li><a href="#http-server-启动-https-服务">http-server 启动 https 服务</a></li><li><a href="#在-es-模块-node-js-中导入-json-文件">在 ES 模块（Node.js）中导入 JSON 文件</a></li></ul></nav>
+<template><div><nav class="table-of-contents"><ul><li><a href="#http-server-启动-https-服务">http-server 启动 https 服务</a></li><li><a href="#在-es-模块-node-js-中导入-json-文件">在 ES 模块（Node.js）中导入 JSON 文件</a></li><li><a href="#自动重启-node-服务">自动重启 node 服务</a></li><li><a href="#如何在-node-中使用-esm">如何在 node 中使用 esm？</a></li><li><a href="#node-esm-中-filename、-dirname-怎么获取">node esm 中__filename、__dirname 怎么获取？</a></li></ul></nav>
 <h3 id="http-server-启动-https-服务" tabindex="-1"><a class="header-anchor" href="#http-server-启动-https-服务" aria-hidden="true">#</a> http-server 启动 https 服务</h3>
 <ul>
 <li>安装 http-server</li>
@@ -30,6 +30,25 @@
 <li>import Assertions</li>
 </ol>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> jsonData <span class="token keyword">from</span> <span class="token string">'./a.json'</span> <span class="token keyword">assert</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'json'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="自动重启-node-服务" tabindex="-1"><a class="header-anchor" href="#自动重启-node-服务" aria-hidden="true">#</a> 自动重启 node 服务</h3>
+<p>使 nodemon 执行 node 文件，当文件变更时会自动重启服务<code v-pre>node index.js</code></p>
+<h3 id="如何在-node-中使用-esm" tabindex="-1"><a class="header-anchor" href="#如何在-node-中使用-esm" aria-hidden="true">#</a> 如何在 node 中使用 esm？</h3>
+<p>在 node 中使用 esm 有 2 种方案：</p>
+<ul>
+<li>在 package.json 中指定 type: &quot;module&quot;，表明模块的类型。此时.js 结尾的默认是 esm，cjs 的文件后缀名要变更为.cjs 才能识别</li>
+<li>将文件后缀改成.mjs，标明该文件是 esm 模块</li>
+</ul>
+<h3 id="node-esm-中-filename、-dirname-怎么获取" tabindex="-1"><a class="header-anchor" href="#node-esm-中-filename、-dirname-怎么获取" aria-hidden="true">#</a> node esm 中__filename、__dirname 怎么获取？</h3>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// import.meta.url 返回模块的绝对的 `file:` URL。</span>
+<span class="token comment">// url模块中fileURLToPath()函数，返回完全解析的特定于平台的 Node.js 文件路径</span>
+<span class="token comment">// path模块中dirname()函数，返回路径的目录路径</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> fileURLToPath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'url'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> dirname <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+<span class="token comment">// import.meta.url：file:///D:/project/vite-learn/dev-server/index.mjs</span>
+<span class="token comment">// __filename：D:/project/vite-learn/dev-server/index.mjs</span>
+<span class="token comment">// __dirname：D:/project/vite-learn/dev-server</span>
+<span class="token keyword">const</span> __filename <span class="token operator">=</span> <span class="token function">fileURLToPath</span><span class="token punctuation">(</span><span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> __dirname <span class="token operator">=</span> <span class="token function">dirname</span><span class="token punctuation">(</span>__filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
 
 

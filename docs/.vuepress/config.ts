@@ -150,6 +150,16 @@ export default defineUserConfig({
         ],
       },
       {
+        text: 'IDE',
+        collapsible: true,
+        children: [
+          {
+            text: 'VSCODE',
+            link: '/ide/vscode.md',
+          },
+        ],
+      },
+      {
         text: '算法',
         collapsible: true,
         children: [
