@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-01-11 18:28:34
+ * @LastEditTime: 2023-02-06 00:10:32
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
@@ -160,6 +160,16 @@ export default defineUserConfig({
         ],
       },
       {
+        text: '前端架构',
+        collapsible: true,
+        children: [
+          {
+            text: '基础',
+            link: '/framework/base.md',
+          },
+        ],
+      },
+      {
         text: '算法',
         collapsible: true,
         children: [
@@ -170,6 +180,16 @@ export default defineUserConfig({
           {
             text: '十大排序算法',
             link: 'https://github.com/hustcc/JS-Sorting-Algorithm',
+          },
+        ],
+      },
+      {
+        text: '杂项',
+        collapsible: true,
+        children: [
+          {
+            text: '科学上网',
+            link: 'other/surf.md',
           },
         ],
       },

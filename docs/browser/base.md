@@ -133,7 +133,7 @@ webkit 内核浏览器渲染流程如下图所示：
 
 ### 浏览器缓存
 
-![浏览器缓存](./image/../images/cache.png)
+![浏览器缓存](./images/cache.png)
 
 #### 缓存位置
 
