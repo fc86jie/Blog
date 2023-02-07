@@ -170,6 +170,16 @@ export default defineUserConfig({
         ],
       },
       {
+        text: '测试',
+        collapsible: true,
+        children: [
+          {
+            text: '基础',
+            link: '/test/base.md',
+          },
+        ],
+      },
+      {
         text: '算法',
         collapsible: true,
         children: [

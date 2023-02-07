@@ -1,4 +1,4 @@
-<template><div><nav class="table-of-contents"><ul><li><a href="#npm-init">npm init</a></li><li><a href="#npx">npx</a></li><li><a href="#package-json-中包的版本控制">package.json 中包的版本控制</a></li></ul></nav>
+<template><div><nav class="table-of-contents"><ul><li><a href="#npm-init">npm init</a></li><li><a href="#npx">npx</a></li><li><a href="#package-json-中包的版本控制">package.json 中包的版本控制</a></li><li><a href="#npm-pack">npm pack</a></li></ul></nav>
 <h3 id="npm-init" tabindex="-1"><a class="header-anchor" href="#npm-init" aria-hidden="true">#</a> npm init</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">npm</span> init 包名 等效于 npx create-包名
 <span class="token function">npm</span> init @命名空间 等效于 npx @命名空间/create
@@ -18,7 +18,7 @@
 <ol>
 <li>版本说明：
 <blockquote>
-<p>主版本号.次版本号.修补版本号 major.minor.patch</p>
+<p>主版本号.次版本号.修补版本号-预发号 major.minor.patch-pre</p>
 </blockquote>
 </li>
 </ol>
@@ -63,6 +63,17 @@
 <p><strong>*</strong>：表示最新的版本，以上面的 vite 和 vue 为例，它们都是去获取最新的版本。</p>
 </li>
 </ul>
+<ol start="3">
+<li>更新版本号，使用<code v-pre>npm version</code>命令
+<ul>
+<li><code v-pre>npm version major -m &quot;description&quot;</code>：变更主版本，例如<code v-pre>1.0.0</code>-&gt;<code v-pre>2.0.0</code></li>
+<li><code v-pre>npm version minor -m &quot;description&quot;</code>：变更次版本，例如<code v-pre>1.0.0</code>-&gt;<code v-pre>1.1.0</code></li>
+<li><code v-pre>npm version patch -m &quot;description&quot;</code>：变更补丁版本，例如<code v-pre>1.0.0</code>-&gt;<code v-pre>1.0.1</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="npm-pack" tabindex="-1"><a class="header-anchor" href="#npm-pack" aria-hidden="true">#</a> npm pack</h3>
+<p>执行命令会在当前目录下生成一个 x.tgz 的压缩包（x-nrm-1.0.0.tgz）,该包可以通过<code v-pre>npm install -g ./x.tgz</code>安装到全局，<code v-pre>package.json</code>中的 bin 配置中的命令就会变成命令行工具的命令，执行命令会执行相应的代码</p>
 </div></template>
 
 

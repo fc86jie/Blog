@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-01a49aa4","path":"/test/base.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[{"level":3,"title":"jest 支持 esm 测试","slug":"jest-支持-esm-测试","link":"#jest-支持-esm-测试","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"test/base.md"}');export{e as data};

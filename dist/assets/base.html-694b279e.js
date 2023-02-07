@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-21a2f63e","path":"/framework/base.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[{"level":3,"title":"架构分级","slug":"架构分级","link":"#架构分级","children":[]}],"git":{"updatedTime":1675613452000,"contributors":[{"name":"fc86jie","email":"wangrenjie86@gmail.com","commits":1}]},"filePathRelative":"framework/base.md"}');export{e as data};

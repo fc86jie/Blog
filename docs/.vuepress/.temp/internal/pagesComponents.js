@@ -3,14 +3,14 @@ import { defineAsyncComponent } from 'vue'
 export const pagesComponents = {
   // path: /
   "v-8daa1a0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"D:/project/Blog/docs/.vuepress/.temp/pages/index.html.vue")),
-  // path: /css/base.html
-  "v-531c1d43": defineAsyncComponent(() => import(/* webpackChunkName: "v-531c1d43" */"D:/project/Blog/docs/.vuepress/.temp/pages/css/base.html.vue")),
   // path: /browser/base.html
   "v-6f859eb0": defineAsyncComponent(() => import(/* webpackChunkName: "v-6f859eb0" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/base.html.vue")),
-  // path: /electron/base.html
-  "v-3b0d6374": defineAsyncComponent(() => import(/* webpackChunkName: "v-3b0d6374" */"D:/project/Blog/docs/.vuepress/.temp/pages/electron/base.html.vue")),
   // path: /framework/base.html
   "v-21a2f63e": defineAsyncComponent(() => import(/* webpackChunkName: "v-21a2f63e" */"D:/project/Blog/docs/.vuepress/.temp/pages/framework/base.html.vue")),
+  // path: /css/base.html
+  "v-531c1d43": defineAsyncComponent(() => import(/* webpackChunkName: "v-531c1d43" */"D:/project/Blog/docs/.vuepress/.temp/pages/css/base.html.vue")),
+  // path: /electron/base.html
+  "v-3b0d6374": defineAsyncComponent(() => import(/* webpackChunkName: "v-3b0d6374" */"D:/project/Blog/docs/.vuepress/.temp/pages/electron/base.html.vue")),
   // path: /html/base.html
   "v-e0c5db06": defineAsyncComponent(() => import(/* webpackChunkName: "v-e0c5db06" */"D:/project/Blog/docs/.vuepress/.temp/pages/html/base.html.vue")),
   // path: /ide/vscode.html
@@ -35,6 +35,8 @@ export const pagesComponents = {
   "v-2e4c22b2": defineAsyncComponent(() => import(/* webpackChunkName: "v-2e4c22b2" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/hooks.html.vue")),
   // path: /react/router.html
   "v-18e7fcc7": defineAsyncComponent(() => import(/* webpackChunkName: "v-18e7fcc7" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/router.html.vue")),
+  // path: /test/base.html
+  "v-01a49aa4": defineAsyncComponent(() => import(/* webpackChunkName: "v-01a49aa4" */"D:/project/Blog/docs/.vuepress/.temp/pages/test/base.html.vue")),
   // path: /typescript/link.html
   "v-1ee8688e": defineAsyncComponent(() => import(/* webpackChunkName: "v-1ee8688e" */"D:/project/Blog/docs/.vuepress/.temp/pages/typescript/link.html.vue")),
   // path: /vue/other.html

@@ -22,7 +22,7 @@ npm create是 npm init 的别名
 ### package.json 中包的版本控制
 
 1. 版本说明：
-   > 主版本号.次版本号.修补版本号 major.minor.patch
+   > 主版本号.次版本号.修补版本号-预发号 major.minor.patch-pre
 
 - **major**：主要版本，新的架构调整，不兼容老版本
 - **minor**：次要版本，新增功能，兼容老版本
@@ -53,3 +53,12 @@ npm create是 npm init 的别名
 
 - **空**：没有任何符号表示版本锁死了，就是指定的这个版本。以上面的 vue-cli 为例，主版本号、次版本号、补丁号都确定了。
 - **\***：表示最新的版本，以上面的 vite 和 vue 为例，它们都是去获取最新的版本。
+
+3. 更新版本号，使用`npm version`命令
+   - `npm version major -m "description"`：变更主版本，例如`1.0.0`->`2.0.0`
+   - `npm version minor -m "description"`：变更次版本，例如`1.0.0`->`1.1.0`
+   - `npm version patch -m "description"`：变更补丁版本，例如`1.0.0`->`1.0.1`
+
+### npm pack
+
+执行命令会在当前目录下生成一个 x.tgz 的压缩包（x-nrm-1.0.0.tgz）,该包可以通过`npm install -g ./x.tgz`安装到全局，`package.json`中的 bin 配置中的命令就会变成命令行工具的命令，执行命令会执行相应的代码
