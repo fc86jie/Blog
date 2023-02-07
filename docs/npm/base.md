@@ -54,7 +54,7 @@ npm create是 npm init 的别名
 - **空**：没有任何符号表示版本锁死了，就是指定的这个版本。以上面的 vue-cli 为例，主版本号、次版本号、补丁号都确定了。
 - **\***：表示最新的版本，以上面的 vite 和 vue 为例，它们都是去获取最新的版本。
 
-3. 更新版本号，使用`npm version`命令
+3. 更新版本号，使用`npm version`命令，执行该命令会同时执行 commit 操作
    - `npm version major -m "description"`：变更主版本，例如`1.0.0`->`2.0.0`
    - `npm version minor -m "description"`：变更次版本，例如`1.0.0`->`1.1.0`
    - `npm version patch -m "description"`：变更补丁版本，例如`1.0.0`->`1.0.1`
