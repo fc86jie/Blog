@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-02-14 13:20:23
+ * @LastEditTime: 2023-02-14 13:41:37
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
@@ -203,7 +203,7 @@ export default defineUserConfig({
         children: [
           {
             text: '科学上网',
-            link: 'other/surf.md',
+            link: '/other/surf.md',
           },
         ],
       },
