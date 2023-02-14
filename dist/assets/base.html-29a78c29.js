@@ -1,0 +1,1 @@
+import{_ as t,p as s,q as c,R as e}from"./framework-96b046e1.js";const o={},a=e("nav",{class:"table-of-contents"},[e("ul")],-1),n=[a];function _(l,r){return s(),c("div",null,n)}const d=t(o,[["render",_],["__file","base.html.vue"]]);export{d as default};

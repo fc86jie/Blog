@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-5c12e78e","path":"/javascript/reg.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[{"level":3,"title":"正则表达式小结","slug":"正则表达式小结","link":"#正则表达式小结","children":[]}],"git":{"updatedTime":1676349138000,"contributors":[{"name":"fc86jie","email":"wangrenjie86@gmail.com","commits":4}]},"filePathRelative":"javascript/reg.md"}');export{e as data};
