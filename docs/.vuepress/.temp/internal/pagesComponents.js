@@ -1,6 +1,8 @@
 import { defineAsyncComponent } from 'vue'
 
 export const pagesComponents = {
+  // path: /
+  "v-8daa1a0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"D:/project/Blog/docs/.vuepress/.temp/pages/index.html.vue")),
   // path: /browser/base.html
   "v-6f859eb0": defineAsyncComponent(() => import(/* webpackChunkName: "v-6f859eb0" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/base.html.vue")),
   // path: /css/base.html
@@ -23,10 +25,10 @@ export const pagesComponents = {
   "v-24bab858": defineAsyncComponent(() => import(/* webpackChunkName: "v-24bab858" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/link.html.vue")),
   // path: /nodejs/other.html
   "v-72b54898": defineAsyncComponent(() => import(/* webpackChunkName: "v-72b54898" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/other.html.vue")),
-  // path: /npm/base.html
-  "v-036777aa": defineAsyncComponent(() => import(/* webpackChunkName: "v-036777aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/npm/base.html.vue")),
   // path: /other/surf.html
   "v-df20c3aa": defineAsyncComponent(() => import(/* webpackChunkName: "v-df20c3aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/other/surf.html.vue")),
+  // path: /npm/base.html
+  "v-036777aa": defineAsyncComponent(() => import(/* webpackChunkName: "v-036777aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/npm/base.html.vue")),
   // path: /react/base.html
   "v-33e27bff": defineAsyncComponent(() => import(/* webpackChunkName: "v-33e27bff" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/base.html.vue")),
   // path: /react/hooks.html

@@ -1,4 +1,6 @@
 export const pagesData = {
+  // path: /
+  "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"D:/project/Blog/docs/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
   // path: /browser/base.html
   "v-6f859eb0": () => import(/* webpackChunkName: "v-6f859eb0" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/base.html.js").then(({ data }) => data),
   // path: /css/base.html
@@ -21,10 +23,10 @@ export const pagesData = {
   "v-24bab858": () => import(/* webpackChunkName: "v-24bab858" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/link.html.js").then(({ data }) => data),
   // path: /nodejs/other.html
   "v-72b54898": () => import(/* webpackChunkName: "v-72b54898" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/other.html.js").then(({ data }) => data),
-  // path: /npm/base.html
-  "v-036777aa": () => import(/* webpackChunkName: "v-036777aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/npm/base.html.js").then(({ data }) => data),
   // path: /other/surf.html
   "v-df20c3aa": () => import(/* webpackChunkName: "v-df20c3aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/other/surf.html.js").then(({ data }) => data),
+  // path: /npm/base.html
+  "v-036777aa": () => import(/* webpackChunkName: "v-036777aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/npm/base.html.js").then(({ data }) => data),
   // path: /react/base.html
   "v-33e27bff": () => import(/* webpackChunkName: "v-33e27bff" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/base.html.js").then(({ data }) => data),
   // path: /react/hooks.html
