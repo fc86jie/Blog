@@ -7,10 +7,10 @@ export const pagesData = {
   "v-531c1d43": () => import(/* webpackChunkName: "v-531c1d43" */"D:/project/Blog/docs/.vuepress/.temp/pages/css/base.html.js").then(({ data }) => data),
   // path: /electron/base.html
   "v-3b0d6374": () => import(/* webpackChunkName: "v-3b0d6374" */"D:/project/Blog/docs/.vuepress/.temp/pages/electron/base.html.js").then(({ data }) => data),
-  // path: /framework/base.html
-  "v-21a2f63e": () => import(/* webpackChunkName: "v-21a2f63e" */"D:/project/Blog/docs/.vuepress/.temp/pages/framework/base.html.js").then(({ data }) => data),
   // path: /html/base.html
   "v-e0c5db06": () => import(/* webpackChunkName: "v-e0c5db06" */"D:/project/Blog/docs/.vuepress/.temp/pages/html/base.html.js").then(({ data }) => data),
+  // path: /framework/base.html
+  "v-21a2f63e": () => import(/* webpackChunkName: "v-21a2f63e" */"D:/project/Blog/docs/.vuepress/.temp/pages/framework/base.html.js").then(({ data }) => data),
   // path: /ide/vscode.html
   "v-ecb1561e": () => import(/* webpackChunkName: "v-ecb1561e" */"D:/project/Blog/docs/.vuepress/.temp/pages/ide/vscode.html.js").then(({ data }) => data),
   // path: /javascript/base.html
@@ -33,10 +33,10 @@ export const pagesData = {
   "v-2e4c22b2": () => import(/* webpackChunkName: "v-2e4c22b2" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/hooks.html.js").then(({ data }) => data),
   // path: /react/router.html
   "v-18e7fcc7": () => import(/* webpackChunkName: "v-18e7fcc7" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/router.html.js").then(({ data }) => data),
-  // path: /test/base.html
-  "v-01a49aa4": () => import(/* webpackChunkName: "v-01a49aa4" */"D:/project/Blog/docs/.vuepress/.temp/pages/test/base.html.js").then(({ data }) => data),
   // path: /typescript/link.html
   "v-1ee8688e": () => import(/* webpackChunkName: "v-1ee8688e" */"D:/project/Blog/docs/.vuepress/.temp/pages/typescript/link.html.js").then(({ data }) => data),
+  // path: /test/base.html
+  "v-01a49aa4": () => import(/* webpackChunkName: "v-01a49aa4" */"D:/project/Blog/docs/.vuepress/.temp/pages/test/base.html.js").then(({ data }) => data),
   // path: /vue/other.html
   "v-afbd21aa": () => import(/* webpackChunkName: "v-afbd21aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/vue/other.html.js").then(({ data }) => data),
   // path: /404.html
