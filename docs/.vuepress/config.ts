@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-02-06 00:10:32
+ * @LastEditTime: 2023-02-14 13:20:23
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
@@ -150,12 +150,16 @@ export default defineUserConfig({
         ],
       },
       {
-        text: 'IDE',
+        text: '工具',
         collapsible: true,
         children: [
           {
             text: 'VSCODE',
-            link: '/ide/vscode.md',
+            link: '/tools/vscode.md',
+          },
+          {
+            text: 'GIT',
+            link: '/tools/git.md',
           },
         ],
       },
