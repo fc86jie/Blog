@@ -171,6 +171,10 @@ export default defineUserConfig({
             text: '基础',
             link: '/framework/base.md',
           },
+          {
+            text: '监控',
+            link: '/framework/monitor.md',
+          },
         ],
       },
       {
