@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-67462264\",\"path\":\"/nodejs/cli.html\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":3,\"title\":\"脚手架常用 package\",\"slug\":\"脚手架常用-package\",\"link\":\"#脚手架常用-package\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"nodejs/cli.md\"}")

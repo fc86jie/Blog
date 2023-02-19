@@ -192,6 +192,10 @@ export default defineUserConfig({
         collapsible: true,
         children: [
           {
+            text: '基础',
+            link: '/algorithm/base.md',
+          },
+          {
             text: 'LeetCode 刷题攻略',
             link: 'https://github.com/youngyangyang04/leetcode-master',
           },
