@@ -335,3 +335,109 @@ function oneMinIndex(arr) {
   return arr[l] < arr[r] ? l : r;
 }
 ```
+
+### 单链表
+
+```javascript
+// 节点
+class Node {
+  constructor(element) {
+    this.element = element;
+    this.next = null;
+  }
+}
+// 单链表
+class SingleLinkedList {
+  constructor() {
+    this.size = 0;
+    this.head = null;
+  }
+  // 新增一个节点
+  add(element) {
+    let node = new Node(element);
+    if (this.head === null) {
+      this.head = node;
+    } else {
+      let lastNode = this.getNode(this.size - 1);
+      lastNode.next = node;
+    }
+    this.size++;
+  }
+  // 指定位置新增
+  addAt(pos, element) {
+    if (pos < 0 || pos > this.size) {
+      throw new Error('addAt pos out range');
+    }
+
+    let node = new Node(element);
+
+    // 在头部添加
+    if (pos === 0) {
+      node.next = this.head;
+      this.head = node;
+    } else {
+      // 在中间、尾部添加
+      let prev = this.getNode(pos - 1);
+      node.next = prev.next;
+      prev.next = node;
+    }
+    this.size++;
+  }
+  // 删除指定位置的节点
+  deleteAt(pos) {
+    if (pos < 0 || pos >= this.size) {
+      throw new Error('deleteAt pos out range');
+    }
+
+    let temp = this.head;
+    if (pos === 0) {
+      this.head = temp.next;
+    } else {
+      let prev = this.getNode(pos - 1);
+      let cur = prev.next;
+      prev.next = cur.next;
+    }
+    this.size--;
+  }
+  // 查找制定节点的位置
+  indexOf(element) {
+    let temp = this.head;
+    let i = 0;
+    while (i < this.size) {
+      if (temp.element === element) {
+        return i;
+      }
+      temp = temp.next;
+      i++;
+    }
+    return -1;
+  }
+  // 根据位置查找node
+  getNode(pos) {
+    if (pos < 0 || pos >= this.size) {
+      throw new Error('getNode pos out range');
+    }
+    let temp = this.head;
+    let i = 0;
+    while (i < pos) {
+      temp = temp.next;
+      i++;
+    }
+
+    return temp;
+  }
+  // 反转链表
+  reverse() {
+    let temp = this.head;
+    let next = null;
+    let prev = null;
+    while (temp) {
+      next = temp.next;
+      temp.next = prev;
+      prev = temp;
+      temp = next;
+    }
+    this.head = prev;
+  }
+}
+```
