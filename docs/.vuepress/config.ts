@@ -51,6 +51,10 @@ export default defineUserConfig({
             text: '基础',
             link: '/css/base.md',
           },
+          {
+            text: 'SASS',
+            link: '/css/scss.md',
+          },
         ],
       },
       {
