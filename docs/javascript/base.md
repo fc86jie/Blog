@@ -246,4 +246,122 @@ function myNonEssentialWork(deadline) {
 }
 ```
 
-### 前端模块化：CommonJS,AMD,CMD,ES6
+### 前端模块化：CommonJS,ESM
+
+- CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。
+- CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。
+
+### toString()和 valueOf()
+
+- `toString`：返回一个表示该对象的字符串，当对象表示为文本值或以期望的字符串方式被引用时，toString 方法被自动调用。
+- `valueOf`：返回当前对象的原始值
+- `[Symbol.toPrimitive]`：是一个内置的 Symbol 值，它是作为对象的函数值属性存在的，当一个对象转换为对应的原始值时，会调用此函数。
+
+1. 在进行对象转换时，将优先调用 toString 方法，如若没有重写 toString，将调用 valueOf 方法；如果两个方法都没有重写，则按 Object 的 toString 输出。
+2. 在进行强转字符串类型时，将优先调用 toString 方法，强转为数字时优先调用 valueOf。
+3. 使用运算操作符的情况下，valueOf 的优先级高于 toString。
+4. `[Symbol.toPrimitive]`优先级高于`valueOf`和`toString`，此方法不兼容 IE
+5. `[Symbol.toPrimitive]`函数被调用时，会被传递一个字符串参数 hint，表示当前运算的模式，一共有三种模式：
+   - string：字符串类型
+   - number：数字类型
+   - default：默认
+
+```javascript
+class A {
+  constructor(count) {
+    this.count = count;
+  }
+  valueOf() {
+    return 2;
+  }
+  toString() {
+    return '哈哈哈';
+  }
+  [Symbol.toPrimitive](hint) {
+    if (hint == 'number') {
+      return 10;
+    }
+    if (hint == 'string') {
+      return 'Hello Libai';
+    }
+    return true;
+  }
+}
+
+const a = new A(10);
+
+console.log(`${a}`); // 'Hello Libai' => (hint == "string")
+console.log(String(a)); // 'Hello Libai' => (hint == "string")
+console.log(+a); // 10            => (hint == "number")
+console.log(a * 20); // 200           => (hint == "number")
+console.log(a / 20); // 0.5           => (hint == "number")
+console.log(Number(a)); // 10            => (hint == "number")
+console.log(a + '22'); // 'true22'      => (hint == "default")
+console.log(a == 10); // false        => (hint == "default")
+```
+
+### this 指向
+
+- 默认绑定规则
+
+  ```javascript
+  console.log(this === window); // true
+  // 函数独立调用，指向window
+  function func() {
+    console.log(this === window); // true
+  }
+  ```
+
+- 隐式调用规则，谁调用指向谁
+
+  ```javascript
+  let i = 0;
+  let obj = {
+    i: 1,
+    func() {
+      console.log(this);
+      function test() {
+        console.log(this);
+      }
+      // 函数独立调用，指向window
+      test();
+    },
+  };
+
+  obj.func(); // this===obj
+  ```
+
+- 显示绑定：bind、call、apply
+
+  ```javascript
+  let obj = {
+    i: 1,
+    func(a, b) {
+      console.log(this);
+    },
+  };
+
+  let bar = obj.func;
+
+  obj.func(1, 2); // obj
+  bar(1, 2); // window
+  obj.call(obj, 1, 2); // obj
+  obj.apply(obj, [1, 2]); // obj
+  obj.bind(obj)(1, 2); // obj
+  obj.call(null, 1, 2); // window
+  obj.call(undefined, 1, 2); // window
+  ```
+
+- new 绑定
+
+```javascript
+function Person() {
+  this.name = 'zs';
+  console.log(this);
+}
+let p1 = new Person(); // this指向p1
+```
+
+::: warning 优先级
+new>显示绑定>隐式绑定>默认绑定
+:::
