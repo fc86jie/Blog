@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@mdit-vue/plugin-toc': ^0.11.2
   '@vuepress/client': 2.0.0-beta.60
+  '@vuepress/plugin-search': 2.0.0-beta.60
   markdown-it-container: ^3.0.0
   vue: ^3.2.45
   vuepress: 2.0.0-beta.60
@@ -10,6 +11,7 @@ specifiers:
 devDependencies:
   '@mdit-vue/plugin-toc': 0.11.2
   '@vuepress/client': 2.0.0-beta.60
+  '@vuepress/plugin-search': 2.0.0-beta.60
   markdown-it-container: 3.0.0
   vue: 3.2.45
   vuepress: 2.0.0-beta.60_dlgznq46b2nyvtu5wqobknojfm
@@ -659,6 +661,20 @@ packages:
     dependencies:
       '@vuepress/core': 2.0.0-beta.60
       prismjs: 1.29.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@vuepress/plugin-search/2.0.0-beta.60:
+    resolution: {integrity: sha512-9ENqni4H35/L6vab5DpQfy92DcKPL+36xxoOj1EqZfjU/IlIOFKz4TK8JwhaX+reswokF8NriPFcWol4xIa5IA==}
+    dependencies:
+      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/core': 2.0.0-beta.60
+      '@vuepress/shared': 2.0.0-beta.60
+      '@vuepress/utils': 2.0.0-beta.60
+      chokidar: 3.5.3
+      vue: 3.2.45
+      vue-router: 4.1.6_vue@3.2.45
     transitivePeerDependencies:
       - supports-color
     dev: true

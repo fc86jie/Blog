@@ -2,12 +2,13 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-02-14 13:41:37
+ * @LastEditTime: 2023-02-25 20:21:30
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
 
 import { tocPlugin } from '@mdit-vue/plugin-toc';
+import { searchPlugin } from '@vuepress/plugin-search';
 import mdItContainer from 'markdown-it-container';
 import { defaultTheme, defineUserConfig } from 'vuepress';
 
@@ -21,7 +22,13 @@ export default defineUserConfig({
     md.use(mdItContainer);
     md.use(tocPlugin);
   },
+  plugins: [
+    searchPlugin({
+      // 配置项
+    }),
+  ],
   theme: defaultTheme({
+    colorModeSwitch: true,
     // 主题配置
     sidebar: [
       // 左侧导航
