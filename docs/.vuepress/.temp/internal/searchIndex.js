@@ -19,70 +19,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "选择排序",
-        "slug": "选择排序",
-        "link": "#选择排序",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "冒泡排序",
-        "slug": "冒泡排序",
-        "link": "#冒泡排序",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "插入排序",
-        "slug": "插入排序",
-        "link": "#插入排序",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "高频率查询数组从 L~R 位置的累加和",
-        "slug": "高频率查询数组从-l-r-位置的累加和",
-        "link": "#高频率查询数组从-l-r-位置的累加和",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Math.random()算法应用",
-        "slug": "math-random-算法应用",
-        "link": "#math-random-算法应用",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "二分法",
-        "slug": "二分法",
-        "link": "#二分法",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "单链表",
-        "slug": "单链表",
-        "link": "#单链表",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "双链表",
-        "slug": "双链表",
-        "link": "#双链表",
-        "children": []
-      }
-    ],
-    "path": "/algorithm/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "浏览器渲染原理",
         "slug": "浏览器渲染原理",
         "link": "#浏览器渲染原理",
@@ -118,49 +54,6 @@ export const searchIndex = [
     "title": "",
     "headers": [],
     "path": "/browser/link.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Electron 安装",
-        "slug": "electron-安装",
-        "link": "#electron-安装",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "windows 下控制台中文乱码问题",
-        "slug": "windows-下控制台中文乱码问题",
-        "link": "#windows-下控制台中文乱码问题",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "打包",
-        "slug": "打包",
-        "link": "#打包",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中使用 nodejs",
-        "slug": "在渲染进程中使用-nodejs",
-        "link": "#在渲染进程中使用-nodejs",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中打开新窗口",
-        "slug": "在渲染进程中打开新窗口",
-        "link": "#在渲染进程中打开新窗口",
-        "children": []
-      }
-    ],
-    "path": "/electron/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -240,6 +133,113 @@ export const searchIndex = [
       }
     ],
     "path": "/css/scss.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "选择排序",
+        "slug": "选择排序",
+        "link": "#选择排序",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "冒泡排序",
+        "slug": "冒泡排序",
+        "link": "#冒泡排序",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "插入排序",
+        "slug": "插入排序",
+        "link": "#插入排序",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "高频率查询数组从 L~R 位置的累加和",
+        "slug": "高频率查询数组从-l-r-位置的累加和",
+        "link": "#高频率查询数组从-l-r-位置的累加和",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Math.random()算法应用",
+        "slug": "math-random-算法应用",
+        "link": "#math-random-算法应用",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "二分法",
+        "slug": "二分法",
+        "link": "#二分法",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "单链表",
+        "slug": "单链表",
+        "link": "#单链表",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "双链表",
+        "slug": "双链表",
+        "link": "#双链表",
+        "children": []
+      }
+    ],
+    "path": "/algorithm/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Electron 安装",
+        "slug": "electron-安装",
+        "link": "#electron-安装",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "windows 下控制台中文乱码问题",
+        "slug": "windows-下控制台中文乱码问题",
+        "link": "#windows-下控制台中文乱码问题",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "打包",
+        "slug": "打包",
+        "link": "#打包",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中使用 nodejs",
+        "slug": "在渲染进程中使用-nodejs",
+        "link": "#在渲染进程中使用-nodejs",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中打开新窗口",
+        "slug": "在渲染进程中打开新窗口",
+        "link": "#在渲染进程中打开新窗口",
+        "children": []
+      }
+    ],
+    "path": "/electron/base.html",
     "pathLocale": "/",
     "extraFields": []
   },

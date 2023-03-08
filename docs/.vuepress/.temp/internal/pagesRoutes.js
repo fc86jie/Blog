@@ -1,11 +1,11 @@
 export const pagesRoutes = [
   ["v-8daa1a0e","/",{"title":""},["/index.html","/README.md"]],
-  ["v-3723c122","/algorithm/base.html",{"title":""},["/algorithm/base","/algorithm/base.md"]],
   ["v-6f859eb0","/browser/base.html",{"title":""},["/browser/base","/browser/base.md"]],
   ["v-589e4dc2","/browser/link.html",{"title":""},["/browser/link","/browser/link.md"]],
-  ["v-3b0d6374","/electron/base.html",{"title":""},["/electron/base","/electron/base.md"]],
   ["v-531c1d43","/css/base.html",{"title":""},["/css/base","/css/base.md"]],
   ["v-134daec4","/css/scss.html",{"title":""},["/css/scss","/css/scss.md"]],
+  ["v-3723c122","/algorithm/base.html",{"title":""},["/algorithm/base","/algorithm/base.md"]],
+  ["v-3b0d6374","/electron/base.html",{"title":""},["/electron/base","/electron/base.md"]],
   ["v-21a2f63e","/framework/base.html",{"title":""},["/framework/base","/framework/base.md"]],
   ["v-2ad03a69","/framework/monitor.html",{"title":""},["/framework/monitor","/framework/monitor.md"]],
   ["v-e0c5db06","/html/base.html",{"title":""},["/html/base","/html/base.md"]],
