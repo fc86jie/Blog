@@ -329,6 +329,29 @@ console.log(a == 10); // false        => (hint == "default")
   };
 
   obj.func(); // this===obj
+
+  // 有难度
+  function fn() {
+    console.log(this); // this === list
+  }
+  let list = [fn, 1, 2, 3, 4];
+  list[0]();
+
+  var length = 1; // 此处测试时不能使用let，否则window调用时length是undefined
+  function fn() {
+    console.log(this.length);
+  }
+  let obj = {
+    length: 100,
+    action(callback) {
+      // fn中的this===window，this.length === window.length === 1
+      callback();
+      // fn内的this===arguments, this.length === arguments.length === 5
+      arguments[0]();
+    },
+  };
+  let arr = [1, 2, 3, 4];
+  obj.action(fn, ...arr);
   ```
 
 - 显示绑定：bind、call、apply

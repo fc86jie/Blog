@@ -1,6 +1,6 @@
 <template><div><nav class="table-of-contents"><ul><li><a href="#微信小程序登录流程">微信小程序登录流程</a></li></ul></nav>
 <h3 id="微信小程序登录流程" tabindex="-1"><a class="header-anchor" href="#微信小程序登录流程" aria-hidden="true">#</a> 微信小程序登录流程</h3>
-<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html" target="_blank" rel="noopener noreferrer"><img src="@source/miniprogram/images/api-login.jpg" alt="微信小程序登录流程图"><ExternalLinkIcon/></a></p>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html" target="_blank" rel="noopener noreferrer"><img src="@source/miniProgram/images/api-login.jpg" alt="微信小程序登录流程图"><ExternalLinkIcon/></a></p>
 <ul>
 <li>部分字段解释如下：</li>
 </ul>

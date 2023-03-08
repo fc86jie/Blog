@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-02-25 20:21:30
+ * @LastEditTime: 2023-02-27 21:43:28
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
@@ -38,7 +38,17 @@ export default defineUserConfig({
       },
       {
         text: '浏览器相关',
-        link: '/browser/base.md',
+        collapsible: true,
+        children: [
+          {
+            text: '基础',
+            link: '/browser/base.md',
+          },
+          {
+            text: '链接相关',
+            link: '/browser/link.md',
+          },
+        ],
       },
       {
         text: 'HTML',
@@ -107,6 +117,10 @@ export default defineUserConfig({
         collapsible: true,
         children: [
           {
+            text: '基础',
+            link: '/typescript/base.md',
+          },
+          {
             text: '链接相关',
             link: '/typescript/link.md',
           },
@@ -141,12 +155,16 @@ export default defineUserConfig({
         ],
       },
       {
-        text: '微信小程序',
+        text: '小程序',
         collapsible: true,
         children: [
           {
             text: '基础',
-            link: '/miniprogram/base.md',
+            link: '/miniProgram/base.md',
+          },
+          {
+            text: 'uni-app',
+            link: '/miniProgram/uniApp.md',
           },
         ],
       },

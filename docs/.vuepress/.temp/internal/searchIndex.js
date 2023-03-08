@@ -116,6 +116,56 @@ export const searchIndex = [
   },
   {
     "title": "",
+    "headers": [],
+    "path": "/browser/link.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Electron 安装",
+        "slug": "electron-安装",
+        "link": "#electron-安装",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "windows 下控制台中文乱码问题",
+        "slug": "windows-下控制台中文乱码问题",
+        "link": "#windows-下控制台中文乱码问题",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "打包",
+        "slug": "打包",
+        "link": "#打包",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中使用 nodejs",
+        "slug": "在渲染进程中使用-nodejs",
+        "link": "#在渲染进程中使用-nodejs",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中打开新窗口",
+        "slug": "在渲染进程中打开新窗口",
+        "link": "#在渲染进程中打开新窗口",
+        "children": []
+      }
+    ],
+    "path": "/electron/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
     "headers": [
       {
         "level": 3,
@@ -190,49 +240,6 @@ export const searchIndex = [
       }
     ],
     "path": "/css/scss.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Electron 安装",
-        "slug": "electron-安装",
-        "link": "#electron-安装",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "windows 下控制台中文乱码问题",
-        "slug": "windows-下控制台中文乱码问题",
-        "link": "#windows-下控制台中文乱码问题",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "打包",
-        "slug": "打包",
-        "link": "#打包",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中使用 nodejs",
-        "slug": "在渲染进程中使用-nodejs",
-        "link": "#在渲染进程中使用-nodejs",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中打开新窗口",
-        "slug": "在渲染进程中打开新窗口",
-        "link": "#在渲染进程中打开新窗口",
-        "children": []
-      }
-    ],
-    "path": "/electron/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -398,7 +405,22 @@ export const searchIndex = [
         "children": []
       }
     ],
-    "path": "/miniprogram/base.html",
+    "path": "/miniProgram/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "uni-app 中 swiper 组件遇到的问题",
+        "slug": "uni-app-中-swiper-组件遇到的问题",
+        "link": "#uni-app-中-swiper-组件遇到的问题",
+        "children": []
+      }
+    ],
+    "path": "/miniProgram/uniApp.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -731,6 +753,28 @@ export const searchIndex = [
       }
     ],
     "path": "/tools/vscode.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "数据类型",
+        "slug": "数据类型",
+        "link": "#数据类型",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "泛型",
+        "slug": "泛型",
+        "link": "#泛型",
+        "children": []
+      }
+    ],
+    "path": "/typescript/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
