@@ -3,7 +3,12 @@
 ### jsx 语法规则
 
 1. 定义虚拟 DOM 时，不要写引号
-2. 标签中混入 JS 表达式是要用{}
+2. 标签中混入 JS 表达式是要用{}，
+   1. js 表达式包含变量/值、数学运算、三元运算符、数组迭代方法 map 等
+   2. {}中放入 number/string 时，值是什么就渲染成什么
+   3. {}中放入 boolean/null/undefined/Symbol/BigInt,渲染内容是空
+   4. {}中放入数组，会把每一项分别拿出来渲染
+   5. 除了数组对象外，一般对象都不支持渲染。（虚拟 dom 对象和 style 除外）
 3. 样式的类名指定使用 className，不要用 class
 4. 内联样式，要用 style={ {key:value} }写法<!--遇到双花括号要在中间加入空格，否则会报错-->
 5. 虚拟 DOM 只有一个根标签
@@ -11,11 +16,13 @@
 7. 标签首字符
    1. 若小写字母开头，则将该标签转化为 html 中同名元素，若 html 中无对应的同名元素，则报错
    2. 若大写字符开头，react 就去渲染对应的组件，若组件没定义，则报错
+8. `ReactDOM.createRoot()` 不能使用 HTML/BODY 根容器作为 root
+9. vscode 对 jsx 语法的支持，把 js 文件后缀名变更为 jsx 即可
 
 ```javascript
 const Id = 'container';
 const data = 'Hello';
-const VDOM = (
+const vDom = (
   <div>
     <h1 className="title" id={Id.toLowerCase()}>
       <span style={{ color: 'white', fontSize: '30px' }}>{data.toLocaleLowerCase()}</span>
@@ -24,11 +31,40 @@ const VDOM = (
       <span style={{ color: 'white', fontSize: '30px' }}>{data.toUpperCase()}</span>
     </h1>
     <input type="text" />
+    {/* 没有数组，单独指定循环次数 */}
+    {new Array(5).fill(null).map((_, index) => (
+      <p key={index}>{index}</p>
+    ))}
   </div>
 );
 const root = ReactDOM.createRoot(document.querySelector('#app'));
-root.render(VDOM);
+root.render(vDom);
 ```
+
+### JSX 处理机制
+
+1. 把 JSX 语法编译成虚拟 DOM
+
+   1. webpack 打包时候基于 babel-preset-react-app 把 JSX 编译为 `React.createElement(...)` 的格式。元素节点使用 `React.createElement(ele, props, ...children)`。ele：元素标签名或组件名，props：元素属性集合（对象），没有属性则为 null，children：第三个及以后的参数都是当前元素的子节点
+   2. 执行 `React.createElement(...)` 生成虚拟 DOM（也叫 JSX 元素、JSX 对象、ReactChild 对象...）
+
+   ```javascript
+   const virtualDom = {
+     $$typeof: Symbol(react.element),
+     ref: null,
+     key: null,
+     type: 标签名 / 组件名,
+     // 元素的相关属性和子节点信息,
+     props: {
+       元素相关属性,
+       children: 子节点信息（没有子节点则没有该属性，有可能是一个值（文本子节点），数组（多个子节点））,
+     },
+   };
+   ```
+
+2. 把虚拟 DOM 渲染成真实 DOM
+
+第一次直接是虚拟 DOM 渲染成真实 DOM，更新时通过 diff 算法比较更新前后的虚拟 DOM，生成 Patch，更新 Patch
 
 ### 组件间通信
 

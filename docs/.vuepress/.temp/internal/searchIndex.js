@@ -19,6 +19,92 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "选择排序",
+        "slug": "选择排序",
+        "link": "#选择排序",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "冒泡排序",
+        "slug": "冒泡排序",
+        "link": "#冒泡排序",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "插入排序",
+        "slug": "插入排序",
+        "link": "#插入排序",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "高频率查询数组从 L~R 位置的累加和",
+        "slug": "高频率查询数组从-l-r-位置的累加和",
+        "link": "#高频率查询数组从-l-r-位置的累加和",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Math.random()算法应用",
+        "slug": "math-random-算法应用",
+        "link": "#math-random-算法应用",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "二分法",
+        "slug": "二分法",
+        "link": "#二分法",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "单链表",
+        "slug": "单链表",
+        "link": "#单链表",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "双链表",
+        "slug": "双链表",
+        "link": "#双链表",
+        "children": []
+      }
+    ],
+    "path": "/algorithm/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "webpack 打包优化",
+        "slug": "webpack-打包优化",
+        "link": "#webpack-打包优化",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "优化输出质量",
+        "slug": "优化输出质量",
+        "link": "#优化输出质量",
+        "children": []
+      }
+    ],
+    "path": "/buildTools/webpack.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "浏览器渲染原理",
         "slug": "浏览器渲染原理",
         "link": "#浏览器渲染原理",
@@ -141,70 +227,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "选择排序",
-        "slug": "选择排序",
-        "link": "#选择排序",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "冒泡排序",
-        "slug": "冒泡排序",
-        "link": "#冒泡排序",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "插入排序",
-        "slug": "插入排序",
-        "link": "#插入排序",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "高频率查询数组从 L~R 位置的累加和",
-        "slug": "高频率查询数组从-l-r-位置的累加和",
-        "link": "#高频率查询数组从-l-r-位置的累加和",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Math.random()算法应用",
-        "slug": "math-random-算法应用",
-        "link": "#math-random-算法应用",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "二分法",
-        "slug": "二分法",
-        "link": "#二分法",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "单链表",
-        "slug": "单链表",
-        "link": "#单链表",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "双链表",
-        "slug": "双链表",
-        "link": "#双链表",
-        "children": []
-      }
-    ],
-    "path": "/algorithm/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "Electron 安装",
         "slug": "electron-安装",
         "link": "#electron-安装",
@@ -240,6 +262,13 @@ export const searchIndex = [
       }
     ],
     "path": "/electron/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/html/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -282,8 +311,31 @@ export const searchIndex = [
   },
   {
     "title": "",
-    "headers": [],
-    "path": "/html/base.html",
+    "headers": [
+      {
+        "level": 3,
+        "title": "微信小程序登录流程",
+        "slug": "微信小程序登录流程",
+        "link": "#微信小程序登录流程",
+        "children": []
+      }
+    ],
+    "path": "/miniProgram/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "uni-app 中 swiper 组件遇到的问题",
+        "slug": "uni-app-中-swiper-组件遇到的问题",
+        "link": "#uni-app-中-swiper-组件遇到的问题",
+        "children": []
+      }
+    ],
+    "path": "/miniProgram/uniApp.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -373,6 +425,13 @@ export const searchIndex = [
         "slug": "this-指向",
         "link": "#this-指向",
         "children": []
+      },
+      {
+        "level": 3,
+        "title": "稀疏数组和密集数组",
+        "slug": "稀疏数组和密集数组",
+        "link": "#稀疏数组和密集数组",
+        "children": []
       }
     ],
     "path": "/javascript/base.html",
@@ -391,36 +450,6 @@ export const searchIndex = [
       }
     ],
     "path": "/javascript/reg.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "微信小程序登录流程",
-        "slug": "微信小程序登录流程",
-        "link": "#微信小程序登录流程",
-        "children": []
-      }
-    ],
-    "path": "/miniProgram/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "uni-app 中 swiper 组件遇到的问题",
-        "slug": "uni-app-中-swiper-组件遇到的问题",
-        "link": "#uni-app-中-swiper-组件遇到的问题",
-        "children": []
-      }
-    ],
-    "path": "/miniProgram/uniApp.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -544,38 +573,16 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "免费代理软件",
-        "slug": "免费代理软件",
-        "link": "#免费代理软件",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "终端下设置代理",
-        "slug": "终端下设置代理",
-        "link": "#终端下设置代理",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "配置 WSL2 使用本机 V2rayN 代理",
-        "slug": "配置-wsl2-使用本机-v2rayn-代理",
-        "link": "#配置-wsl2-使用本机-v2rayn-代理",
-        "children": []
-      }
-    ],
-    "path": "/other/surf.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "jsx 语法规则",
         "slug": "jsx-语法规则",
         "link": "#jsx-语法规则",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "JSX 处理机制",
+        "slug": "jsx-处理机制",
+        "link": "#jsx-处理机制",
         "children": []
       },
       {
@@ -708,6 +715,35 @@ export const searchIndex = [
       }
     ],
     "path": "/react/router.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "免费代理软件",
+        "slug": "免费代理软件",
+        "link": "#免费代理软件",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "终端下设置代理",
+        "slug": "终端下设置代理",
+        "link": "#终端下设置代理",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "配置 WSL2 使用本机 V2rayN 代理",
+        "slug": "配置-wsl2-使用本机-v2rayn-代理",
+        "link": "#配置-wsl2-使用本机-v2rayn-代理",
+        "children": []
+      }
+    ],
+    "path": "/other/surf.html",
     "pathLocale": "/",
     "extraFields": []
   },

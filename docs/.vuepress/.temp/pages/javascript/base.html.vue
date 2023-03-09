@@ -1,4 +1,4 @@
-<template><div><nav class="table-of-contents"><ul><li><a href="#offset">offset</a></li><li><a href="#mouseevent">MouseEvent</a></li><li><a href="#prototype-和-proto-关系">prototype 和__proto__关系？</a></li><li><a href="#getboundingclientrect">getBoundingClientRect</a></li><li><a href="#intersectionobserver">IntersectionObserver</a></li><li><a href="#createnodeiterator">createNodeIterator</a></li><li><a href="#getcomputedstyle">getComputedStyle</a></li><li><a href="#requestanimationframe">requestAnimationFrame</a></li><li><a href="#requestidlecallback">requestIdleCallback</a></li><li><a href="#前端模块化-commonjs-esm">前端模块化：CommonJS,ESM</a></li><li><a href="#tostring-和-valueof">toString()和 valueOf()</a></li><li><a href="#this-指向">this 指向</a></li></ul></nav>
+<template><div><nav class="table-of-contents"><ul><li><a href="#offset">offset</a></li><li><a href="#mouseevent">MouseEvent</a></li><li><a href="#prototype-和-proto-关系">prototype 和__proto__关系？</a></li><li><a href="#getboundingclientrect">getBoundingClientRect</a></li><li><a href="#intersectionobserver">IntersectionObserver</a></li><li><a href="#createnodeiterator">createNodeIterator</a></li><li><a href="#getcomputedstyle">getComputedStyle</a></li><li><a href="#requestanimationframe">requestAnimationFrame</a></li><li><a href="#requestidlecallback">requestIdleCallback</a></li><li><a href="#前端模块化-commonjs-esm">前端模块化：CommonJS,ESM</a></li><li><a href="#tostring-和-valueof">toString()和 valueOf()</a></li><li><a href="#this-指向">this 指向</a></li><li><a href="#稀疏数组和密集数组">稀疏数组和密集数组</a></li></ul></nav>
 <h3 id="offset" tabindex="-1"><a class="header-anchor" href="#offset" aria-hidden="true">#</a> offset</h3>
 <p><img src="@source/javascript/images/offset.jpg" alt="offset示例图"></p>
 <ul>
@@ -383,6 +383,17 @@ obj<span class="token punctuation">.</span><span class="token function">func</sp
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container warning"><p class="custom-container-title">优先级</p>
 <p>new&gt;显示绑定&gt;隐式绑定&gt;默认绑定</p>
 </div>
+<h3 id="稀疏数组和密集数组" tabindex="-1"><a class="header-anchor" href="#稀疏数组和密集数组" aria-hidden="true">#</a> 稀疏数组和密集数组</h3>
+<ul>
+<li>稀疏数组：索引不连续，数组长度大于元素个数的数组, 可以简单理解为有 empty 的数组</li>
+<li>密集数组：索引连续, 数组长度等于元素个数的数组</li>
+</ul>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// 稀疏数组  [empty × 5]</span>
+<span class="token keyword">let</span> arr1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 密集数组 [null, null, null, null, null]</span>
+<span class="token keyword">let</span> arr2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>稀疏数组在大多数遍历数组的方法中，遇到「empty」元素的时候，callback 函数是不会执行的，如：map, forEach, filter 等, 在 for...in 语句中同样适用</p>
 </div></template>
 
 

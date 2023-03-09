@@ -388,3 +388,18 @@ let p1 = new Person(); // this指向p1
 ::: warning 优先级
 new>显示绑定>隐式绑定>默认绑定
 :::
+
+### 稀疏数组和密集数组
+
+- 稀疏数组：索引不连续，数组长度大于元素个数的数组, 可以简单理解为有 empty 的数组
+- 密集数组：索引连续, 数组长度等于元素个数的数组
+
+```javascript
+// 稀疏数组  [empty × 5]
+let arr1 = new Array(5);
+
+// 密集数组 [null, null, null, null, null]
+let arr2 = new Array(5).fill(null);
+```
+
+稀疏数组在大多数遍历数组的方法中，遇到「empty」元素的时候，callback 函数是不会执行的，如：map, forEach, filter 等, 在 for...in 语句中同样适用

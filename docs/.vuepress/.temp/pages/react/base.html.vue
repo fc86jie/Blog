@@ -1,8 +1,16 @@
-<template><div><nav class="table-of-contents"><ul><li><a href="#jsx-语法规则">jsx 语法规则</a></li><li><a href="#组件间通信">组件间通信</a></li><li><a href="#setstate-异步-or-同步">setState 异步 or 同步</a></li><li><a href="#react-的生命周期-旧的">React 的生命周期（旧的）</a></li><li><a href="#react-的生命周期-新的">React 的生命周期（新的）</a></li><li><a href="#高阶组件">高阶组件</a></li><li><a href="#memo">memo</a></li></ul></nav>
+<template><div><nav class="table-of-contents"><ul><li><a href="#jsx-语法规则">jsx 语法规则</a></li><li><a href="#jsx-处理机制">JSX 处理机制</a></li><li><a href="#组件间通信">组件间通信</a></li><li><a href="#setstate-异步-or-同步">setState 异步 or 同步</a></li><li><a href="#react-的生命周期-旧的">React 的生命周期（旧的）</a></li><li><a href="#react-的生命周期-新的">React 的生命周期（新的）</a></li><li><a href="#高阶组件">高阶组件</a></li><li><a href="#memo">memo</a></li></ul></nav>
 <h3 id="jsx-语法规则" tabindex="-1"><a class="header-anchor" href="#jsx-语法规则" aria-hidden="true">#</a> jsx 语法规则</h3>
 <ol>
 <li>定义虚拟 DOM 时，不要写引号</li>
-<li>标签中混入 JS 表达式是要用{}</li>
+<li>标签中混入 JS 表达式是要用{}，
+<ol>
+<li>js 表达式包含变量/值、数学运算、三元运算符、数组迭代方法 map 等</li>
+<li>{}中放入 number/string 时，值是什么就渲染成什么</li>
+<li>{}中放入 boolean/null/undefined/Symbol/BigInt,渲染内容是空</li>
+<li>{}中放入数组，会把每一项分别拿出来渲染</li>
+<li>除了数组对象外，一般对象都不支持渲染。（虚拟 dom 对象和 style 除外）</li>
+</ol>
+</li>
 <li>样式的类名指定使用 className，不要用 class</li>
 <li>内联样式，要用 style={ {key:value} }写法<!--遇到双花括号要在中间加入空格，否则会报错--></li>
 <li>虚拟 DOM 只有一个根标签</li>
@@ -13,10 +21,12 @@
 <li>若大写字符开头，react 就去渲染对应的组件，若组件没定义，则报错</li>
 </ol>
 </li>
+<li><code v-pre>ReactDOM.createRoot()</code> 不能使用 HTML/BODY 根容器作为 root</li>
+<li>vscode 对 jsx 语法的支持，把 js 文件后缀名变更为 jsx 即可</li>
 </ol>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> Id <span class="token operator">=</span> <span class="token string">'container'</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token constant">VDOM</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
+<span class="token keyword">const</span> vDom <span class="token operator">=</span> <span class="token punctuation">(</span>
   <span class="token operator">&lt;</span>div<span class="token operator">></span>
     <span class="token operator">&lt;</span>h1 className<span class="token operator">=</span><span class="token string">"title"</span> id<span class="token operator">=</span><span class="token punctuation">{</span>Id<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
       <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'white'</span><span class="token punctuation">,</span> <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token string">'30px'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span>data<span class="token punctuation">.</span><span class="token function">toLocaleLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
@@ -25,11 +35,40 @@
       <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'white'</span><span class="token punctuation">,</span> <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token string">'30px'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span>data<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
     <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token punctuation">{</span><span class="token comment">/* 没有数组，单独指定循环次数 */</span><span class="token punctuation">}</span>
+    <span class="token punctuation">{</span><span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">_<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>p key<span class="token operator">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> root <span class="token operator">=</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token constant">VDOM</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="组件间通信" tabindex="-1"><a class="header-anchor" href="#组件间通信" aria-hidden="true">#</a> 组件间通信</h3>
+root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>vDom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="jsx-处理机制" tabindex="-1"><a class="header-anchor" href="#jsx-处理机制" aria-hidden="true">#</a> JSX 处理机制</h3>
+<ol>
+<li>
+<p>把 JSX 语法编译成虚拟 DOM</p>
+<ol>
+<li>webpack 打包时候基于 babel-preset-react-app 把 JSX 编译为 <code v-pre>React.createElement(...)</code> 的格式。元素节点使用 <code v-pre>React.createElement(ele, props, ...children)</code>。ele：元素标签名或组件名，props：元素属性集合（对象），没有属性则为 null，children：第三个及以后的参数都是当前元素的子节点</li>
+<li>执行 <code v-pre>React.createElement(...)</code> 生成虚拟 DOM（也叫 JSX 元素、JSX 对象、ReactChild 对象...）</li>
+</ol>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> virtualDom <span class="token operator">=</span> <span class="token punctuation">{</span>
+  $$<span class="token keyword">typeof</span><span class="token operator">:</span> <span class="token function">Symbol</span><span class="token punctuation">(</span>react<span class="token punctuation">.</span>element<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">ref</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">key</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> 标签名 <span class="token operator">/</span> 组件名<span class="token punctuation">,</span>
+  <span class="token comment">// 元素的相关属性和子节点信息,</span>
+  <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    元素相关属性<span class="token punctuation">,</span>
+    <span class="token literal-property property">children</span><span class="token operator">:</span> 子节点信息（没有子节点则没有该属性，有可能是一个值（文本子节点），数组（多个子节点））<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<p>把虚拟 DOM 渲染成真实 DOM</p>
+</li>
+</ol>
+<p>第一次直接是虚拟 DOM 渲染成真实 DOM，更新时通过 diff 算法比较更新前后的虚拟 DOM，生成 Patch，更新 Patch</p>
+<h3 id="组件间通信" tabindex="-1"><a class="header-anchor" href="#组件间通信" aria-hidden="true">#</a> 组件间通信</h3>
 <ol>
 <li>
 <p>父级向子级通信：把数据添加到子组件的属性中，然后组件从 props 属性中获取父级传递过来的数据</p>

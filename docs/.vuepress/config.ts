@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-02-27 21:43:28
+ * @LastEditTime: 2023-03-08 22:53:02
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
@@ -151,6 +151,16 @@ export default defineUserConfig({
           {
             text: 'Router',
             link: '/react/router.md',
+          },
+        ],
+      },
+      {
+        text: '构建工具',
+        collapsible: true,
+        children: [
+          {
+            text: 'webpack',
+            link: '/buildTools/webpack.md',
           },
         ],
       },
