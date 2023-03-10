@@ -403,3 +403,35 @@ let arr2 = new Array(5).fill(null);
 ```
 
 稀疏数组在大多数遍历数组的方法中，遇到「empty」元素的时候，callback 函数是不会执行的，如：map, forEach, filter 等, 在 for...in 语句中同样适用
+
+### 迭代对象上所有的属性
+
+```javascript
+Array.prototype.BB = 200;
+let arr = [1, 2, 3];
+arr[Symbol('A')] = 100;
+let keys1 = [];
+for (let key in arr) {
+  keys1.push(key);
+}
+// ['0', '1', '2', 'BB']，for...in迭代“可枚举、非Symbol”类型，会查找原型上的属性
+console.log(`🚀 ~ file: jsxHandle.js:18 ~ keys1:`, keys1);
+// ['0', '1', '2', 'length', Symbol(A)]，兼容性好
+let keys2 = [...Object.getOwnPropertyNames(arr), ...Object.getOwnPropertySymbols(arr)];
+console.log(`🚀 ~ file: jsxHandle.js:20 ~ keys:`, keys2);
+let keys3 = Reflect.ownKeys(arr);
+// ['0', '1', '2', 'length', Symbol(A)]，IE不支持
+console.log(`🚀 ~ file: jsxHandle.js:22 ~ keys3:`, keys3);
+```
+
+### 对象规则设置
+
+- 冻结：被冻结的对象不能新增、删除、修改、劫持（Object.defineProperty）
+  - 冻结对象：Object.freeze(obj)
+  - 检测对象是否被冻结：Object.isFrozen(obj) => true/false
+- 密封：被密封的对象不能新增、删除、劫持
+  - 密封对象：Object.seal(obj)
+  - 检测对象是否被密封：Object.isSealed(obj) => true/false
+- 扩展：被阻止扩展的对象不能新增
+  - 不可扩展对象：Object.preventExtensions(obj)
+  - 检测对象是否可扩展：Object.isExtensible => true/false

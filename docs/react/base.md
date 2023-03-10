@@ -19,7 +19,7 @@
 8. `ReactDOM.createRoot()` 不能使用 HTML/BODY 根容器作为 root
 9. vscode 对 jsx 语法的支持，把 js 文件后缀名变更为 jsx 即可
 
-```javascript
+```jsx
 const Id = 'container';
 const data = 'Hello';
 const vDom = (
@@ -41,14 +41,14 @@ const root = ReactDOM.createRoot(document.querySelector('#app'));
 root.render(vDom);
 ```
 
-### JSX 处理机制
+### JSX 底层渲染机制
 
 1. 把 JSX 语法编译成虚拟 DOM
 
    1. webpack 打包时候基于 babel-preset-react-app 把 JSX 编译为 `React.createElement(...)` 的格式。元素节点使用 `React.createElement(ele, props, ...children)`。ele：元素标签名或组件名，props：元素属性集合（对象），没有属性则为 null，children：第三个及以后的参数都是当前元素的子节点
    2. 执行 `React.createElement(...)` 生成虚拟 DOM（也叫 JSX 元素、JSX 对象、ReactChild 对象...）
 
-   ```javascript
+   ```jsx
    const virtualDom = {
      $$typeof: Symbol(react.element),
      ref: null,
@@ -63,6 +63,15 @@ root.render(vDom);
    ```
 
 2. 把虚拟 DOM 渲染成真实 DOM
+
+   ```jsx
+   // v16
+   ReactDOM.render(<App />, document.getElementById('root'));
+
+   // v18
+   const root = ReactDOM.createRoot(document.getElementById('root'));
+   root.render(<App />);
+   ```
 
 第一次直接是虚拟 DOM 渲染成真实 DOM，更新时通过 diff 算法比较更新前后的虚拟 DOM，生成 Patch，更新 Patch
 
@@ -173,11 +182,7 @@ function MyComponent(props) {
   /* 使用 props 渲染 */
 }
 function areEqual(prevProps, nextProps) {
-  /*
-  如果把 nextProps 传入 render 方法的返回结果与
-  将 prevProps 传入 render 方法的返回结果一致则返回 true，不更新myComponent
-  否则返回 false，更新myComponent
-  */
+  // 如果把 nextProps 传入 render 方法的返回结果与将 prevProps 传入 render 方法的返回结果一致则返回 true，不更新myComponent 否则返回 false，更新myComponent
 }
 export default React.memo(MyComponent, areEqual);
 ```

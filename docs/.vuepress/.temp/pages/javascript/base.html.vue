@@ -1,4 +1,4 @@
-<template><div><nav class="table-of-contents"><ul><li><a href="#offset">offset</a></li><li><a href="#mouseevent">MouseEvent</a></li><li><a href="#prototype-和-proto-关系">prototype 和__proto__关系？</a></li><li><a href="#getboundingclientrect">getBoundingClientRect</a></li><li><a href="#intersectionobserver">IntersectionObserver</a></li><li><a href="#createnodeiterator">createNodeIterator</a></li><li><a href="#getcomputedstyle">getComputedStyle</a></li><li><a href="#requestanimationframe">requestAnimationFrame</a></li><li><a href="#requestidlecallback">requestIdleCallback</a></li><li><a href="#前端模块化-commonjs-esm">前端模块化：CommonJS,ESM</a></li><li><a href="#tostring-和-valueof">toString()和 valueOf()</a></li><li><a href="#this-指向">this 指向</a></li><li><a href="#稀疏数组和密集数组">稀疏数组和密集数组</a></li></ul></nav>
+<template><div><nav class="table-of-contents"><ul><li><a href="#offset">offset</a></li><li><a href="#mouseevent">MouseEvent</a></li><li><a href="#prototype-和-proto-关系">prototype 和__proto__关系？</a></li><li><a href="#getboundingclientrect">getBoundingClientRect</a></li><li><a href="#intersectionobserver">IntersectionObserver</a></li><li><a href="#createnodeiterator">createNodeIterator</a></li><li><a href="#getcomputedstyle">getComputedStyle</a></li><li><a href="#requestanimationframe">requestAnimationFrame</a></li><li><a href="#requestidlecallback">requestIdleCallback</a></li><li><a href="#前端模块化-commonjs-esm">前端模块化：CommonJS,ESM</a></li><li><a href="#tostring-和-valueof">toString()和 valueOf()</a></li><li><a href="#this-指向">this 指向</a></li><li><a href="#稀疏数组和密集数组">稀疏数组和密集数组</a></li><li><a href="#迭代对象上所有的属性">迭代对象上所有的属性</a></li><li><a href="#对象规则设置">对象规则设置</a></li></ul></nav>
 <h3 id="offset" tabindex="-1"><a class="header-anchor" href="#offset" aria-hidden="true">#</a> offset</h3>
 <p><img src="@source/javascript/images/offset.jpg" alt="offset示例图"></p>
 <ul>
@@ -394,6 +394,43 @@ obj<span class="token punctuation">.</span><span class="token function">func</sp
 <span class="token comment">// 密集数组 [null, null, null, null, null]</span>
 <span class="token keyword">let</span> arr2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>稀疏数组在大多数遍历数组的方法中，遇到「empty」元素的时候，callback 函数是不会执行的，如：map, forEach, filter 等, 在 for...in 语句中同样适用</p>
+<h3 id="迭代对象上所有的属性" tabindex="-1"><a class="header-anchor" href="#迭代对象上所有的属性" aria-hidden="true">#</a> 迭代对象上所有的属性</h3>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token constant">BB</span> <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">[</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> keys1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  keys1<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// ['0', '1', '2', 'BB']，for...in迭代“可枚举、非Symbol”类型，会查找原型上的属性</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">🚀 ~ file: jsxHandle.js:18 ~ keys1:</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> keys1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// ['0', '1', '2', 'length', Symbol(A)]，兼容性好</span>
+<span class="token keyword">let</span> keys2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">...</span>Object<span class="token punctuation">.</span><span class="token function">getOwnPropertySymbols</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">🚀 ~ file: jsxHandle.js:20 ~ keys:</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> keys2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> keys3 <span class="token operator">=</span> Reflect<span class="token punctuation">.</span><span class="token function">ownKeys</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// ['0', '1', '2', 'length', Symbol(A)]，IE不支持</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">🚀 ~ file: jsxHandle.js:22 ~ keys3:</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> keys3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="对象规则设置" tabindex="-1"><a class="header-anchor" href="#对象规则设置" aria-hidden="true">#</a> 对象规则设置</h3>
+<ul>
+<li>冻结：被冻结的对象不能新增、删除、修改、劫持（Object.defineProperty）
+<ul>
+<li>冻结对象：Object.freeze(obj)</li>
+<li>检测对象是否被冻结：Object.isFrozen(obj) =&gt; true/false</li>
+</ul>
+</li>
+<li>密封：被密封的对象不能新增、删除、劫持
+<ul>
+<li>密封对象：Object.seal(obj)</li>
+<li>检测对象是否被密封：Object.isSealed(obj) =&gt; true/false</li>
+</ul>
+</li>
+<li>扩展：被阻止扩展的对象不能新增
+<ul>
+<li>不可扩展对象：Object.preventExtensions(obj)</li>
+<li>检测对象是否可扩展：Object.isExtensible =&gt; true/false</li>
+</ul>
+</li>
+</ul>
 </div></template>
 
 

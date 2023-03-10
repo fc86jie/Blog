@@ -83,28 +83,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "webpack 打包优化",
-        "slug": "webpack-打包优化",
-        "link": "#webpack-打包优化",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "优化输出质量",
-        "slug": "优化输出质量",
-        "link": "#优化输出质量",
-        "children": []
-      }
-    ],
-    "path": "/buildTools/webpack.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "浏览器渲染原理",
         "slug": "浏览器渲染原理",
         "link": "#浏览器渲染原理",
@@ -140,6 +118,71 @@ export const searchIndex = [
     "title": "",
     "headers": [],
     "path": "/browser/link.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "webpack 打包优化",
+        "slug": "webpack-打包优化",
+        "link": "#webpack-打包优化",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "优化输出质量",
+        "slug": "优化输出质量",
+        "link": "#优化输出质量",
+        "children": []
+      }
+    ],
+    "path": "/buildTools/webpack.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Electron 安装",
+        "slug": "electron-安装",
+        "link": "#electron-安装",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "windows 下控制台中文乱码问题",
+        "slug": "windows-下控制台中文乱码问题",
+        "link": "#windows-下控制台中文乱码问题",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "打包",
+        "slug": "打包",
+        "link": "#打包",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中使用 nodejs",
+        "slug": "在渲染进程中使用-nodejs",
+        "link": "#在渲染进程中使用-nodejs",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中打开新窗口",
+        "slug": "在渲染进程中打开新窗口",
+        "link": "#在渲染进程中打开新窗口",
+        "children": []
+      }
+    ],
+    "path": "/electron/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -227,56 +270,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "Electron 安装",
-        "slug": "electron-安装",
-        "link": "#electron-安装",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "windows 下控制台中文乱码问题",
-        "slug": "windows-下控制台中文乱码问题",
-        "link": "#windows-下控制台中文乱码问题",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "打包",
-        "slug": "打包",
-        "link": "#打包",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中使用 nodejs",
-        "slug": "在渲染进程中使用-nodejs",
-        "link": "#在渲染进程中使用-nodejs",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中打开新窗口",
-        "slug": "在渲染进程中打开新窗口",
-        "link": "#在渲染进程中打开新窗口",
-        "children": []
-      }
-    ],
-    "path": "/electron/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/html/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "架构分级",
         "slug": "架构分级",
         "link": "#架构分级",
@@ -311,31 +304,8 @@ export const searchIndex = [
   },
   {
     "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "微信小程序登录流程",
-        "slug": "微信小程序登录流程",
-        "link": "#微信小程序登录流程",
-        "children": []
-      }
-    ],
-    "path": "/miniProgram/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "uni-app 中 swiper 组件遇到的问题",
-        "slug": "uni-app-中-swiper-组件遇到的问题",
-        "link": "#uni-app-中-swiper-组件遇到的问题",
-        "children": []
-      }
-    ],
-    "path": "/miniProgram/uniApp.html",
+    "headers": [],
+    "path": "/html/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -432,6 +402,20 @@ export const searchIndex = [
         "slug": "稀疏数组和密集数组",
         "link": "#稀疏数组和密集数组",
         "children": []
+      },
+      {
+        "level": 3,
+        "title": "迭代对象上所有的属性",
+        "slug": "迭代对象上所有的属性",
+        "link": "#迭代对象上所有的属性",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "对象规则设置",
+        "slug": "对象规则设置",
+        "link": "#对象规则设置",
+        "children": []
       }
     ],
     "path": "/javascript/base.html",
@@ -450,6 +434,36 @@ export const searchIndex = [
       }
     ],
     "path": "/javascript/reg.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "微信小程序登录流程",
+        "slug": "微信小程序登录流程",
+        "link": "#微信小程序登录流程",
+        "children": []
+      }
+    ],
+    "path": "/miniProgram/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "uni-app 中 swiper 组件遇到的问题",
+        "slug": "uni-app-中-swiper-组件遇到的问题",
+        "link": "#uni-app-中-swiper-组件遇到的问题",
+        "children": []
+      }
+    ],
+    "path": "/miniProgram/uniApp.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -523,6 +537,35 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "免费代理软件",
+        "slug": "免费代理软件",
+        "link": "#免费代理软件",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "终端下设置代理",
+        "slug": "终端下设置代理",
+        "link": "#终端下设置代理",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "配置 WSL2 使用本机 V2rayN 代理",
+        "slug": "配置-wsl2-使用本机-v2rayn-代理",
+        "link": "#配置-wsl2-使用本机-v2rayn-代理",
+        "children": []
+      }
+    ],
+    "path": "/other/surf.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "npx",
         "slug": "npx",
         "link": "#npx",
@@ -573,6 +616,21 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "jest 支持 esm 测试",
+        "slug": "jest-支持-esm-测试",
+        "link": "#jest-支持-esm-测试",
+        "children": []
+      }
+    ],
+    "path": "/test/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "jsx 语法规则",
         "slug": "jsx-语法规则",
         "link": "#jsx-语法规则",
@@ -580,9 +638,9 @@ export const searchIndex = [
       },
       {
         "level": 3,
-        "title": "JSX 处理机制",
-        "slug": "jsx-处理机制",
-        "link": "#jsx-处理机制",
+        "title": "JSX 底层渲染机制",
+        "slug": "jsx-底层渲染机制",
+        "link": "#jsx-底层渲染机制",
         "children": []
       },
       {
@@ -723,50 +781,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "免费代理软件",
-        "slug": "免费代理软件",
-        "link": "#免费代理软件",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "终端下设置代理",
-        "slug": "终端下设置代理",
-        "link": "#终端下设置代理",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "配置 WSL2 使用本机 V2rayN 代理",
-        "slug": "配置-wsl2-使用本机-v2rayn-代理",
-        "link": "#配置-wsl2-使用本机-v2rayn-代理",
-        "children": []
-      }
-    ],
-    "path": "/other/surf.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "jest 支持 esm 测试",
-        "slug": "jest-支持-esm-测试",
-        "link": "#jest-支持-esm-测试",
-        "children": []
-      }
-    ],
-    "path": "/test/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "删除文件及历史记",
         "slug": "删除文件及历史记",
         "link": "#删除文件及历史记",
@@ -789,6 +803,21 @@ export const searchIndex = [
       }
     ],
     "path": "/tools/vscode.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "vue 中动态引入图片为什么要是 require",
+        "slug": "vue-中动态引入图片为什么要是-require",
+        "link": "#vue-中动态引入图片为什么要是-require",
+        "children": []
+      }
+    ],
+    "path": "/vue/other.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -826,21 +855,6 @@ export const searchIndex = [
       }
     ],
     "path": "/typescript/link.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "vue 中动态引入图片为什么要是 require",
-        "slug": "vue-中动态引入图片为什么要是-require",
-        "link": "#vue-中动态引入图片为什么要是-require",
-        "children": []
-      }
-    ],
-    "path": "/vue/other.html",
     "pathLocale": "/",
     "extraFields": []
   },
