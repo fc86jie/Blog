@@ -126,71 +126,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "webpack 打包优化",
-        "slug": "webpack-打包优化",
-        "link": "#webpack-打包优化",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "优化输出质量",
-        "slug": "优化输出质量",
-        "link": "#优化输出质量",
-        "children": []
-      }
-    ],
-    "path": "/buildTools/webpack.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Electron 安装",
-        "slug": "electron-安装",
-        "link": "#electron-安装",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "windows 下控制台中文乱码问题",
-        "slug": "windows-下控制台中文乱码问题",
-        "link": "#windows-下控制台中文乱码问题",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "打包",
-        "slug": "打包",
-        "link": "#打包",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中使用 nodejs",
-        "slug": "在渲染进程中使用-nodejs",
-        "link": "#在渲染进程中使用-nodejs",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中打开新窗口",
-        "slug": "在渲染进程中打开新窗口",
-        "link": "#在渲染进程中打开新窗口",
-        "children": []
-      }
-    ],
-    "path": "/electron/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "CSS 选择器优先级",
         "slug": "css-选择器优先级",
         "link": "#css-选择器优先级",
@@ -262,6 +197,71 @@ export const searchIndex = [
       }
     ],
     "path": "/css/scss.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "webpack 打包优化",
+        "slug": "webpack-打包优化",
+        "link": "#webpack-打包优化",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "优化输出质量",
+        "slug": "优化输出质量",
+        "link": "#优化输出质量",
+        "children": []
+      }
+    ],
+    "path": "/buildTools/webpack.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Electron 安装",
+        "slug": "electron-安装",
+        "link": "#electron-安装",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "windows 下控制台中文乱码问题",
+        "slug": "windows-下控制台中文乱码问题",
+        "link": "#windows-下控制台中文乱码问题",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "打包",
+        "slug": "打包",
+        "link": "#打包",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中使用 nodejs",
+        "slug": "在渲染进程中使用-nodejs",
+        "link": "#在渲染进程中使用-nodejs",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中打开新窗口",
+        "slug": "在渲染进程中打开新窗口",
+        "link": "#在渲染进程中打开新窗口",
+        "children": []
+      }
+    ],
+    "path": "/electron/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -416,6 +416,13 @@ export const searchIndex = [
         "slug": "对象规则设置",
         "link": "#对象规则设置",
         "children": []
+      },
+      {
+        "level": 3,
+        "title": "async 和 await 注意细节",
+        "slug": "async-和-await-注意细节",
+        "link": "#async-和-await-注意细节",
+        "children": []
       }
     ],
     "path": "/javascript/base.html",
@@ -537,35 +544,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "免费代理软件",
-        "slug": "免费代理软件",
-        "link": "#免费代理软件",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "终端下设置代理",
-        "slug": "终端下设置代理",
-        "link": "#终端下设置代理",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "配置 WSL2 使用本机 V2rayN 代理",
-        "slug": "配置-wsl2-使用本机-v2rayn-代理",
-        "link": "#配置-wsl2-使用本机-v2rayn-代理",
-        "children": []
-      }
-    ],
-    "path": "/other/surf.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "npx",
         "slug": "npx",
         "link": "#npx",
@@ -616,13 +594,27 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "jest 支持 esm 测试",
-        "slug": "jest-支持-esm-测试",
-        "link": "#jest-支持-esm-测试",
+        "title": "免费代理软件",
+        "slug": "免费代理软件",
+        "link": "#免费代理软件",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "终端下设置代理",
+        "slug": "终端下设置代理",
+        "link": "#终端下设置代理",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "配置 WSL2 使用本机 V2rayN 代理",
+        "slug": "配置-wsl2-使用本机-v2rayn-代理",
+        "link": "#配置-wsl2-使用本机-v2rayn-代理",
         "children": []
       }
     ],
-    "path": "/test/base.html",
+    "path": "/other/surf.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -781,43 +773,13 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "删除文件及历史记",
-        "slug": "删除文件及历史记",
-        "link": "#删除文件及历史记",
+        "title": "jest 支持 esm 测试",
+        "slug": "jest-支持-esm-测试",
+        "link": "#jest-支持-esm-测试",
         "children": []
       }
     ],
-    "path": "/tools/git.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "在 vscode 为配置文件增加语法提示",
-        "slug": "在-vscode-为配置文件增加语法提示",
-        "link": "#在-vscode-为配置文件增加语法提示",
-        "children": []
-      }
-    ],
-    "path": "/tools/vscode.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "vue 中动态引入图片为什么要是 require",
-        "slug": "vue-中动态引入图片为什么要是-require",
-        "link": "#vue-中动态引入图片为什么要是-require",
-        "children": []
-      }
-    ],
-    "path": "/vue/other.html",
+    "path": "/test/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -855,6 +817,51 @@ export const searchIndex = [
       }
     ],
     "path": "/typescript/link.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "删除文件及历史记",
+        "slug": "删除文件及历史记",
+        "link": "#删除文件及历史记",
+        "children": []
+      }
+    ],
+    "path": "/tools/git.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "在 vscode 为配置文件增加语法提示",
+        "slug": "在-vscode-为配置文件增加语法提示",
+        "link": "#在-vscode-为配置文件增加语法提示",
+        "children": []
+      }
+    ],
+    "path": "/tools/vscode.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "vue 中动态引入图片为什么要是 require",
+        "slug": "vue-中动态引入图片为什么要是-require",
+        "link": "#vue-中动态引入图片为什么要是-require",
+        "children": []
+      }
+    ],
+    "path": "/vue/other.html",
     "pathLocale": "/",
     "extraFields": []
   },

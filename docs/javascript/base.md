@@ -435,3 +435,109 @@ console.log(`🚀 ~ file: jsxHandle.js:22 ~ keys3:`, keys3);
 - 扩展：被阻止扩展的对象不能新增
   - 不可扩展对象：Object.preventExtensions(obj)
   - 检测对象是否可扩展：Object.isExtensible => true/false
+
+### async 和 await 注意细节
+
+- `async` 函数：async 函数在抛出返回值时，会根据返回值类型开启不同数目的微任务
+
+  - return 结果值：非 `thenable`、非 `Promise`（不等待）
+  - return 结果值：`thenable`（等待 1 个 `then` 的时间）
+  - return 结果值：`Promise`（等待 2 个 `then` 的时间）
+
+- `await` 右值类型区别
+  - 接非 `thenable` 类型，会立即向微任务队列添加一个微任务 `then`，但不需等待
+  - 接 `thenable` 类型，需要等待一个 `then` 的时间之后执行
+  - 接 `Promise` 类型(有确定的返回值)，会立即向微任务队列添加一个微任务 `then`，但不需等待
+
+```javascript
+// async函数返回非thenable、非Promise，不等待，1 2 3
+async function testA() {
+  return 1;
+}
+
+testA().then(() => console.log(1));
+Promise.resolve()
+  .then(() => console.log(2))
+  .then(() => console.log(3));
+
+// async函数返回thenable，等待一个then，2 1 3
+async function testB() {
+  return {
+    then(cb) {
+      cb();
+    },
+  };
+}
+
+testB().then(() => console.log(1));
+Promise.resolve()
+  .then(() => console.log(2))
+  .then(() => console.log(3));
+
+// async函数返回Promise，等待两个then，结果：2 3 1 4
+async function testC() {
+  return new Promise((resolve, reject) => {
+    resolve();
+  });
+}
+
+testC().then(() => console.log(1));
+Promise.resolve()
+  .then(() => console.log(2))
+  .then(() => console.log(3))
+  .then(() => console.log(4));
+```
+
+```javascript
+// await后面接非 thenable 类型，会立即向微任务队列添加一个微任务then，但不需等待，结果：1 2 4 3
+function func() {
+  console.log(2);
+}
+
+async function test() {
+  console.log(1);
+  await func();
+  console.log(3);
+}
+
+test();
+console.log(4);
+
+// await 后面接 thenable 类型，需要等待一个 then 的时间之后执行，结果：1 3 4 2 5 6 7
+async function test() {
+  console.log(1);
+  await {
+    then(cb) {
+      cb();
+    },
+  };
+  console.log(2);
+}
+
+test();
+console.log(3);
+
+Promise.resolve()
+  .then(() => console.log(4))
+  .then(() => console.log(5))
+  .then(() => console.log(6))
+  .then(() => console.log(7));
+
+// await 后面接 Promise 类型，会立即向微任务队列添加一个微任务then，但不需等待，结果：1 3 2 4 5 6 7
+async function test() {
+  console.log(1);
+  await new Promise((resolve, reject) => {
+    resolve();
+  });
+  console.log(2);
+}
+
+test();
+console.log(3);
+
+Promise.resolve()
+  .then(() => console.log(4))
+  .then(() => console.log(5))
+  .then(() => console.log(6))
+  .then(() => console.log(7));
+```
