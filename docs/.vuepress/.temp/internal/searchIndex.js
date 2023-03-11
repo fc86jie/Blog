@@ -83,6 +83,28 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "webpack 打包优化",
+        "slug": "webpack-打包优化",
+        "link": "#webpack-打包优化",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "优化输出质量",
+        "slug": "优化输出质量",
+        "link": "#优化输出质量",
+        "children": []
+      }
+    ],
+    "path": "/buildTools/webpack.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "浏览器渲染原理",
         "slug": "浏览器渲染原理",
         "link": "#浏览器渲染原理",
@@ -197,28 +219,6 @@ export const searchIndex = [
       }
     ],
     "path": "/css/scss.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "webpack 打包优化",
-        "slug": "webpack-打包优化",
-        "link": "#webpack-打包优化",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "优化输出质量",
-        "slug": "优化输出质量",
-        "link": "#优化输出质量",
-        "children": []
-      }
-    ],
-    "path": "/buildTools/webpack.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -449,36 +449,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "微信小程序登录流程",
-        "slug": "微信小程序登录流程",
-        "link": "#微信小程序登录流程",
-        "children": []
-      }
-    ],
-    "path": "/miniProgram/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "uni-app 中 swiper 组件遇到的问题",
-        "slug": "uni-app-中-swiper-组件遇到的问题",
-        "link": "#uni-app-中-swiper-组件遇到的问题",
-        "children": []
-      }
-    ],
-    "path": "/miniProgram/uniApp.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "脚手架常用 package",
         "slug": "脚手架常用-package",
         "link": "#脚手架常用-package",
@@ -536,6 +506,36 @@ export const searchIndex = [
       }
     ],
     "path": "/nodejs/other.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "微信小程序登录流程",
+        "slug": "微信小程序登录流程",
+        "link": "#微信小程序登录流程",
+        "children": []
+      }
+    ],
+    "path": "/miniProgram/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "uni-app 中 swiper 组件遇到的问题",
+        "slug": "uni-app-中-swiper-组件遇到的问题",
+        "link": "#uni-app-中-swiper-组件遇到的问题",
+        "children": []
+      }
+    ],
+    "path": "/miniProgram/uniApp.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -633,6 +633,34 @@ export const searchIndex = [
         "title": "JSX 底层渲染机制",
         "slug": "jsx-底层渲染机制",
         "link": "#jsx-底层渲染机制",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "插槽",
+        "slug": "插槽",
+        "link": "#插槽",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "组件的分类",
+        "slug": "组件的分类",
+        "link": "#组件的分类",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "PureComponent 和 Component 区别",
+        "slug": "purecomponent-和-component-区别",
+        "link": "#purecomponent-和-component-区别",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "ref 使用",
+        "slug": "ref-使用",
+        "link": "#ref-使用",
         "children": []
       },
       {
@@ -788,6 +816,36 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "删除文件及历史记",
+        "slug": "删除文件及历史记",
+        "link": "#删除文件及历史记",
+        "children": []
+      }
+    ],
+    "path": "/tools/git.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "在 vscode 为配置文件增加语法提示",
+        "slug": "在-vscode-为配置文件增加语法提示",
+        "link": "#在-vscode-为配置文件增加语法提示",
+        "children": []
+      }
+    ],
+    "path": "/tools/vscode.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "数据类型",
         "slug": "数据类型",
         "link": "#数据类型",
@@ -817,36 +875,6 @@ export const searchIndex = [
       }
     ],
     "path": "/typescript/link.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "删除文件及历史记",
-        "slug": "删除文件及历史记",
-        "link": "#删除文件及历史记",
-        "children": []
-      }
-    ],
-    "path": "/tools/git.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "在 vscode 为配置文件增加语法提示",
-        "slug": "在-vscode-为配置文件增加语法提示",
-        "link": "#在-vscode-为配置文件增加语法提示",
-        "children": []
-      }
-    ],
-    "path": "/tools/vscode.html",
     "pathLocale": "/",
     "extraFields": []
   },

@@ -75,6 +75,229 @@ root.render(vDom);
 
 第一次直接是虚拟 DOM 渲染成真实 DOM，更新时通过 diff 算法比较更新前后的虚拟 DOM，生成 Patch，更新 Patch
 
+### 插槽
+
+通过`props.children`获取插槽，然后使用`React.Children.toArray(children)`格式化`children`（props.children 拿到的可能是 undefined、一个元素对象，需要统一转化成数组），传入组件内的 children 都是虚拟 DOM
+
+```jsx
+{
+  /* 通过数组下表的方式使用插槽 */
+}
+{
+  /* 父组件调用 */
+}
+<>
+  <Count></Count>
+  <Count>1</Count>
+  <Count>
+    <span>1</span>
+    <span>2</span>
+  </Count>
+</>;
+{
+  /* 子组件处理 */
+}
+function Count(props) {
+  let children = React.Children.toArray(props.children);
+  return (
+    <>
+      {children[0]}
+      <div>count</div>
+      {children[1]}
+    </>
+  );
+}
+
+{
+  /* 具名插槽通过给插槽定义名称的方式使用插槽 */
+  <>
+    <Count>
+      <span slot="header">header</span>
+      <span>default</span>
+      <span slot="footer">footer</span>
+    </Count>
+  </>;
+
+  function Count(props) {
+    let children = React.Children.toArray(props.children);
+    let headerSlots = [],
+      defaultSlots = [],
+      footerSlots = [];
+    children.forEach(child => {
+      // 此处如果是文本节点child='text'，需要单独处理一下
+      let { slot } = child.props;
+      if (slot === 'header') {
+        headerSlots.push(child);
+      } else if (slot === 'footer') {
+        footerSlots.push(child);
+      } else {
+        defaultSlots.push(child);
+      }
+    });
+
+    return (
+      <>
+        {headerSlots}
+        {defaultSlots}
+        {footerSlots}
+      </>
+    );
+  }
+}
+```
+
+### 组件的分类
+
+- 函数式组件：静态组件
+
+  - 不具备状态、生命周期、ref 等
+  - 第一次渲染完，除非父组件控制重新渲染，否则内容不在更新
+  - 优点：渲染速度快
+  - 缺点：静态组件，无法实现组件动态更新
+
+  ```jsx
+  // 点击的时候count会发生变化，但视图不会重新渲染
+  function Count() {
+    let count = 0;
+
+    return (
+      <>
+        当前是：{count}
+        <button
+          onClick={() => {
+            count++;
+          }}>
+          增加
+        </button>
+      </>
+    );
+  }
+  ```
+
+- 类组件：动态组件，继承`React.Component/React.PureComponent`，基于`render`返回 JSX 视图
+  - 具备属性、规则校验
+  - 具备状态，修改状态控制视图更新
+    - `setState`
+    - `forceUpdate`
+  - 具备周期函数
+    - 严格模式下，不安全的周期函数禁止使用
+
+```jsx
+class Vote extends React.Component {
+  // props默认值
+  static defaultProps = {
+    num: 0,
+  };
+  // 规则
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    num: PropTypes.number,
+  };
+  // 不在constructor中初始化，可以直接在此初始化
+  // state = {
+  //   supNum: 2,
+  //   noSupNum: 8,
+  // };
+  constructor(props) {
+    // 把传递过来的属性挂载到this上，在constructor中就可使用this.props。如果此处不手动挂载，constructor中无法使用this.props，在constructor后依旧会自动把props挂载到this上，所以即使此处不挂载,render中可以访问到this.props
+    super(props);
+    this.state = {
+      supNum: 2,
+      noSupNum: 8,
+    };
+  }
+  render() {
+    let { supNum, noSupNum } = this.state;
+
+    return (
+      <div className="vote-box">
+        <div className="header">
+          {this.props.num}
+          <h2 className="title">{this.props.title}</h2>
+          <span>{supNum + noSupNum}人</span>
+        </div>
+        <div className="main">
+          <p>支持人数：{supNum}人</p>
+          <p>反对人数：{noSupNum}人</p>
+        </div>
+        <div className="footer">
+          <button
+            onClick={() => {
+              this.setState({ supNum: supNum + 1 });
+            }}>
+            支持
+          </button>
+          <button
+            onClick={() => {
+              this.setState({ noSupNum: noSupNum + 1 });
+            }}>
+            反对
+          </button>
+        </div>
+      </div>
+    );
+  }
+}
+```
+
+### PureComponent 和 Component 区别
+
+`PureComponent`默认加了`shouldComponentUpdate `周期函数，在该周期函数内，对新老`props`和`state`做浅比较，有变化返回 true，无变化返回 false
+
+### ref 使用
+
+- 受控组件：基于数据驱动视图更新，推荐
+- 非受控组件：基于 ref 获取 DOM，直接操作 DOM
+- ref 原理：在 render 时候，获取虚拟 DOM 的 ref 属性
+  - 属性是字符串，则给 this.refs 增加一个成员，成员值就是当前的 DOM 对象，不推荐使用
+  - 属性是函数，把函数执行，把当前 DOM 对象作为参数传递给该函数
+  - 属性是 Ref 对象，把当前 DOM 对象给到对象的 current 属性
+- 给元素设置 ref，获取对应的 DOM 元素
+- 给类组件设置 ref，获取组件的实例
+- 给函数式组件设置 ref，会报错。可以通过`React.forwardRef`进行转发，获取函数式组件内的某个 DOM 元素
+
+```jsx
+class Box extends React.Component {
+  p3 = React.createRef();
+  render() {
+    return (
+      <div>
+        <p ref="p1"></p>
+        <p ref={ele => (this.p2 = ele)}></p>
+        <p ref={p3}></p>
+      </div>
+    );
+  }
+  componentDidMount() {
+    console.log(this.refs.p1);
+    console.log(this.p2);
+    console.log(this.p3.current);
+  }
+}
+
+{
+  /* 函数式组件的ref */
+}
+const Child1 = React.forwardRef(function (props, ref) {
+  // 此处传递的ref是父组件中设置的ref的值（函数）
+  return (
+    <div>
+      <button ref={ref}>按钮</button>
+    </div>
+  );
+});
+class Demo extends React.Component {
+  render() {
+    return (
+      <div>
+        {/* this.child1获取的是Child中的button */}
+        <Child ref={ele => (this.child1 = ele)}></Child>
+      </div>
+    );
+  }
+}
+```
+
 ### 组件间通信
 
 1. 父级向子级通信：把数据添加到子组件的属性中，然后组件从 props 属性中获取父级传递过来的数据
