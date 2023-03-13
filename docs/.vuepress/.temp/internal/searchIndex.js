@@ -449,6 +449,36 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "微信小程序登录流程",
+        "slug": "微信小程序登录流程",
+        "link": "#微信小程序登录流程",
+        "children": []
+      }
+    ],
+    "path": "/miniProgram/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "uni-app 中 swiper 组件遇到的问题",
+        "slug": "uni-app-中-swiper-组件遇到的问题",
+        "link": "#uni-app-中-swiper-组件遇到的问题",
+        "children": []
+      }
+    ],
+    "path": "/miniProgram/uniApp.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "脚手架常用 package",
         "slug": "脚手架常用-package",
         "link": "#脚手架常用-package",
@@ -506,36 +536,6 @@ export const searchIndex = [
       }
     ],
     "path": "/nodejs/other.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "微信小程序登录流程",
-        "slug": "微信小程序登录流程",
-        "link": "#微信小程序登录流程",
-        "children": []
-      }
-    ],
-    "path": "/miniProgram/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "uni-app 中 swiper 组件遇到的问题",
-        "slug": "uni-app-中-swiper-组件遇到的问题",
-        "link": "#uni-app-中-swiper-组件遇到的问题",
-        "children": []
-      }
-    ],
-    "path": "/miniProgram/uniApp.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -665,16 +665,16 @@ export const searchIndex = [
       },
       {
         "level": 3,
-        "title": "组件间通信",
-        "slug": "组件间通信",
-        "link": "#组件间通信",
+        "title": "setState 详解",
+        "slug": "setstate-详解",
+        "link": "#setstate-详解",
         "children": []
       },
       {
         "level": 3,
-        "title": "setState 异步 or 同步",
-        "slug": "setstate-异步-or-同步",
-        "link": "#setstate-异步-or-同步",
+        "title": "合成事件",
+        "slug": "合成事件",
+        "link": "#合成事件",
         "children": []
       },
       {
@@ -704,6 +704,13 @@ export const searchIndex = [
         "slug": "memo",
         "link": "#memo",
         "children": []
+      },
+      {
+        "level": 3,
+        "title": "组件间通信",
+        "slug": "组件间通信",
+        "link": "#组件间通信",
+        "children": []
       }
     ],
     "path": "/react/base.html",
@@ -729,37 +736,44 @@ export const searchIndex = [
       },
       {
         "level": 3,
-        "title": "State Hook",
-        "slug": "state-hook",
-        "link": "#state-hook",
+        "title": "useState",
+        "slug": "usestate",
+        "link": "#usestate",
         "children": []
       },
       {
         "level": 3,
-        "title": "Effect Hook",
-        "slug": "effect-hook",
-        "link": "#effect-hook",
+        "title": "useEffect 和 useLayoutEffect",
+        "slug": "useeffect-和-uselayouteffect",
+        "link": "#useeffect-和-uselayouteffect",
         "children": []
       },
       {
         "level": 3,
-        "title": "Ref hook",
-        "slug": "ref-hook",
-        "link": "#ref-hook",
+        "title": "useRef 和 useImperativeHandle",
+        "slug": "useref-和-useimperativehandle",
+        "link": "#useref-和-useimperativehandle",
         "children": []
       },
       {
         "level": 3,
-        "title": "Memo hook",
-        "slug": "memo-hook",
-        "link": "#memo-hook",
+        "title": "useMemo",
+        "slug": "usememo",
+        "link": "#usememo",
         "children": []
       },
       {
         "level": 3,
-        "title": "Callback hook",
-        "slug": "callback-hook",
-        "link": "#callback-hook",
+        "title": "useCallback",
+        "slug": "usecallback",
+        "link": "#usecallback",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "自定义 HOOK",
+        "slug": "自定义-hook",
+        "link": "#自定义-hook",
         "children": []
       }
     ],

@@ -298,63 +298,32 @@ class Demo extends React.Component {
 }
 ```
 
-### 组件间通信
+### setState 详解
 
-1. 父级向子级通信：把数据添加到子组件的属性中，然后组件从 props 属性中获取父级传递过来的数据
-2. 子级向父级通信：在父级中定义回调方法，然后将回调方法传递给子级，子级调用父级的回调进行通信
-3. 祖先和后代通信：通过 Context 完成
+使用方法`setState(updater[, callback])`
 
-   ```javascript
-   const MyContext = React.createContext(defaultValue);
+- updater
+  - 对象：`{key: newVal}`，对象会与 state 进行浅合并
+  - 函数：`(state, props) => {}`，返回值会与 state 进行浅合并
+- callback 在状态更改后，视图更新完毕后触发。
+  - 回调发生在`componentDidMount`后
+  - 特殊情况，当使用`shouldComponentUpdate`阻止视图更新后，`componentDidMount`周期函数不执行的时候，依然会触发 callback
+- `flushSync`：强制 React 同步刷新提供的回调函数中的任何更新。这确保了 DOM 会被立即 更新
 
-   <MyContext.Provider value="dark">
-     <Toolbar />
-   </MyContext.Provider>;
+:::warning
+在 React18 中，都是异步操作【基于 updater 更新队列机制，实现的批处理】。有效减少更新次数，降低性能消耗，有效管理代码执行的逻辑顺序
 
-   // 中间的组件再也不必指明往下传递 theme 了。
-   function Toolbar() {
-     return (
-       <div>
-         <ThemedButton />
-       </div>
-     );
-   }
+在 React16 中，如果在合成事件【jsx 中基于 onXxx 绑定的事件】、周期函数中，setState 的操作都是异步的。如果出现在其它异步操作中【定时器（setTimeout 等）、Promise.then、手动获取 DOM 元素做的绑定事件等】，将变成同步的
+:::
 
-   // contextType方式
-   class ThemedButton extends React.Component {
-     // 指定 contextType 读取当前的 theme context。
-     // React 会往上找到最近的 theme Provider，然后使用它的值。
-     // 在这个例子中，当前的 theme 值为 “dark”。
-     static contextType = MyContext;
-     render() {
-       return <Button theme={this.context} />;
-     }
-   }
+### 合成事件
 
-   // Context.Consumer方式
-   function ThemedButton() {
-     return (
-       <MyContext.Consumer>
-         {theme => (
-          <Button theme={theme} />;
-         )}
-       </MyContext.Consumer>
-     );
-   }
-   ```
-
-   ##### Class.contextType 和 Context.Consumer 的区别
-
-   - Class.contextType 使用时会自动在组件上添加一个属性 context，存储离当前组件最近的 Provider 提供的数据，不能写多个
-
-   - Context.Consumer 可以写多个，能获取到所有 Provider 提供数据
-
-   - 动态的数据，还可以传递方法
-
-### setState 异步 or 同步
-
-在 React 可以控制的方法中（React 生命周期函数、React 事件中）表现为异步，在原生 js 控制（setTimeout、Promise.then 等）及
-DOM 事件中表现为同步
+- 基于事件委托
+- React17 及以后，都是委托给`#root`容器【捕获和冒泡都做了委托】
+- React17 以前，都是委托给`document`【只做了冒泡阶段的委托】
+- 没有实现事件传播机制的事件，是单独做的事件绑定【例如：onMouseEnter、onMouseMove 等】
+- 渲染组件的时候发现有`onXxx/onXxxCapture`属性的时候，不会给当前元素绑定事件，只是把绑定的方法赋值给相关属性
+- 合成事件的阻止事件传播`e.stopPropagation()`，会阻止合成事件和原生事件的传播。原生事件的阻止事件传播`e.nativeEvent.stopPropagation()`只会阻止原生的事件传播。`e.nativeEvent.stopImmediatePropagation()`阻止原生的同时会阻止`#root`上其它绑定的方法执行
 
 ### React 的生命周期（旧的）
 
@@ -400,6 +369,8 @@ const EnhancedComponent = higherOrderComponent(WrappedComponent);
 
 ### memo
 
+默认情况下其只会对复杂对象做浅层对比，如果你想要控制对比过程，那么请将自定义的比较函数通过第二个参数传入来实现
+
 ```javascript
 function MyComponent(props) {
   /* 使用 props 渲染 */
@@ -409,3 +380,102 @@ function areEqual(prevProps, nextProps) {
 }
 export default React.memo(MyComponent, areEqual);
 ```
+
+### 组件间通信
+
+1. 父级向子级通信：
+   - 把数据添加到子组件的属性中，然后组件从 props 属性中获取父级传递过来的数据。
+   - 父组件将一些 HTML 结构传递给子组件，子组件通过`props.children`获取到【插槽】
+   - 给子组件设置`ref`，获取到子组件实例【类组件】/数据、方法【函数式组件】
+2. 子级向父级通信：在父级中定义回调方法，然后将回调方法传递给子级，子级调用父级的回调进行通信
+3. 祖先和后代通信：通过 Context 完成
+
+   ```javascript
+   const MyContext = React.createContext(defaultValue);
+
+   <MyContext.Provider value="dark">
+     <Toolbar />
+   </MyContext.Provider>;
+
+   // 中间的组件再也不必指明往下传递 theme 了。
+   function Toolbar() {
+     return (
+       <div>
+         <ThemedButton />
+       </div>
+     );
+   }
+
+   // contextType方式
+   class ThemedButton extends React.Component {
+     // 指定 contextType 读取当前的 theme context。
+     // React 会往上找到最近的 theme Provider，然后使用它的值。
+     // 在这个例子中，当前的 theme 值为 “dark”。
+     static contextType = MyContext;
+     render() {
+       return <Button theme={this.context} />;
+     }
+   }
+
+   // Context.Consumer方式
+   function ThemedButton() {
+     return (
+       <MyContext.Consumer>
+         {theme => (
+          <Button theme={theme} />;
+         )}
+       </MyContext.Consumer>
+     );
+   }
+   ```
+
+   ##### Class.contextType 和 Context.Consumer 的区别
+
+   - Class.contextType 使用时会自动在组件上添加一个属性 context，存储离当前组件最近的 Provider 提供的数据，不能写多个，只支持类组件
+   - Context.Consumer 可以写多个，能获取到所有 Provider 提供数据，类组件和函数式组件都支持
+   - `useContext`只支持函数式组件
+     ```jsx
+     const GrandSon = () => {
+       // 使用useContext方式
+       let { count, handleClick } = useContext(CountContext);
+       let { num, changeNum } = useContext(SonContext);
+       return (
+         <>
+           <p>GrandSon组件：{count}</p>
+           <Button type="primary" onClick={handleClick}>
+             GrandSon组件+
+           </Button>
+           <Divider></Divider>
+           <p>GrandSon中Son组件：{num}</p>
+           <Button type="primary" onClick={changeNum}>
+             GrandSon中Son组件+
+           </Button>
+         </>
+       );
+       // 使用Consumer方式
+       // return (
+       //   <CountContext.Consumer>
+       //     {({ count, handleClick }) => (
+       //       <SonContext.Consumer>
+       //         {({ num, changeNum }) => {
+       //           return (
+       //             <>
+       //               <p>GrandSon组件：{count}</p>
+       //               <Button type="primary" onClick={handleClick}>
+       //                 GrandSon组件+
+       //               </Button>
+       //               <Divider></Divider>
+       //               <p>GrandSon中Son组件：{num}</p>
+       //               <Button type="primary" onClick={changeNum}>
+       //                 GrandSon中Son组件+
+       //               </Button>
+       //             </>
+       //           );
+       //         }}
+       //       </SonContext.Consumer>
+       //     )}
+       //   </CountContext.Consumer>
+       // );
+     };
+     ```
+   - 动态的数据，还可以传递方法

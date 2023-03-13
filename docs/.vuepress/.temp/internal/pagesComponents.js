@@ -27,16 +27,16 @@ export const pagesComponents = {
   "v-17ed0aff": defineAsyncComponent(() => import(/* webpackChunkName: "v-17ed0aff" */"D:/project/Blog/docs/.vuepress/.temp/pages/javascript/base.html.vue")),
   // path: /javascript/reg.html
   "v-5c12e78e": defineAsyncComponent(() => import(/* webpackChunkName: "v-5c12e78e" */"D:/project/Blog/docs/.vuepress/.temp/pages/javascript/reg.html.vue")),
+  // path: /miniProgram/base.html
+  "v-d7dcac26": defineAsyncComponent(() => import(/* webpackChunkName: "v-d7dcac26" */"D:/project/Blog/docs/.vuepress/.temp/pages/miniProgram/base.html.vue")),
+  // path: /miniProgram/uniApp.html
+  "v-dc5c7726": defineAsyncComponent(() => import(/* webpackChunkName: "v-dc5c7726" */"D:/project/Blog/docs/.vuepress/.temp/pages/miniProgram/uniApp.html.vue")),
   // path: /nodejs/cli.html
   "v-67462264": defineAsyncComponent(() => import(/* webpackChunkName: "v-67462264" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/cli.html.vue")),
   // path: /nodejs/link.html
   "v-24bab858": defineAsyncComponent(() => import(/* webpackChunkName: "v-24bab858" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/link.html.vue")),
   // path: /nodejs/other.html
   "v-72b54898": defineAsyncComponent(() => import(/* webpackChunkName: "v-72b54898" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/other.html.vue")),
-  // path: /miniProgram/base.html
-  "v-d7dcac26": defineAsyncComponent(() => import(/* webpackChunkName: "v-d7dcac26" */"D:/project/Blog/docs/.vuepress/.temp/pages/miniProgram/base.html.vue")),
-  // path: /miniProgram/uniApp.html
-  "v-dc5c7726": defineAsyncComponent(() => import(/* webpackChunkName: "v-dc5c7726" */"D:/project/Blog/docs/.vuepress/.temp/pages/miniProgram/uniApp.html.vue")),
   // path: /npm/base.html
   "v-036777aa": defineAsyncComponent(() => import(/* webpackChunkName: "v-036777aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/npm/base.html.vue")),
   // path: /other/surf.html
