@@ -578,7 +578,7 @@ function compose(...fns) {
   };
 }
 
-// pipe是从左至右的执行,compose(add, del, multiply)(x) => multiply(del(add(x)))
+// pipe是从左至右的执行,pipe(add, del, multiply)(x) => multiply(del(add(x)))
 function pipe(...fns) {
   return function (...args) {
     if (fns.length === 0) {
