@@ -19,120 +19,20 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "CSS 选择器优先级",
-        "slug": "css-选择器优先级",
-        "link": "#css-选择器优先级",
+        "title": "webpack 打包优化",
+        "slug": "webpack-打包优化",
+        "link": "#webpack-打包优化",
         "children": []
       },
       {
         "level": 3,
-        "title": "fixed 定位失效",
-        "slug": "fixed-定位失效",
-        "link": "#fixed-定位失效",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "单行省略技巧",
-        "slug": "单行省略技巧",
-        "link": "#单行省略技巧",
+        "title": "优化输出质量",
+        "slug": "优化输出质量",
+        "link": "#优化输出质量",
         "children": []
       }
     ],
-    "path": "/css/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "SCSS 语法扩展",
-        "slug": "scss-语法扩展",
-        "link": "#scss-语法扩展",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "变量",
-        "slug": "变量",
-        "link": "#变量",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "import 导入",
-        "slug": "import-导入",
-        "link": "#import-导入",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "mixin",
-        "slug": "mixin",
-        "link": "#mixin",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "插值语句",
-        "slug": "插值语句",
-        "link": "#插值语句",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "@use",
-        "slug": "use",
-        "link": "#use",
-        "children": []
-      }
-    ],
-    "path": "/css/scss.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "浏览器渲染原理",
-        "slug": "浏览器渲染原理",
-        "link": "#浏览器渲染原理",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "浏览器存储",
-        "slug": "浏览器存储",
-        "link": "#浏览器存储",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "浏览器缓存",
-        "slug": "浏览器缓存",
-        "link": "#浏览器缓存",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "获取 URL 中的参数",
-        "slug": "获取-url-中的参数",
-        "link": "#获取-url-中的参数",
-        "children": []
-      }
-    ],
-    "path": "/browser/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/browser/link.html",
+    "path": "/buildTools/webpack.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -205,27 +105,120 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "webpack 打包优化",
-        "slug": "webpack-打包优化",
-        "link": "#webpack-打包优化",
+        "title": "浏览器渲染原理",
+        "slug": "浏览器渲染原理",
+        "link": "#浏览器渲染原理",
         "children": []
       },
       {
         "level": 3,
-        "title": "优化输出质量",
-        "slug": "优化输出质量",
-        "link": "#优化输出质量",
+        "title": "浏览器存储",
+        "slug": "浏览器存储",
+        "link": "#浏览器存储",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "浏览器缓存",
+        "slug": "浏览器缓存",
+        "link": "#浏览器缓存",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "获取 URL 中的参数",
+        "slug": "获取-url-中的参数",
+        "link": "#获取-url-中的参数",
         "children": []
       }
     ],
-    "path": "/buildTools/webpack.html",
+    "path": "/browser/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
     "title": "",
     "headers": [],
-    "path": "/html/base.html",
+    "path": "/browser/link.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "CSS 选择器优先级",
+        "slug": "css-选择器优先级",
+        "link": "#css-选择器优先级",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "fixed 定位失效",
+        "slug": "fixed-定位失效",
+        "link": "#fixed-定位失效",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "单行省略技巧",
+        "slug": "单行省略技巧",
+        "link": "#单行省略技巧",
+        "children": []
+      }
+    ],
+    "path": "/css/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "SCSS 语法扩展",
+        "slug": "scss-语法扩展",
+        "link": "#scss-语法扩展",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "变量",
+        "slug": "变量",
+        "link": "#变量",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "import 导入",
+        "slug": "import-导入",
+        "link": "#import-导入",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "mixin",
+        "slug": "mixin",
+        "link": "#mixin",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "插值语句",
+        "slug": "插值语句",
+        "link": "#插值语句",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "@use",
+        "slug": "use",
+        "link": "#use",
+        "children": []
+      }
+    ],
+    "path": "/css/scss.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -306,6 +299,13 @@ export const searchIndex = [
       }
     ],
     "path": "/framework/monitor.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/html/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -422,6 +422,20 @@ export const searchIndex = [
         "title": "async 和 await 注意细节",
         "slug": "async-和-await-注意细节",
         "link": "#async-和-await-注意细节",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "发送请求方案",
+        "slug": "发送请求方案",
+        "link": "#发送请求方案",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "函数式编程",
+        "slug": "函数式编程",
+        "link": "#函数式编程",
         "children": []
       }
     ],
@@ -803,6 +817,20 @@ export const searchIndex = [
         "title": "合并 reducer",
         "slug": "合并-reducer",
         "link": "#合并-reducer",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "react-redux 使用",
+        "slug": "react-redux-使用",
+        "link": "#react-redux-使用",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "redux 中间件",
+        "slug": "redux-中间件",
+        "link": "#redux-中间件",
         "children": []
       }
     ],
