@@ -479,3 +479,11 @@ export default React.memo(MyComponent, areEqual);
      };
      ```
    - 动态的数据，还可以传递方法
+
+### React 样式私有化
+
+- 内联样式
+- CSS 样式：保证最外层类名样式的唯一性
+- CSS Modules：xxx.module.css
+- react-jss
+- styled-components

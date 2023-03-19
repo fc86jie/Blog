@@ -19,6 +19,128 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "CSS 选择器优先级",
+        "slug": "css-选择器优先级",
+        "link": "#css-选择器优先级",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "fixed 定位失效",
+        "slug": "fixed-定位失效",
+        "link": "#fixed-定位失效",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "单行省略技巧",
+        "slug": "单行省略技巧",
+        "link": "#单行省略技巧",
+        "children": []
+      }
+    ],
+    "path": "/css/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "SCSS 语法扩展",
+        "slug": "scss-语法扩展",
+        "link": "#scss-语法扩展",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "变量",
+        "slug": "变量",
+        "link": "#变量",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "import 导入",
+        "slug": "import-导入",
+        "link": "#import-导入",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "mixin",
+        "slug": "mixin",
+        "link": "#mixin",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "插值语句",
+        "slug": "插值语句",
+        "link": "#插值语句",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "@use",
+        "slug": "use",
+        "link": "#use",
+        "children": []
+      }
+    ],
+    "path": "/css/scss.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "浏览器渲染原理",
+        "slug": "浏览器渲染原理",
+        "link": "#浏览器渲染原理",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "浏览器存储",
+        "slug": "浏览器存储",
+        "link": "#浏览器存储",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "浏览器缓存",
+        "slug": "浏览器缓存",
+        "link": "#浏览器缓存",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "获取 URL 中的参数",
+        "slug": "获取-url-中的参数",
+        "link": "#获取-url-中的参数",
+        "children": []
+      }
+    ],
+    "path": "/browser/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/browser/link.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "选择排序",
         "slug": "选择排序",
         "link": "#选择排序",
@@ -102,123 +224,8 @@ export const searchIndex = [
   },
   {
     "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "浏览器渲染原理",
-        "slug": "浏览器渲染原理",
-        "link": "#浏览器渲染原理",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "浏览器存储",
-        "slug": "浏览器存储",
-        "link": "#浏览器存储",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "浏览器缓存",
-        "slug": "浏览器缓存",
-        "link": "#浏览器缓存",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "获取 URL 中的参数",
-        "slug": "获取-url-中的参数",
-        "link": "#获取-url-中的参数",
-        "children": []
-      }
-    ],
-    "path": "/browser/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
     "headers": [],
-    "path": "/browser/link.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "CSS 选择器优先级",
-        "slug": "css-选择器优先级",
-        "link": "#css-选择器优先级",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "fixed 定位失效",
-        "slug": "fixed-定位失效",
-        "link": "#fixed-定位失效",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "单行省略技巧",
-        "slug": "单行省略技巧",
-        "link": "#单行省略技巧",
-        "children": []
-      }
-    ],
-    "path": "/css/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "SCSS 语法扩展",
-        "slug": "scss-语法扩展",
-        "link": "#scss-语法扩展",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "变量",
-        "slug": "变量",
-        "link": "#变量",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "import 导入",
-        "slug": "import-导入",
-        "link": "#import-导入",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "mixin",
-        "slug": "mixin",
-        "link": "#mixin",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "插值语句",
-        "slug": "插值语句",
-        "link": "#插值语句",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "@use",
-        "slug": "use",
-        "link": "#use",
-        "children": []
-      }
-    ],
-    "path": "/css/scss.html",
+    "path": "/html/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -299,13 +306,6 @@ export const searchIndex = [
       }
     ],
     "path": "/framework/monitor.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/html/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -711,6 +711,13 @@ export const searchIndex = [
         "slug": "组件间通信",
         "link": "#组件间通信",
         "children": []
+      },
+      {
+        "level": 3,
+        "title": "React 样式私有化",
+        "slug": "react-样式私有化",
+        "link": "#react-样式私有化",
+        "children": []
       }
     ],
     "path": "/react/base.html",
@@ -778,6 +785,28 @@ export const searchIndex = [
       }
     ],
     "path": "/react/hooks.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "redux 基本使用",
+        "slug": "redux-基本使用",
+        "link": "#redux-基本使用",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "合并 reducer",
+        "slug": "合并-reducer",
+        "link": "#合并-reducer",
+        "children": []
+      }
+    ],
+    "path": "/react/redux.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -915,3 +944,16 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ searchIndex }) => {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  })
+}

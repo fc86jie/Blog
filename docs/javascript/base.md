@@ -541,3 +541,132 @@ Promise.resolve()
   .then(() => console.log(6))
   .then(() => console.log(7));
 ```
+
+### 发送请求方案
+
+- XMLHttpRequest
+  - ajax：自己编写请求逻辑和步骤
+  - axios：基于 promise 对 XMLHttpRequest 进行封装
+- fetch：ES6 内置 API，本身基于 promise，用全新的方案实现数据请求（不兼容 IE）
+- 其它方案，主要跨域为主
+  - jsonp
+  - img 的 src，实现数据埋点和上报
+  - postMessage
+  - ...
+
+### 函数式编程
+
+- compose：组合，从右往左执行，例如：`compose(multiply, del, add)(x) => multiply(del(add(x)))`
+- pipe：管道，从左往右执行，例如：`compose(add, del, multiply)(x) => multiply(del(add(x)))`
+- curry：柯里化，例如：`curried(1)(2)(3) =》 curried(1, 2, 3)`
+
+```javascript
+// compose(multiply, del, add)(x) => multiply(del(add(x)))
+// compose 执行是从右到左
+function compose(...fns) {
+  return function (...args) {
+    if (fns.length === 0) {
+      return args;
+    }
+
+    if (fns.length === 1) {
+      return fns[0](...args);
+    }
+
+    // 使用reduceRight从右往左执行，此处可以使用reverse().reduce代替
+    return fns.reduceRight((acc, cur) => (typeof acc === 'function' ? cur(acc(...args)) : cur(acc)));
+  };
+}
+
+// pipe是从左至右的执行,compose(add, del, multiply)(x) => multiply(del(add(x)))
+function pipe(...fns) {
+  return function (...args) {
+    if (fns.length === 0) {
+      return args;
+    }
+
+    if (fns.length === 1) {
+      return fns[0](...args);
+    }
+
+    return fns.reduce((acc, cur) => (typeof acc === 'function' ? cur(acc(...args)) : cur(acc)));
+  };
+}
+
+// 测试
+function add(num) {
+  return num + 10;
+}
+
+function del(num) {
+  return num - 5;
+}
+
+function multiply(num) {
+  return num * 2;
+}
+
+let x = 10;
+let res1 = multiply(del(add(x)));
+console.log(`🚀 ~ file: func.js:63 ~ res1:`, res1);
+
+let composeFn = compose(multiply, del, add);
+let res2 = composeFn(10);
+console.log(`🚀 ~ file: func.js:67 ~ res2:`, res2);
+
+let pipeFn = pipe(add, del, multiply);
+let res3 = pipeFn(x);
+console.log(`🚀 ~ file: func.js:71 ~ res3:`, res3);
+
+// 参数定长柯里化
+function curry(fn, ...restArgs) {
+  // 获取原函数的参数长度
+  const fnArgLen = fn.length;
+  // 返回一个新函数
+  return function (...args) {
+    // 新函数调用时会继续传参
+    const allArgs = [...restArgs, ...args];
+    if (allArgs.length >= fnArgLen) {
+      // 如果参数够了，就执行原函数
+      return fn.apply(this, allArgs);
+    } else {
+      // 否则继续柯里化
+      return curry.call(null, fn, ...allArgs);
+    }
+  };
+}
+
+function fn(a, b, c) {
+  return a + b + c;
+}
+let curried = curry(fn);
+console.log(curried(1, 2, 3)); // 6
+console.log(curried(1, 2)(3)); // 6
+console.log(curried(1)(2, 3)); // 6
+console.log(curried(1)(2)(3)); // 6
+console.log(curried(7)(8)(9)); // 24
+
+// 参数不定长柯里化
+function curry2(fn, ...restArgs) {
+  // 返回一个新函数
+  function curried(...args) {
+    // 新函数调用时会继续传参
+    const allArgs = [...restArgs, ...args];
+    return curry2.call(null, fn, ...allArgs);
+  }
+  // 重写toString
+  curried.toString = function () {
+    return fn.apply(null, restArgs);
+  };
+  return curried;
+}
+
+function dynamicAdd() {
+  return [...arguments].reduce((prev, curr) => {
+    return prev + curr;
+  }, 0);
+}
+let dAdd = curry2(dynamicAdd);
+console.log(+dAdd(1)(2)(3)(4)); // 10
+console.log(+dAdd(1, 2)(3, 4)(5, 6)); // 21
+```

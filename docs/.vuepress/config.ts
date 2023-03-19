@@ -152,6 +152,10 @@ export default defineUserConfig({
             text: 'Router',
             link: '/react/router.md',
           },
+          {
+            text: 'Redux',
+            link: '/react/redux.md',
+          },
         ],
       },
       {

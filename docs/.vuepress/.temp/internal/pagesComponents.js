@@ -3,26 +3,26 @@ import { defineAsyncComponent } from 'vue'
 export const pagesComponents = {
   // path: /
   "v-8daa1a0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"D:/project/Blog/docs/.vuepress/.temp/pages/index.html.vue")),
-  // path: /algorithm/base.html
-  "v-3723c122": defineAsyncComponent(() => import(/* webpackChunkName: "v-3723c122" */"D:/project/Blog/docs/.vuepress/.temp/pages/algorithm/base.html.vue")),
-  // path: /buildTools/webpack.html
-  "v-0d3d7596": defineAsyncComponent(() => import(/* webpackChunkName: "v-0d3d7596" */"D:/project/Blog/docs/.vuepress/.temp/pages/buildTools/webpack.html.vue")),
-  // path: /browser/base.html
-  "v-6f859eb0": defineAsyncComponent(() => import(/* webpackChunkName: "v-6f859eb0" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/base.html.vue")),
-  // path: /browser/link.html
-  "v-589e4dc2": defineAsyncComponent(() => import(/* webpackChunkName: "v-589e4dc2" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/link.html.vue")),
   // path: /css/base.html
   "v-531c1d43": defineAsyncComponent(() => import(/* webpackChunkName: "v-531c1d43" */"D:/project/Blog/docs/.vuepress/.temp/pages/css/base.html.vue")),
   // path: /css/scss.html
   "v-134daec4": defineAsyncComponent(() => import(/* webpackChunkName: "v-134daec4" */"D:/project/Blog/docs/.vuepress/.temp/pages/css/scss.html.vue")),
+  // path: /browser/base.html
+  "v-6f859eb0": defineAsyncComponent(() => import(/* webpackChunkName: "v-6f859eb0" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/base.html.vue")),
+  // path: /browser/link.html
+  "v-589e4dc2": defineAsyncComponent(() => import(/* webpackChunkName: "v-589e4dc2" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/link.html.vue")),
+  // path: /algorithm/base.html
+  "v-3723c122": defineAsyncComponent(() => import(/* webpackChunkName: "v-3723c122" */"D:/project/Blog/docs/.vuepress/.temp/pages/algorithm/base.html.vue")),
+  // path: /buildTools/webpack.html
+  "v-0d3d7596": defineAsyncComponent(() => import(/* webpackChunkName: "v-0d3d7596" */"D:/project/Blog/docs/.vuepress/.temp/pages/buildTools/webpack.html.vue")),
+  // path: /html/base.html
+  "v-e0c5db06": defineAsyncComponent(() => import(/* webpackChunkName: "v-e0c5db06" */"D:/project/Blog/docs/.vuepress/.temp/pages/html/base.html.vue")),
   // path: /electron/base.html
   "v-3b0d6374": defineAsyncComponent(() => import(/* webpackChunkName: "v-3b0d6374" */"D:/project/Blog/docs/.vuepress/.temp/pages/electron/base.html.vue")),
   // path: /framework/base.html
   "v-21a2f63e": defineAsyncComponent(() => import(/* webpackChunkName: "v-21a2f63e" */"D:/project/Blog/docs/.vuepress/.temp/pages/framework/base.html.vue")),
   // path: /framework/monitor.html
   "v-2ad03a69": defineAsyncComponent(() => import(/* webpackChunkName: "v-2ad03a69" */"D:/project/Blog/docs/.vuepress/.temp/pages/framework/monitor.html.vue")),
-  // path: /html/base.html
-  "v-e0c5db06": defineAsyncComponent(() => import(/* webpackChunkName: "v-e0c5db06" */"D:/project/Blog/docs/.vuepress/.temp/pages/html/base.html.vue")),
   // path: /javascript/base.html
   "v-17ed0aff": defineAsyncComponent(() => import(/* webpackChunkName: "v-17ed0aff" */"D:/project/Blog/docs/.vuepress/.temp/pages/javascript/base.html.vue")),
   // path: /javascript/reg.html
@@ -45,6 +45,8 @@ export const pagesComponents = {
   "v-33e27bff": defineAsyncComponent(() => import(/* webpackChunkName: "v-33e27bff" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/base.html.vue")),
   // path: /react/hooks.html
   "v-2e4c22b2": defineAsyncComponent(() => import(/* webpackChunkName: "v-2e4c22b2" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/hooks.html.vue")),
+  // path: /react/redux.html
+  "v-dd505424": defineAsyncComponent(() => import(/* webpackChunkName: "v-dd505424" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/redux.html.vue")),
   // path: /react/router.html
   "v-18e7fcc7": defineAsyncComponent(() => import(/* webpackChunkName: "v-18e7fcc7" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/router.html.vue")),
   // path: /test/base.html

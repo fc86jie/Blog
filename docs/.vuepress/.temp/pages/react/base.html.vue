@@ -1,4 +1,4 @@
-<template><div><nav class="table-of-contents"><ul><li><a href="#jsx-语法规则">jsx 语法规则</a></li><li><a href="#jsx-底层渲染机制">JSX 底层渲染机制</a></li><li><a href="#插槽">插槽</a></li><li><a href="#组件的分类">组件的分类</a></li><li><a href="#purecomponent-和-component-区别">PureComponent 和 Component 区别</a></li><li><a href="#ref-使用">ref 使用</a></li><li><a href="#setstate-详解">setState 详解</a></li><li><a href="#合成事件">合成事件</a></li><li><a href="#react-的生命周期-旧的">React 的生命周期（旧的）</a></li><li><a href="#react-的生命周期-新的">React 的生命周期（新的）</a></li><li><a href="#高阶组件">高阶组件</a></li><li><a href="#memo">memo</a></li><li><a href="#组件间通信">组件间通信</a></li></ul></nav>
+<template><div><nav class="table-of-contents"><ul><li><a href="#jsx-语法规则">jsx 语法规则</a></li><li><a href="#jsx-底层渲染机制">JSX 底层渲染机制</a></li><li><a href="#插槽">插槽</a></li><li><a href="#组件的分类">组件的分类</a></li><li><a href="#purecomponent-和-component-区别">PureComponent 和 Component 区别</a></li><li><a href="#ref-使用">ref 使用</a></li><li><a href="#setstate-详解">setState 详解</a></li><li><a href="#合成事件">合成事件</a></li><li><a href="#react-的生命周期-旧的">React 的生命周期（旧的）</a></li><li><a href="#react-的生命周期-新的">React 的生命周期（新的）</a></li><li><a href="#高阶组件">高阶组件</a></li><li><a href="#memo">memo</a></li><li><a href="#组件间通信">组件间通信</a></li><li><a href="#react-样式私有化">React 样式私有化</a></li></ul></nav>
 <h3 id="jsx-语法规则" tabindex="-1"><a class="header-anchor" href="#jsx-语法规则" aria-hidden="true">#</a> jsx 语法规则</h3>
 <ol>
 <li>定义虚拟 DOM 时，不要写引号</li>
@@ -492,6 +492,14 @@ root<span class="token punctuation">.</span><span class="token function">render<
 </ul>
 </li>
 </ol>
+<h3 id="react-样式私有化" tabindex="-1"><a class="header-anchor" href="#react-样式私有化" aria-hidden="true">#</a> React 样式私有化</h3>
+<ul>
+<li>内联样式</li>
+<li>CSS 样式：保证最外层类名样式的唯一性</li>
+<li>CSS Modules：xxx.module.css</li>
+<li>react-jss</li>
+<li>styled-components</li>
+</ul>
 </div></template>
 
 
