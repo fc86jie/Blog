@@ -7,12 +7,12 @@ export const pagesData = {
   "v-6f859eb0": () => import(/* webpackChunkName: "v-6f859eb0" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/base.html.js").then(({ data }) => data),
   // path: /browser/link.html
   "v-589e4dc2": () => import(/* webpackChunkName: "v-589e4dc2" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/link.html.js").then(({ data }) => data),
+  // path: /buildTools/webpack.html
+  "v-0d3d7596": () => import(/* webpackChunkName: "v-0d3d7596" */"D:/project/Blog/docs/.vuepress/.temp/pages/buildTools/webpack.html.js").then(({ data }) => data),
   // path: /css/base.html
   "v-531c1d43": () => import(/* webpackChunkName: "v-531c1d43" */"D:/project/Blog/docs/.vuepress/.temp/pages/css/base.html.js").then(({ data }) => data),
   // path: /css/scss.html
   "v-134daec4": () => import(/* webpackChunkName: "v-134daec4" */"D:/project/Blog/docs/.vuepress/.temp/pages/css/scss.html.js").then(({ data }) => data),
-  // path: /buildTools/webpack.html
-  "v-0d3d7596": () => import(/* webpackChunkName: "v-0d3d7596" */"D:/project/Blog/docs/.vuepress/.temp/pages/buildTools/webpack.html.js").then(({ data }) => data),
   // path: /electron/base.html
   "v-3b0d6374": () => import(/* webpackChunkName: "v-3b0d6374" */"D:/project/Blog/docs/.vuepress/.temp/pages/electron/base.html.js").then(({ data }) => data),
   // path: /html/base.html
@@ -37,6 +37,8 @@ export const pagesData = {
   "v-72b54898": () => import(/* webpackChunkName: "v-72b54898" */"D:/project/Blog/docs/.vuepress/.temp/pages/nodejs/other.html.js").then(({ data }) => data),
   // path: /npm/base.html
   "v-036777aa": () => import(/* webpackChunkName: "v-036777aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/npm/base.html.js").then(({ data }) => data),
+  // path: /other/surf.html
+  "v-df20c3aa": () => import(/* webpackChunkName: "v-df20c3aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/other/surf.html.js").then(({ data }) => data),
   // path: /react/base.html
   "v-33e27bff": () => import(/* webpackChunkName: "v-33e27bff" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/base.html.js").then(({ data }) => data),
   // path: /react/hooks.html
@@ -45,8 +47,6 @@ export const pagesData = {
   "v-dd505424": () => import(/* webpackChunkName: "v-dd505424" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/redux.html.js").then(({ data }) => data),
   // path: /react/router.html
   "v-18e7fcc7": () => import(/* webpackChunkName: "v-18e7fcc7" */"D:/project/Blog/docs/.vuepress/.temp/pages/react/router.html.js").then(({ data }) => data),
-  // path: /other/surf.html
-  "v-df20c3aa": () => import(/* webpackChunkName: "v-df20c3aa" */"D:/project/Blog/docs/.vuepress/.temp/pages/other/surf.html.js").then(({ data }) => data),
   // path: /test/base.html
   "v-01a49aa4": () => import(/* webpackChunkName: "v-01a49aa4" */"D:/project/Blog/docs/.vuepress/.temp/pages/test/base.html.js").then(({ data }) => data),
   // path: /tools/git.html

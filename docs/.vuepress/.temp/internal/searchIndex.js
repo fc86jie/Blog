@@ -126,6 +126,28 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "webpack 打包优化",
+        "slug": "webpack-打包优化",
+        "link": "#webpack-打包优化",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "优化输出质量",
+        "slug": "优化输出质量",
+        "link": "#优化输出质量",
+        "children": []
+      }
+    ],
+    "path": "/buildTools/webpack.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "CSS 选择器优先级",
         "slug": "css-选择器优先级",
         "link": "#css-选择器优先级",
@@ -197,28 +219,6 @@ export const searchIndex = [
       }
     ],
     "path": "/css/scss.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "webpack 打包优化",
-        "slug": "webpack-打包优化",
-        "link": "#webpack-打包优化",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "优化输出质量",
-        "slug": "优化输出质量",
-        "link": "#优化输出质量",
-        "children": []
-      }
-    ],
-    "path": "/buildTools/webpack.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -437,6 +437,13 @@ export const searchIndex = [
         "slug": "函数式编程",
         "link": "#函数式编程",
         "children": []
+      },
+      {
+        "level": 3,
+        "title": "forEach 遍历 Set 遇到的问题",
+        "slug": "foreach-遍历-set-遇到的问题",
+        "link": "#foreach-遍历-set-遇到的问题",
+        "children": []
       }
     ],
     "path": "/javascript/base.html",
@@ -600,6 +607,35 @@ export const searchIndex = [
       }
     ],
     "path": "/npm/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "免费代理软件",
+        "slug": "免费代理软件",
+        "link": "#免费代理软件",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "终端下设置代理",
+        "slug": "终端下设置代理",
+        "link": "#终端下设置代理",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "配置 WSL2 使用本机 V2rayN 代理",
+        "slug": "配置-wsl2-使用本机-v2rayn-代理",
+        "link": "#配置-wsl2-使用本机-v2rayn-代理",
+        "children": []
+      }
+    ],
+    "path": "/other/surf.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -843,35 +879,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "免费代理软件",
-        "slug": "免费代理软件",
-        "link": "#免费代理软件",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "终端下设置代理",
-        "slug": "终端下设置代理",
-        "link": "#终端下设置代理",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "配置 WSL2 使用本机 V2rayN 代理",
-        "slug": "配置-wsl2-使用本机-v2rayn-代理",
-        "link": "#配置-wsl2-使用本机-v2rayn-代理",
-        "children": []
-      }
-    ],
-    "path": "/other/surf.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "jest 支持 esm 测试",
         "slug": "jest-支持-esm-测试",
         "link": "#jest-支持-esm-测试",
@@ -951,7 +958,36 @@ export const searchIndex = [
   },
   {
     "title": "",
-    "headers": [],
+    "headers": [
+      {
+        "level": 3,
+        "title": "命令式和声明式",
+        "slug": "命令式和声明式",
+        "link": "#命令式和声明式",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "运行时和编译时",
+        "slug": "运行时和编译时",
+        "link": "#运行时和编译时",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Tree-Shaking",
+        "slug": "tree-shaking",
+        "link": "#tree-shaking",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "vue3 编译优化",
+        "slug": "vue3-编译优化",
+        "link": "#vue3-编译优化",
+        "children": []
+      }
+    ],
     "path": "/vue/advanced.html",
     "pathLocale": "/",
     "extraFields": []
@@ -979,16 +1015,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}
