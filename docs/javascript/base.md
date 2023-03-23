@@ -670,3 +670,26 @@ let dAdd = curry2(dynamicAdd);
 console.log(+dAdd(1)(2)(3)(4)); // 10
 console.log(+dAdd(1, 2)(3, 4)(5, 6)); // 21
 ```
+
+### forEach 遍历 Set 遇到的问题
+
+在调用 forEach 遍历 Set 集合时，如果一个值已经被访问过了，但该值被删除并重新添加到集合，如果此时 forEach 遍历没有结束，那么该值会重新被访问。
+
+```javascript
+// 下面的代码会死循环
+const set = new Set([1]);
+set.forEach(item => {
+  set.delete(1);
+  set.add(1);
+  console.log('遍历中');
+});
+
+// 正确方式
+const set = new Set([1]);
+const newSet = new Set(set);
+newSet.forEach(item => {
+  set.delete(1);
+  set.add(1);
+  console.log('遍历中');
+});
+```

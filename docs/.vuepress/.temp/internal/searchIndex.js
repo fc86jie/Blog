@@ -19,28 +19,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "webpack 打包优化",
-        "slug": "webpack-打包优化",
-        "link": "#webpack-打包优化",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "优化输出质量",
-        "slug": "优化输出质量",
-        "link": "#优化输出质量",
-        "children": []
-      }
-    ],
-    "path": "/buildTools/webpack.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "选择排序",
         "slug": "选择排序",
         "link": "#选择排序",
@@ -227,6 +205,28 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "webpack 打包优化",
+        "slug": "webpack-打包优化",
+        "link": "#webpack-打包优化",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "优化输出质量",
+        "slug": "优化输出质量",
+        "link": "#优化输出质量",
+        "children": []
+      }
+    ],
+    "path": "/buildTools/webpack.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "Electron 安装",
         "slug": "electron-安装",
         "link": "#electron-安装",
@@ -267,6 +267,13 @@ export const searchIndex = [
   },
   {
     "title": "",
+    "headers": [],
+    "path": "/html/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
     "headers": [
       {
         "level": 3,
@@ -299,13 +306,6 @@ export const searchIndex = [
       }
     ],
     "path": "/framework/monitor.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/html/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -608,35 +608,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "免费代理软件",
-        "slug": "免费代理软件",
-        "link": "#免费代理软件",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "终端下设置代理",
-        "slug": "终端下设置代理",
-        "link": "#终端下设置代理",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "配置 WSL2 使用本机 V2rayN 代理",
-        "slug": "配置-wsl2-使用本机-v2rayn-代理",
-        "link": "#配置-wsl2-使用本机-v2rayn-代理",
-        "children": []
-      }
-    ],
-    "path": "/other/surf.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "jsx 语法规则",
         "slug": "jsx-语法规则",
         "link": "#jsx-语法规则",
@@ -872,6 +843,35 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "免费代理软件",
+        "slug": "免费代理软件",
+        "link": "#免费代理软件",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "终端下设置代理",
+        "slug": "终端下设置代理",
+        "link": "#终端下设置代理",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "配置 WSL2 使用本机 V2rayN 代理",
+        "slug": "配置-wsl2-使用本机-v2rayn-代理",
+        "link": "#配置-wsl2-使用本机-v2rayn-代理",
+        "children": []
+      }
+    ],
+    "path": "/other/surf.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "jest 支持 esm 测试",
         "slug": "jest-支持-esm-测试",
         "link": "#jest-支持-esm-测试",
@@ -946,6 +946,13 @@ export const searchIndex = [
       }
     ],
     "path": "/typescript/link.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/vue/advanced.html",
     "pathLocale": "/",
     "extraFields": []
   },

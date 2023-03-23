@@ -2,7 +2,7 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2022-11-14 15:20:39
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2023-03-08 22:53:02
+ * @LastEditTime: 2023-03-20 10:01:40
  * @FilePath: \docs\.vuepress\config.ts
  * @Description:
  */
@@ -130,6 +130,10 @@ export default defineUserConfig({
         text: 'Vue',
         collapsible: true,
         children: [
+          {
+            text: '设计与实现',
+            link: '/vue/advanced.md',
+          },
           {
             text: '其他',
             link: '/vue/other.md',
