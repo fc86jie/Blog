@@ -148,6 +148,49 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "Electron 安装",
+        "slug": "electron-安装",
+        "link": "#electron-安装",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "windows 下控制台中文乱码问题",
+        "slug": "windows-下控制台中文乱码问题",
+        "link": "#windows-下控制台中文乱码问题",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "打包",
+        "slug": "打包",
+        "link": "#打包",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中使用 nodejs",
+        "slug": "在渲染进程中使用-nodejs",
+        "link": "#在渲染进程中使用-nodejs",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中打开新窗口",
+        "slug": "在渲染进程中打开新窗口",
+        "link": "#在渲染进程中打开新窗口",
+        "children": []
+      }
+    ],
+    "path": "/electron/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "CSS 选择器优先级",
         "slug": "css-选择器优先级",
         "link": "#css-选择器优先级",
@@ -227,56 +270,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "Electron 安装",
-        "slug": "electron-安装",
-        "link": "#electron-安装",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "windows 下控制台中文乱码问题",
-        "slug": "windows-下控制台中文乱码问题",
-        "link": "#windows-下控制台中文乱码问题",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "打包",
-        "slug": "打包",
-        "link": "#打包",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中使用 nodejs",
-        "slug": "在渲染进程中使用-nodejs",
-        "link": "#在渲染进程中使用-nodejs",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中打开新窗口",
-        "slug": "在渲染进程中打开新窗口",
-        "link": "#在渲染进程中打开新窗口",
-        "children": []
-      }
-    ],
-    "path": "/electron/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/html/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "架构分级",
         "slug": "架构分级",
         "link": "#架构分级",
@@ -306,6 +299,13 @@ export const searchIndex = [
       }
     ],
     "path": "/framework/monitor.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/html/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -802,6 +802,13 @@ export const searchIndex = [
         "title": "自定义 HOOK",
         "slug": "自定义-hook",
         "link": "#自定义-hook",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "useReducer",
+        "slug": "usereducer",
+        "link": "#usereducer",
         "children": []
       }
     ],

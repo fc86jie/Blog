@@ -11,18 +11,18 @@ export const pagesComponents = {
   "v-589e4dc2": defineAsyncComponent(() => import(/* webpackChunkName: "v-589e4dc2" */"D:/project/Blog/docs/.vuepress/.temp/pages/browser/link.html.vue")),
   // path: /buildTools/webpack.html
   "v-0d3d7596": defineAsyncComponent(() => import(/* webpackChunkName: "v-0d3d7596" */"D:/project/Blog/docs/.vuepress/.temp/pages/buildTools/webpack.html.vue")),
+  // path: /electron/base.html
+  "v-3b0d6374": defineAsyncComponent(() => import(/* webpackChunkName: "v-3b0d6374" */"D:/project/Blog/docs/.vuepress/.temp/pages/electron/base.html.vue")),
   // path: /css/base.html
   "v-531c1d43": defineAsyncComponent(() => import(/* webpackChunkName: "v-531c1d43" */"D:/project/Blog/docs/.vuepress/.temp/pages/css/base.html.vue")),
   // path: /css/scss.html
   "v-134daec4": defineAsyncComponent(() => import(/* webpackChunkName: "v-134daec4" */"D:/project/Blog/docs/.vuepress/.temp/pages/css/scss.html.vue")),
-  // path: /electron/base.html
-  "v-3b0d6374": defineAsyncComponent(() => import(/* webpackChunkName: "v-3b0d6374" */"D:/project/Blog/docs/.vuepress/.temp/pages/electron/base.html.vue")),
-  // path: /html/base.html
-  "v-e0c5db06": defineAsyncComponent(() => import(/* webpackChunkName: "v-e0c5db06" */"D:/project/Blog/docs/.vuepress/.temp/pages/html/base.html.vue")),
   // path: /framework/base.html
   "v-21a2f63e": defineAsyncComponent(() => import(/* webpackChunkName: "v-21a2f63e" */"D:/project/Blog/docs/.vuepress/.temp/pages/framework/base.html.vue")),
   // path: /framework/monitor.html
   "v-2ad03a69": defineAsyncComponent(() => import(/* webpackChunkName: "v-2ad03a69" */"D:/project/Blog/docs/.vuepress/.temp/pages/framework/monitor.html.vue")),
+  // path: /html/base.html
+  "v-e0c5db06": defineAsyncComponent(() => import(/* webpackChunkName: "v-e0c5db06" */"D:/project/Blog/docs/.vuepress/.temp/pages/html/base.html.vue")),
   // path: /javascript/base.html
   "v-17ed0aff": defineAsyncComponent(() => import(/* webpackChunkName: "v-17ed0aff" */"D:/project/Blog/docs/.vuepress/.temp/pages/javascript/base.html.vue")),
   // path: /javascript/reg.html

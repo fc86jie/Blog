@@ -418,3 +418,57 @@ const UsePartialStateDemo = () => {
   );
 };
 ```
+
+### useReducer
+
+当组件中有大量状态时，使用`useReducer`
+
+```jsx
+import { useReducer } from 'react';
+
+const initialState = {
+  num: 0,
+};
+
+const reducer = (state, action) => {
+  state = { ...state };
+  switch (action.type) {
+    case 'plus':
+      state.num++;
+      break;
+    case 'minus':
+      state.num--;
+      break;
+    default:
+  }
+  return state;
+};
+
+const A1 = () => {
+  let [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <>
+      <h3>这是A1组件</h3>
+      {state.num}
+      <button
+        onClick={() => {
+          dispatch({
+            type: 'plus',
+          });
+        }}>
+        增加
+      </button>
+      <button
+        onClick={() => {
+          dispatch({
+            type: 'minus',
+          });
+        }}>
+        减少
+      </button>
+    </>
+  );
+};
+
+export default A1;
+```

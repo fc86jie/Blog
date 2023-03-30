@@ -1,4 +1,5 @@
-<template><div><h3 id="redux-基本使用" tabindex="-1"><a class="header-anchor" href="#redux-基本使用" aria-hidden="true">#</a> redux 基本使用</h3>
+<template><div><nav class="table-of-contents"><ul><li><a href="#redux-基本使用">redux 基本使用</a></li><li><a href="#合并-reducer">合并 reducer</a></li><li><a href="#react-redux-使用">react-redux 使用</a></li><li><a href="#redux-中间件">redux 中间件</a></li></ul></nav>
+<h3 id="redux-基本使用" tabindex="-1"><a class="header-anchor" href="#redux-基本使用" aria-hidden="true">#</a> redux 基本使用</h3>
 <ul>
 <li>创建上下文对象，基于上下文对象的 Provider 把创建的 store 放到根组件的上下文中，后代基于上下文获取 store</li>
 <li>公共组件的状态

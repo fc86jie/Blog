@@ -1,4 +1,5 @@
-<template><div><h3 id="埋点分类" tabindex="-1"><a class="header-anchor" href="#埋点分类" aria-hidden="true">#</a> 埋点分类</h3>
+<template><div><nav class="table-of-contents"><ul><li><a href="#埋点分类">埋点分类</a></li></ul></nav>
+<h3 id="埋点分类" tabindex="-1"><a class="header-anchor" href="#埋点分类" aria-hidden="true">#</a> 埋点分类</h3>
 <ul>
 <li>手动埋点
 调用埋点 SDK 函数，在需要埋点的业务位置调用接口上报数据。例如：百度统计、友盟、TalkingData、Google Analytics 等
