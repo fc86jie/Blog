@@ -222,6 +222,10 @@ export default defineUserConfig({
             text: '监控',
             link: '/framework/monitor.md',
           },
+          {
+            text: '性能优化',
+            link: '/framework/performance.md',
+          },
         ],
       },
       {

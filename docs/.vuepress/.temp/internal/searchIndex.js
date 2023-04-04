@@ -19,6 +19,49 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "浏览器渲染原理",
+        "slug": "浏览器渲染原理",
+        "link": "#浏览器渲染原理",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "浏览器存储",
+        "slug": "浏览器存储",
+        "link": "#浏览器存储",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "浏览器缓存",
+        "slug": "浏览器缓存",
+        "link": "#浏览器缓存",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "获取 URL 中的参数",
+        "slug": "获取-url-中的参数",
+        "link": "#获取-url-中的参数",
+        "children": []
+      }
+    ],
+    "path": "/browser/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/browser/link.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "选择排序",
         "slug": "选择排序",
         "link": "#选择排序",
@@ -83,49 +126,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "浏览器渲染原理",
-        "slug": "浏览器渲染原理",
-        "link": "#浏览器渲染原理",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "浏览器存储",
-        "slug": "浏览器存储",
-        "link": "#浏览器存储",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "浏览器缓存",
-        "slug": "浏览器缓存",
-        "link": "#浏览器缓存",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "获取 URL 中的参数",
-        "slug": "获取-url-中的参数",
-        "link": "#获取-url-中的参数",
-        "children": []
-      }
-    ],
-    "path": "/browser/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/browser/link.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
         "title": "webpack 打包优化",
         "slug": "webpack-打包优化",
         "link": "#webpack-打包优化",
@@ -140,49 +140,6 @@ export const searchIndex = [
       }
     ],
     "path": "/buildTools/webpack.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Electron 安装",
-        "slug": "electron-安装",
-        "link": "#electron-安装",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "windows 下控制台中文乱码问题",
-        "slug": "windows-下控制台中文乱码问题",
-        "link": "#windows-下控制台中文乱码问题",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "打包",
-        "slug": "打包",
-        "link": "#打包",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中使用 nodejs",
-        "slug": "在渲染进程中使用-nodejs",
-        "link": "#在渲染进程中使用-nodejs",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "在渲染进程中打开新窗口",
-        "slug": "在渲染进程中打开新窗口",
-        "link": "#在渲染进程中打开新窗口",
-        "children": []
-      }
-    ],
-    "path": "/electron/base.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -270,6 +227,49 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "Electron 安装",
+        "slug": "electron-安装",
+        "link": "#electron-安装",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "windows 下控制台中文乱码问题",
+        "slug": "windows-下控制台中文乱码问题",
+        "link": "#windows-下控制台中文乱码问题",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "打包",
+        "slug": "打包",
+        "link": "#打包",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中使用 nodejs",
+        "slug": "在渲染进程中使用-nodejs",
+        "link": "#在渲染进程中使用-nodejs",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "在渲染进程中打开新窗口",
+        "slug": "在渲染进程中打开新窗口",
+        "link": "#在渲染进程中打开新窗口",
+        "children": []
+      }
+    ],
+    "path": "/electron/base.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "架构分级",
         "slug": "架构分级",
         "link": "#架构分级",
@@ -299,6 +299,13 @@ export const searchIndex = [
       }
     ],
     "path": "/framework/monitor.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/framework/performance.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -565,6 +572,35 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
+        "title": "免费代理软件",
+        "slug": "免费代理软件",
+        "link": "#免费代理软件",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "终端下设置代理",
+        "slug": "终端下设置代理",
+        "link": "#终端下设置代理",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "配置 WSL2 使用本机 V2rayN 代理",
+        "slug": "配置-wsl2-使用本机-v2rayn-代理",
+        "link": "#配置-wsl2-使用本机-v2rayn-代理",
+        "children": []
+      }
+    ],
+    "path": "/other/surf.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
         "title": "npx",
         "slug": "npx",
         "link": "#npx",
@@ -607,35 +643,6 @@ export const searchIndex = [
       }
     ],
     "path": "/npm/base.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "免费代理软件",
-        "slug": "免费代理软件",
-        "link": "#免费代理软件",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "终端下设置代理",
-        "slug": "终端下设置代理",
-        "link": "#终端下设置代理",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "配置 WSL2 使用本机 V2rayN 代理",
-        "slug": "配置-wsl2-使用本机-v2rayn-代理",
-        "link": "#配置-wsl2-使用本机-v2rayn-代理",
-        "children": []
-      }
-    ],
-    "path": "/other/surf.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1022,3 +1029,16 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ searchIndex }) => {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  })
+}
