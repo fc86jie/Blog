@@ -1,3 +1,12 @@
+/*
+ * @Author: wangrenjie86@gmail.com
+ * @Date: 2024-12-06 16:55:14
+ * @LastEditors: wangrenjie86@gmail.com
+ * @LastEditTime: 2024-12-06 16:55:16
+ * @FilePath: /docs/.vitepress/config.mts
+ * @Description:
+ */
+
 import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config

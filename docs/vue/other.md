@@ -11,3 +11,21 @@
   的依赖图中。在其编译过程中，所有诸如 <img src=\"...\">、background: url(...) 和 CSS @import 的资源 URL 都会被解析为一
   个模块依赖。
 - [参考链接](https://mp.weixin.qq.com/s/HM8lrZezW5WonPlk74zitQ)
+
+### vue-cli 打包过程中的一次报错
+
+![](./images/vue-i18n-error.png)
+
+- 产生场景：突然有一天打包失败了
+- 解决方案：排查依赖包，`@babel/traverse` 版本问题导致的，在 package.json 中锁定版本
+
+```json
+{
+  "resolutions": {
+    "@babel/traverse": "7.25.9"
+  },
+  "overrides": {
+    "@babel/traverse": "7.25.9"
+  }
+}
+```
