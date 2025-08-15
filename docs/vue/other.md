@@ -29,3 +29,12 @@
   }
 }
 ```
+
+### vue 静态资源引入的路径问题
+
+```javascript
+function getImageUrl(name) {
+  // 请注意，这不包括子目录中的文件，此处name只能是文件名(或者后缀)
+  return new URL(`./dir/${name}`, import.meta.url).href;
+}
+```

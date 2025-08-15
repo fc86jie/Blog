@@ -139,3 +139,8 @@
 ```
 
 ![省略](./images//ellipsis.png)
+
+
+### Select 下拉框的样式调试
+
+打开`DevTools`的 `More tools` 菜单，选择 `Rendering`，在打开的 Rendering 面板中，勾选 `Emulate a focused page`
