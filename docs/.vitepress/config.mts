@@ -2,15 +2,17 @@
  * @Author: wangrenjie86@gmail.com
  * @Date: 2024-12-06 16:55:14
  * @LastEditors: wangrenjie86@gmail.com
- * @LastEditTime: 2024-12-06 16:55:16
+ * @LastEditTime: 2026-01-04 10:24:03
  * @FilePath: /docs/.vitepress/config.mts
  * @Description:
  */
 
 import { defineConfig } from 'vitepress';
+import { withMermaid } from 'vitepress-plugin-mermaid';
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default defineConfig(
+  withMermaid({
   lang: 'zh-CN',
   title: '学习笔记',
   description: '学习笔记',
@@ -19,6 +21,12 @@ export default defineConfig({
   markdown: {
     lineNumbers: true,
   },
+  vite: {
+    optimizeDeps: {
+      // fastdom 为 UMD 模块，需强制预构建为 ESM，否则浏览器端报 default 导出错误
+      include: ['mermaid', 'fastdom'],
+    },
+  },
   themeConfig: {
     search: {
       provider: 'local',
@@ -26,6 +34,44 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [],
     sidebar: [
+      {
+        text: 'AI',
+        collapsed: true,
+        items: [
+          {
+            text: '基础',
+            link: '/ai/base.md',
+          },
+          {
+            text: 'Agent',
+            link: '/ai/agent.md',
+          },
+          {
+            text: '意图识别',
+            link: '/ai/intent-recognition.md',
+          },
+        ],
+      },
+      {
+        text: 'Python',
+        collapsed: true,
+        items: [
+          {
+            text: '基础',
+            link: '/python/base.md',
+          },
+        ],
+      },
+      {
+        text: 'Docker',
+        collapsed: true,
+        items: [
+          {
+            text: '基础',
+            link: '/docker/base.md',
+          },
+        ],
+      },
       // 左侧导航
       {
         text: '浏览器相关',
@@ -260,4 +306,5 @@ export default defineConfig({
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/fc86jie/Blog/' }],
   },
-});
+  }),
+);

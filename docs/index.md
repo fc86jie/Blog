@@ -8,6 +8,9 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
+      text: AI
+      link: /ai/base.md
+    - theme: alt
       text: Vue
       link: /vue/advanced.md
     - theme: alt

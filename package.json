@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/fc86jie/Blog#readme",
   "devDependencies": {
-    "postcss": "^8.5.6",
-    "vitepress": "^1.6.4"
+    "mermaid": "^11.17.2",
+    "postcss": "^8.5.28",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17"
   }
 }
